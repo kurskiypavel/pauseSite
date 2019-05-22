@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+
+    <div class="header">
+        <div class="logo">Pause Architects & Design</div>
+        <div class="nav-wrap">
+            <div class="nav-item left">
+                Projects
+            </div>
+            <div class="nav-item center">
+                Studio
+            </div>
+            <div class="nav-item right">
+                Contact
+            </div>
+
+        </div>
+        <button type="button" class="site-header-button" id='toogle-hamburger' title="Toggle menu">
+            <span class="u-visually-hidden">Toggle menu</span>
+            <span class="button-bar button-bar--1"></span>
+            <span class="button-bar button-bar--2"></span>
+            <span class="button-bar button-bar--3"></span>
+        </button>
+    </div>
+    <div class="title-wrap">
+        <div class="image-card"></div>
+        <div class="current title-item">
+            <div>Boiler</div>
+            <div>Loft</div>
+        </div>
+        <!-- <div class="title-item">
+                <div>Larchmount</div>
+                <div>Kitchen</div>
+            </div>
+            <div class="title-item">
+                <div>Boiler</div>
+                <div>Loft</div>
+            </div> -->
+
+    </div>
+    <div class="layer-text">
+
+        <div class="paginator-wrap">
+            <div class="current paginator-item">01</div>
+            <!-- <div class="paginator-item">02</div>
+            <div class="paginator-item">03</div>
+            <div class="paginator-item">04</div>
+            <div class="paginator-item">05</div> -->
+            <div class="total paginator-item">05</div>
+        </div>
+
+    </div>
+    <div class="contact-mobile-screens">
+        <div class="contact-item">Contact</div>
+        <div class="contact-item">hello@pausesdesign.ca</div>
+        <div class="contact-item">437 886 5526</div>
+    </div>
+    <div class="footer-wrap">
+        <div class="footer">
+            <div class="footer-item">
+                instagram
+            </div>
+            <div class="footer-item center">
+                twitter
+            </div>
+            <div class="footer-item">
+                houzz
+            </div>
+        </div>
+
+    </div>
+
+    <!-- <div class="layer-slider">
+        <div id="js-mv-slide" class="slide-wrap">
+            I am wrapper
+            <div id="js-slide-l" class="slide-l">
+                I am left column
+                <div class="in">
+                    <div class="slide-cell js-slide-cell">
+                        I am one cell L
+                    </div>
+                </div>
+            </div>
+            <div id="js-slide-r" class="slide-r">
+                I am right column
+                <div class="slide-cell js-slide-cell">
+                    I am one cell R
+                </div>
+            </div>
+        </div>
+    </div> -->
+
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <!-- <script>
+        var flag = true;
+
+        function animate() {
+            $(".some").animate({
+                opacity: 1
+            }, 3000, function () {                
+                flag = true;
+            });
+        }
+
+        $(window).scroll(function () {
+            console.log('ad');
+
+            if (flag === true) {
+                console.log('scroll');
+                flag = false;
+                animate();
+            }
+
+        });
+
+                
+    </script> -->
+    <script>
+        var hamburger = document.getElementById('toogle-hamburger');
+        hamburger.addEventListener('click', function () {
+            if (hamburger.classList.contains('is-active')) {
+                hamburger.classList.remove('is-active');
+            } else {
+                hamburger.classList.add('is-active');
+            }
+
+        });
+    </script>
+
+
+
+</body>
+
+</html>

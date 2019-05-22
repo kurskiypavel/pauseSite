@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        button {
+            outline: none;
+            cursor: pointer;
+        }
+
+        .u-visually-hidden {
+            border: 0;
+            clip: rect(0 0 0 0);
+            height: 1px;
+            margin: -1px;
+            overflow: hidden;
+            padding: 0;
+            position: absolute;
+            width: 1px;
+        }
+
+        .site-header-button .button-bar--1 {
+            -webkit-transform: translateY(-6px);
+            transform: translateY(-6px);
+        }
+
+        .site-header-button .button-bar--2 {
+            -webkit-transform-origin: 100% 50%;
+            transform-origin: 100% 50%;
+            -webkit-transform: scaleX(1);
+            transform: scaleX(1);
+        }
+
+        .site-header-button:hover .button-bar--2 {
+
+            -webkit-transform: scaleX(.8);
+            transform: scaleX(.8);
+        }
+
+        .site-header-button .button-bar--3 {
+            -webkit-transform: translateY(6px);
+            transform: translateY(6px);
+        }
+
+        .site-header-button .button-bar {
+            position: absolute;
+            top: 50%;
+            right: 6px;
+            left: 6px;
+            height: 2px;
+            width: auto;
+            margin-top: -1px;
+            transition: opacity .3s cubic-bezier(.165, .84, .44, 1), background-color .6s cubic-bezier(.165, .84, .44, 1), -webkit-transform .6s cubic-bezier(.165, .84, .44, 1);
+            transition: transform .6s cubic-bezier(.165, .84, .44, 1), opacity .3s cubic-bezier(.165, .84, .44, 1), background-color .6s cubic-bezier(.165, .84, .44, 1);
+            transition: transform .6s cubic-bezier(.165, .84, .44, 1), opacity .3s cubic-bezier(.165, .84, .44, 1), background-color .6s cubic-bezier(.165, .84, .44, 1), -webkit-transform .6s cubic-bezier(.165, .84, .44, 1);
+            background-color: #000;
+        }
+
+        .site-header-button {
+            position: relative;
+            height: 30px;
+            width: 32px;
+            margin-top: -1px;
+            margin-right: -6px;
+            padding: 8px 6px;
+            display: block;
+            z-index: 60;
+            border: 0;
+            border-radius: 0;
+            background-color: transparent;
+            pointer-events: all;
+            transition: -webkit-transform .6s cubic-bezier(.165, .84, .44, 1);
+            transition: transform .6s cubic-bezier(.165, .84, .44, 1);
+            transition: transform .6s cubic-bezier(.165, .84, .44, 1), -webkit-transform .6s cubic-bezier(.165, .84, .44, 1);
+        }
+
+
+
+        /* activated */
+        .site-header-button.is-active {
+            -webkit-transform: rotate(-180deg);
+            transform: rotate(-180deg);
+        }
+
+        .site-header-button.is-active .button-bar--1 {
+            -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+        }
+
+        .site-header-button.is-active .button-bar--2 {
+            opacity: 0;
+        }
+
+        .site-header-button.is-active .button-bar--3 {
+            -webkit-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+        }
+
+        .site-header-button.is-active .button-bar {
+            transition: opacity .3s cubic-bezier(.165, .84, .44, 1), background-color .6s cubic-bezier(.165, .84, .44, 1), -webkit-transform .6s cubic-bezier(.165, .84, .44, 1);
+            transition: transform .6s cubic-bezier(.165, .84, .44, 1), opacity .3s cubic-bezier(.165, .84, .44, 1), background-color .6s cubic-bezier(.165, .84, .44, 1);
+            transition: transform .6s cubic-bezier(.165, .84, .44, 1), opacity .3s cubic-bezier(.165, .84, .44, 1), background-color .6s cubic-bezier(.165, .84, .44, 1), -webkit-transform .6s cubic-bezier(.165, .84, .44, 1);
+        }
+    </style>
+</head>
+
+<body>
+    <button type="button" class="site-header-button" id='toogle-hamburger' title="Toggle menu">
+        <span class="u-visually-hidden">Toggle menu</span>
+        <span class="button-bar button-bar--1"></span>
+        <span class="button-bar button-bar--2"></span>
+        <span class="button-bar button-bar--3"></span>
+    </button>
+    <script>
+        var hamburger = document.getElementById('toogle-hamburger');
+        hamburger.addEventListener('click', function () {
+            if (hamburger.classList.contains('is-active')) {
+                hamburger.classList.remove('is-active');
+            } else {
+                hamburger.classList.add('is-active');
+            }
+
+        });
+    </script>
+
+</body>
+
+</html>
