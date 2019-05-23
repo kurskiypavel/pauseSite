@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="/css/style.css">
 </head>
 
-<body>
+<body class="page">
 
     <div class="header">
         <div class="logo">Pause Architects & Design</div>
@@ -34,29 +34,105 @@
         </button>
     </div>
     <div class="title-wrap">
-        <div class="image-card"></div>
-        <div class="current title-item">
-            <div>Boiler</div>
-            <div>Loft</div>
+        <div class="card">
+            <div class="image-card">
+                <img src="static/images/Layer 2.png" alt="" srcset="">
+            </div>
+            <div class="current title-item">
+                <div class="js-title-wrap row-one">
+                    <div class="js-title">
+                        <div>Larchmount 05</div>
+                    </div>
+                    <div class="js-title">
+                        <div>Larchmount 04</div>
+                    </div>
+                    <div class="js-title">
+                        <div>Larchmount 03</div>
+                    </div>
+                    <div class="js-title">
+                        <div>Larchmount 02</div>
+                    </div>
+                    <div class="js-title first active">
+                        <div>Larchmount 01</div>
+                    </div>
+                </div>
+                <div class="js-title-wrap row-two">
+                    <div class="js-title">
+                        <div>Kitchen 05</div>
+                    </div>
+                    <div class="js-title">
+                        <div>Kitchen 04</div>
+                    </div>
+                    <div class="js-title">
+                        <div>Kitchen 03</div>
+                    </div>
+                    <div class="js-title">
+                        <div>Kitchen 02</div>
+                    </div>
+                    <div class="js-title first active">
+                        <div>Kitchen 01</div>
+                    </div>
+                </div>
+            </div>
         </div>
-        <!-- <div class="title-item">
+    </div>
+    <div class="title-wrap">
+        <div class="card">
+            <div class="image-card">
+                <img src="static/images/Layer 2.png" alt="" srcset="">
+            </div>
+            <div class="title-item">
                 <div>Larchmount</div>
                 <div>Kitchen</div>
             </div>
-            <div class="title-item">
-                <div>Boiler</div>
-                <div>Loft</div>
-            </div> -->
-
+        </div>
     </div>
+    <div class="title-wrap">
+        <div class="card">
+            <div class="image-card">
+                <img src="static/images/Layer 2.png" alt="" srcset="">
+            </div>
+            <div class="title-item">
+                <div>Larchmount</div>
+                <div>Garden</div>
+            </div>
+        </div>
+    </div>
+    <div class="title-wrap">
+        <div class="card">
+            <div class="image-card">
+                <img src="static/images/Layer 2.png" alt="" srcset="">
+            </div>
+            <div class="title-item">
+                <div>Larchmount</div>
+                <div>Garden</div>
+            </div>
+        </div>
+    </div>
+    <div class="title-wrap">
+        <div class="card">
+            <div class="image-card">
+                <img src="static/images/Layer 2.png" alt="" srcset="">
+            </div>
+            <div class="title-item">
+                <div>Larchmount</div>
+                <div>Garden</div>
+            </div>
+        </div>
+    </div>
+
     <div class="layer-text">
 
         <div class="paginator-wrap">
-            <div class="current paginator-item">01</div>
-            <!-- <div class="paginator-item">02</div>
-            <div class="paginator-item">03</div>
-            <div class="paginator-item">04</div>
-            <div class="paginator-item">05</div> -->
+            <div class="current paginator-item">
+                <div class="js-rotate">
+                    <div>05</div>
+                    <div>04</div>
+                    <div>03</div>
+                    <div>02</div>
+                    <div class='first active'>01</div>
+                </div>
+            </div>
             <div class="total paginator-item">05</div>
         </div>
 
@@ -81,54 +157,121 @@
 
     </div>
 
-    <!-- <div class="layer-slider">
+    <div class="layer-slider">
         <div id="js-mv-slide" class="slide-wrap">
-            I am wrapper
+            <!-- I am wrapper -->
             <div id="js-slide-l" class="slide-l">
-                I am left column
+                <!-- I am left column -->
                 <div class="in">
                     <div class="slide-cell js-slide-cell">
-                        I am one cell L
+                        <!-- I am one cell L -->
+                        <img src="static/images/Layer 2.png" alt="" srcset="">
                     </div>
                 </div>
             </div>
             <div id="js-slide-r" class="slide-r">
-                I am right column
+                <!-- I am right column -->
                 <div class="slide-cell js-slide-cell">
-                    I am one cell R
+                    <!-- I am one cell R -->
+                    <img src="static/images/Layer 2.png" alt="" srcset="">
                 </div>
             </div>
         </div>
-    </div> -->
+    </div>
 
 
 
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <!-- <script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.13/jquery.mousewheel.min.js"></script>
+
+
+    <!--<script>
         var flag = true;
+        var scrollCount = 0;
+        // initial position - same as in styles
+        var rotateAmount = 440;
 
+        // Global animation
         function animate() {
-            $(".some").animate({
-                opacity: 1
-            }, 3000, function () {                
-                flag = true;
-            });
-        }
+            // scroll down animation
+            if (event.deltaY > 0) {
+                scrollCount += 1;
+                console.log(scrollCount);
 
-        $(window).scroll(function () {
-            console.log('ad');
+                console.log('scroll down');
 
-            if (flag === true) {
-                console.log('scroll');
-                flag = false;
-                animate();
+
+                // control for end of list
+                if (scrollCount <= 4) {
+                    console.log('animate .js-rotate');
+
+                    // calculate where to rotate
+                    rotateAmount -= 110;
+                    // Animate js-rotate
+                    // $('.js-rotate').css('transform', 'translateY(-' + rotateAmount + 'px)');
+                    $('.js-rotate').animate({
+                        some: '-330'
+                    }, {
+                        step: function (now, fx) {
+                            $(this).css('transform', 'translateY(' + now + 'px)');
+                        },
+                        duration: 2000,
+                        done: function () {
+                            $('.page').bind('mousewheel', wheelHandler);
+                            flag = true;
+                        }
+                    });
+
+                } else {
+                    console.log('end of list');
+                }
+
+
+
+                // Enable scrolling
+                // setTimeout(function () {
+                //     $('.page').bind('mousewheel', wheelHandler);
+                //     flag = true;
+                // }, 1500);
+
+            } else if (event.deltaY < 0) {
+
+                scrollCount -= 1;
+                console.log(scrollCount);
+
+
+                console.log('scroll up');
+
+
+                // Enable scrolling
+                setTimeout(function () {
+                    $('.page').bind('mousewheel', wheelHandler);
+                    flag = true;
+                }, 2000);
+
             }
 
-        });
+            // ON COMPLETE ANIMATION
+            // $('.page').bind('mousewheel',wheelHandler);
+            // flag = true;
+        }
 
-                
-    </script> -->
+        // Prevent from many scrolling
+        function wheelHandler() {
+            // console.log(event.deltaX, event.deltaY, event.deltaFactor);
+            if (flag === true) {
+                flag = false;
+
+
+                // Disable scrolling
+                $('.page').unbind('mousewheel', wheelHandler);
+                animate();
+            }
+        }
+        $('.page').mousewheel(wheelHandler);
+    </script>-->
+
     <script>
         var hamburger = document.getElementById('toogle-hamburger');
         hamburger.addEventListener('click', function () {
@@ -137,11 +280,126 @@
             } else {
                 hamburger.classList.add('is-active');
             }
-
         });
     </script>
 
 
+    <script>
+        // Array of titles row one
+        var titleArrayOne = $('.row-one .js-title');
+        const lastTitleOne = titleArrayOne[0];
+        const firstTitleOne = titleArrayOne[titleArrayOne.length - 1];
+        // Global index for slides titles and pages
+        var index = titleArrayOne.length - 1;
+
+        // Array of titles row two
+        var titleArrayTwo = $('.row-two .js-title');
+        const lastTitleTwo = titleArrayTwo[0];
+        const firstTitleTwo = titleArrayTwo[titleArrayTwo.length - 1];
+
+
+        // Array of page numbers 01 - 05
+        var pagesArray = $('.js-rotate div');
+        const lastPage = pagesArray[0];
+        const firstPage = pagesArray[pagesArray.length - 1];
+
+
+        // Main loop for animation
+        function myLoop() {
+            // Main timeout fo all animations BEGINS
+            setTimeout(function () {
+
+                // Drop styles for last element for new Loop
+                if (index === titleArrayOne.length - 2) {
+                    // ANIMATE TITLES
+                    lastTitleOne.classList.remove('active');
+                    lastTitleTwo.classList.remove('active');
+
+                    // ANIMATE PAGINATION
+                    lastPage.classList.remove('rotated');
+                }
+
+                // Beginning of loop
+                if (index > 0) {
+
+
+                    // ANIMATE TITLES
+                    // Drop current down
+                    titleArrayOne[index].classList.remove('active');
+                    titleArrayTwo[index].classList.remove('active');
+                    // wait until current animated
+                    setTimeout(function () {
+                        // Show next title
+                        titleArrayOne[index - 1].classList.add('active');
+                        titleArrayTwo[index - 1].classList.add('active');
+
+                        index--;
+                        myLoop();
+                        // duration = transition in styles
+                    }, 500);
+
+
+
+
+                    // ANIMATE PAGINATION
+                    // Rotate current down
+                    pagesArray[index].classList.add('rotated');
+                    pagesArray[index].classList.remove('active');
+                    // Show next number
+                    pagesArray[index - 1].classList.add('active');
+                    pagesArray[index - 1].classList.remove('rotated');
+
+                    // Drop styles for rotated
+                    if (pagesArray[index + 1]) {
+                        pagesArray[index + 1].classList.remove('rotated');
+                    }
+
+                } else {
+
+                    // ANIMATE TITLES
+                    // Start loop over
+                    // Drop last element
+                    lastTitleOne.classList.remove('active');
+                    lastTitleTwo.classList.remove('active');
+                    // wait until current animated
+                    setTimeout(function () {
+                        // Show first element
+                        firstTitleOne.classList.add('active');
+                        firstTitleTwo.classList.add('active');
+                        // Drop index to initial
+                        index = titleArrayOne.length - 1;
+
+                        // Call loop over
+                        myLoop();
+                        // duration = transition in styles
+                    }, 500);
+
+                    // ANIMATE PAGINATION
+                    // Rotate last element
+                    lastPage.classList.add('rotated');
+                    lastPage.classList.remove('active');
+
+                    // Show first element
+                    firstPage.classList.add('active');
+                    firstPage.classList.remove('rotated');
+
+                    // Drop styles for prev last element
+                    pagesArray[index + 1].classList.remove('rotated');
+
+                }
+
+
+
+                // Main timeout fo all animations ENDS
+            }, 2000);
+
+
+
+        }
+
+        // Call main loop first time
+        myLoop();
+    </script>
 
 </body>
 
