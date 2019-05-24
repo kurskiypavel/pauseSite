@@ -33,7 +33,7 @@
             <span class="button-bar button-bar--3"></span>
         </button>
     </div>
-    <div class="title-wrap">
+    <div class="desktop title-wrap">
         <div class="card">
             <div class="image-card">
                 <img src="static/images/Layer 2.png" alt="" srcset="">
@@ -165,7 +165,23 @@
                 <div class="in">
                     <div class="slide-cell js-slide-cell">
                         <!-- I am one cell L -->
-                        <img src="static/images/Layer 2.png" alt="" srcset="">
+                        <img src="static/images/Layer 2.png" alt="05" srcset="">
+                    </div>
+                    <div class="slide-cell js-slide-cell">
+                        <!-- I am one cell L -->
+                        <img src="static/images/Layer 2.png" alt="04" srcset="">
+                    </div>
+                    <div class="slide-cell js-slide-cell">
+                        <!-- I am one cell L -->
+                        <img src="static/images/Layer 2.png" alt="03" srcset="">
+                    </div>
+                    <div class="slide-cell js-slide-cell">
+                        <!-- I am one cell L -->
+                        <img src="static/images/Layer 2.png" alt="02" srcset="">
+                    </div>
+                    <div class="slide-cell js-slide-cell active">
+                        <!-- I am one cell L -->
+                        <img src="static/images/Layer 2.png" alt="01" srcset="">
                     </div>
                 </div>
             </div>
@@ -173,7 +189,23 @@
                 <!-- I am right column -->
                 <div class="slide-cell js-slide-cell">
                     <!-- I am one cell R -->
-                    <img src="static/images/Layer 2.png" alt="" srcset="">
+                    <img src="static/images/Layer 2.png" alt="05" srcset="">
+                </div>
+                <div class="slide-cell js-slide-cell">
+                    <!-- I am one cell R -->
+                    <img src="static/images/Layer 2.png" alt="04" srcset="">
+                </div>
+                <div class="slide-cell js-slide-cell">
+                    <!-- I am one cell R -->
+                    <img src="static/images/Layer 2.png" alt="03" srcset="">
+                </div>
+                <div class="slide-cell js-slide-cell">
+                    <!-- I am one cell R -->
+                    <img src="static/images/Layer 2.png" alt="02" srcset="">
+                </div>
+                <div class="slide-cell js-slide-cell active">
+                    <!-- I am one cell R -->
+                    <img src="static/images/Layer 2.png" alt="01" srcset="">
                 </div>
             </div>
         </div>
@@ -297,11 +329,20 @@
         const lastTitleTwo = titleArrayTwo[0];
         const firstTitleTwo = titleArrayTwo[titleArrayTwo.length - 1];
 
-
         // Array of page numbers 01 - 05
         var pagesArray = $('.js-rotate div');
         const lastPage = pagesArray[0];
         const firstPage = pagesArray[pagesArray.length - 1];
+
+        // Array of image slides left side
+        var slidesArrayLeft = $('#js-slide-l .js-slide-cell');
+        const lastSlideLeft = slidesArrayLeft[0];
+        const firstSlideLeft = slidesArrayLeft[slidesArrayLeft.length - 1];
+
+        // Array of image slides right side
+        var slidesArrayRight = $('#js-slide-r .js-slide-cell');
+        const lastSlideRight = slidesArrayRight[0];
+        const firstSlideRight = slidesArrayRight[slidesArrayRight.length - 1];
 
 
         // Main loop for animation
@@ -315,6 +356,10 @@
                     lastTitleOne.classList.remove('active');
                     lastTitleTwo.classList.remove('active');
 
+                    // ANIMATE SLIDES
+                    lastSlideLeft.classList.remove('active');
+                    lastSlideRight.classList.remove('active');
+
                     // ANIMATE PAGINATION
                     lastPage.classList.remove('rotated');
                 }
@@ -323,20 +368,29 @@
                 if (index > 0) {
 
 
-                    // ANIMATE TITLES
+                    // ANIMATE TITLES AND SLIDES
+                    // TITLES
                     // Drop current down
                     titleArrayOne[index].classList.remove('active');
                     titleArrayTwo[index].classList.remove('active');
+                    // SLIDES
+                    // Drop current down
+                    slidesArrayLeft[index].classList.remove('active');
+                    slidesArrayRight[index].classList.remove('active');
                     // wait until current animated
                     setTimeout(function () {
+                        // TITLES
                         // Show next title
                         titleArrayOne[index - 1].classList.add('active');
                         titleArrayTwo[index - 1].classList.add('active');
+                        // SLIDES
+                        slidesArrayLeft[index - 1].classList.add('active');
+                        slidesArrayRight[index - 1].classList.add('active');
 
                         index--;
                         myLoop();
                         // duration = transition in styles
-                    }, 500);
+                    }, 900);
 
 
 
@@ -348,7 +402,6 @@
                     // Show next number
                     pagesArray[index - 1].classList.add('active');
                     pagesArray[index - 1].classList.remove('rotated');
-
                     // Drop styles for rotated
                     if (pagesArray[index + 1]) {
                         pagesArray[index + 1].classList.remove('rotated');
@@ -356,23 +409,33 @@
 
                 } else {
 
-                    // ANIMATE TITLES
+                    // ANIMATE TITLES AND SLIDES
                     // Start loop over
                     // Drop last element
+                    // TITLES
                     lastTitleOne.classList.remove('active');
                     lastTitleTwo.classList.remove('active');
+                    // SLIDES
+                    lastSlideLeft.classList.remove('active');
+                    lastSlideRight.classList.remove('active');
                     // wait until current animated
                     setTimeout(function () {
                         // Show first element
+                        // TITLES
                         firstTitleOne.classList.add('active');
                         firstTitleTwo.classList.add('active');
+                        // SLIDES
+                        firstSlideLeft.classList.add('active');
+                        firstSlideRight.classList.add('active');
                         // Drop index to initial
                         index = titleArrayOne.length - 1;
 
                         // Call loop over
                         myLoop();
                         // duration = transition in styles
-                    }, 500);
+                    }, 900);
+
+
 
                     // ANIMATE PAGINATION
                     // Rotate last element
