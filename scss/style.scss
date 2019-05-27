@@ -869,7 +869,6 @@ button {
 
 /*  PAGINATION ANIMATION STYLES */
 
-.paginator-item,
 .total,
 .total.paginator-item::before,
 .js-rotate div {
@@ -983,6 +982,7 @@ button {
             transform: translate3d(0, 900px, 0);
         }
     }
+
     .slide-l .slide-cell {
         img {
             transform: translate3d(0, -900px, 0);
@@ -996,6 +996,7 @@ button {
             transform: translate3d(0, 900px, 0);
         }
     }
+
     .slide-l .slide-cell {
         img {
             transform: translate3d(0, -900px, 0);
@@ -1009,6 +1010,7 @@ button {
             transform: translate3d(0, 800px, 0);
         }
     }
+
     .slide-l .slide-cell {
         img {
             transform: translate3d(0, -800px, 0);
@@ -1022,6 +1024,7 @@ button {
             transform: translate3d(0, 700px, 0);
         }
     }
+
     .slide-l .slide-cell {
         img {
             transform: translate3d(0, -700px, 0);
@@ -1035,5 +1038,5 @@ button {
             transform: translate3d(0, -90vh, 0);
         }
     }
-    
+
 }
