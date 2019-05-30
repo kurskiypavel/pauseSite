@@ -1040,3 +1040,76 @@ button {
     }
 
 }
+
+
+/*  HOVER AND SELECTED NAV STYLES */
+
+@media only screen and (min-width: 768px) {
+    .nav-item {
+        position: relative;
+
+        &::before {
+            transform: scaleX(.0001);
+            content: "";
+            position: absolute;
+            top: 0;
+            right: 0;
+            left: 0;
+            height: 1px;
+            width: 100%;
+            background-color: black;
+            transition: transform .3s cubic-bezier(.215, .61, .355, 1);
+
+        }
+
+        &.active::before {
+            transform: scaleX(1);
+        }
+
+
+        // Hover on nav items
+        .wrapper:hover {
+            div {
+                animation: textclip 1.5s linear;
+                text-fill-color: transparent;
+                -webkit-text-fill-color: transparent;
+            }
+        }
+        .wrapper {
+            div {
+                color: #000;
+                background: linear-gradient(to left, #000 30%, #fff 50%, #000 70%);
+                background-size: auto auto;
+                background-clip: border-box;
+                background-size: 300% auto;
+                background-clip: text;
+                -webkit-background-clip: text;
+                display: inline-block;
+            }
+
+        }
+
+    }
+
+    #projectsNav,
+    #studioNav.right-origin {
+        &::before {
+            transform-origin: center right;
+        }
+    }
+
+    #studioNav.left-origin,
+    #contactNav {
+        &::before {
+            transform-origin: center left;
+        }
+    }
+
+
+
+    @keyframes textclip {
+        from {
+            background-position: 300% center
+        }
+    }
+}
