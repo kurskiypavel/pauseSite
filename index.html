@@ -10,7 +10,7 @@
         .splash {
             z-index: 1000;
             display: block;
-            transition: 0.1s;
+            transition: 0.3s;
             position: fixed;
             top: 0;
             left: 0;
@@ -24,227 +24,280 @@
     <link rel="stylesheet" href="/css/style.css">
 </head>
 
-<body class="page">
+<body class="page disabledScroll tutorial">
+    <!-- The cursor elements -->
+    <div class="cursor cursor--small"></div>
+    <canvas class="cursor cursor--canvas" resize></canvas>
     <div class="splash">
     </div>
-    <div class="header">
-        <div class="logo">Pause Architects & Design</div>
-        <div class="nav-wrap js-nav-wrap">
-            <div id="projectsNav" class="nav-item left ">
-                <div class="wrapper">
-                    <div>Projects</div>
+    <div class="header-wrap fixed">
+        <div class="header">
+            <div id="headerLogo" class="logo link-item">Pause Architects & Design</div>
+            <div class="nav-wrap js-nav-wrap">
+                <div id="projectsNav" class="nav-item projects left link-item">
+                    <div class="wrapper">
+                        <div>Projects</div>
+                    </div>
                 </div>
-            </div>
-            <div id="studioNav" class="nav-item center active left-origin">
+                <div id="studioNav" class="nav-item center left-origin link-item">
 
-                <div class="wrapper">
-                    <div>Studio</div>
+                    <div class="wrapper">
+                        <div>Studio</div>
+                    </div>
                 </div>
-            </div>
-            <div id="contactNav" class="nav-item right">
+                <div id="contactNav" class="nav-item right link-item">
 
-                <div class="wrapper">
-                    <div>Contact</div>
+                    <div class="wrapper">
+                        <div>Contact</div>
+                    </div>
                 </div>
-            </div>
 
-        </div>
-        <button type="button" class="site-header-button" id='toogle-hamburger' title="Toggle menu">
-            <span class="u-visually-hidden">Toggle menu</span>
-            <span class="button-bar button-bar--1"></span>
-            <span class="button-bar button-bar--2"></span>
-            <span class="button-bar button-bar--3"></span>
-        </button>
-    </div>
-    <div class="desktop title-wrap">
-        <div class="card">
-            <div class="image-card">
-                <img src="static/images/Layer 2.png" alt="" srcset="">
             </div>
-            <div class="current title-item">
-                <div class="js-title-wrap row-one">
-                    <div class="js-title">
-                        <div>Larchmount</div>
-                    </div>
-                    <div class="js-title">
-                        <div>Larchmount</div>
-                    </div>
-                    <div class="js-title">
-                        <div>Larchmount</div>
-                    </div>
-                    <div class="js-title">
-                        <div>Larchmount</div>
-                    </div>
-                    <div class="js-title first active">
-                        <div>Boiler</div>
-                    </div>
-                </div>
-                <div class="js-title-wrap row-two">
-                    <div class="js-title">
-                        <div>Kitchen</div>
-                    </div>
-                    <div class="js-title">
-                        <div>Kitchen</div>
-                    </div>
-                    <div class="js-title">
-                        <div>Kitchen</div>
-                    </div>
-                    <div class="js-title">
-                        <div>Kitchen</div>
-                    </div>
-                    <div class="js-title first active">
-                        <div>Loft</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="title-wrap">
-        <div class="card">
-            <div class="image-card">
-                <img src="static/images/Layer 2.png" alt="" srcset="">
-            </div>
-            <div class="title-item">
-                <div>Boiler</div>
-                <div>Loft</div>
-            </div>
-        </div>
-    </div>
-    <div class="title-wrap">
-        <div class="card">
-            <div class="image-card">
-                <img src="static/images/Layer 3.png" alt="" srcset="">
-            </div>
-            <div class="title-item">
-                <div>Larchmount</div>
-                <div>Kitchen</div>
-            </div>
-        </div>
-    </div>
-    <div class="title-wrap">
-        <div class="card">
-            <div class="image-card">
-                <img src="static/images/Layer 2.png" alt="" srcset="">
-            </div>
-            <div class="title-item">
-                <div>Larchmount</div>
-                <div>Kitchen</div>
-            </div>
-        </div>
-    </div>
-    <div class="title-wrap">
-        <div class="card">
-            <div class="image-card">
-                <img src="static/images/Layer 3.png" alt="" srcset="">
-            </div>
-            <div class="title-item">
-                <div>Larchmount</div>
-                <div>Kitchen</div>
-            </div>
-        </div>
-    </div>
-    <div class="title-wrap">
-        <div class="card">
-            <div class="image-card">
-                <img src="static/images/Layer 2.png" alt="" srcset="">
-            </div>
-            <div class="title-item">
-                <div>Larchmount</div>
-                <div>Kitchen</div>
-            </div>
+            <button type="button" class="site-header-button" id='toogle-hamburger' title="Toggle menu">
+                <span class="u-visually-hidden">Toggle menu</span>
+                <span class="button-bar button-bar--1"></span>
+                <span class="button-bar button-bar--2"></span>
+                <span class="button-bar button-bar--3"></span>
+            </button>
         </div>
     </div>
 
-    <div class="layer-text">
-
-        <div class="paginator-wrap">
-            <div class="current paginator-item">
-                <div class="js-rotate">
-                    <div>05</div>
-                    <div>04</div>
-                    <div>03</div>
-                    <div>02</div>
-                    <div class='first active'>01</div>
+    <div class="home-page js-home-page">
+        <div class="desktop title-wrap">
+            <div class="card">
+                <div class="image-card">
+                    <img src="static/images/Layer 2.png" alt="" srcset="">
+                </div>
+                <div class="current title-item">
+                    <div class="js-title-wrap row-one">
+                        <div class="js-title">
+                            <div>Larchmount</div>
+                        </div>
+                        <div class="js-title">
+                            <div>Larchmount</div>
+                        </div>
+                        <div class="js-title">
+                            <div>Larchmount</div>
+                        </div>
+                        <div class="js-title">
+                            <div>Larchmount</div>
+                        </div>
+                        <div class="js-title first active">
+                            <div>Boiler</div>
+                        </div>
+                    </div>
+                    <div class="js-title-wrap row-two">
+                        <div class="js-title">
+                            <div>Kitchen</div>
+                        </div>
+                        <div class="js-title">
+                            <div>Kitchen</div>
+                        </div>
+                        <div class="js-title">
+                            <div>Kitchen</div>
+                        </div>
+                        <div class="js-title">
+                            <div>Kitchen</div>
+                        </div>
+                        <div class="js-title first active">
+                            <div>Loft</div>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="total paginator-item">05</div>
+        </div>
+        <div class="title-wrap">
+            <div class="card">
+                <div class="image-card">
+                    <img src="static/images/Layer 2.png" alt="" srcset="">
+                </div>
+                <div class="title-item">
+                    <div>Boiler</div>
+                    <div>Loft</div>
+                </div>
+            </div>
+        </div>
+        <div class="title-wrap">
+            <div class="card">
+                <div class="image-card">
+                    <img src="static/images/Layer 3.png" alt="" srcset="">
+                </div>
+                <div class="title-item">
+                    <div>Larchmount</div>
+                    <div>Kitchen</div>
+                </div>
+            </div>
+        </div>
+        <div class="title-wrap">
+            <div class="card">
+                <div class="image-card">
+                    <img src="static/images/Layer 2.png" alt="" srcset="">
+                </div>
+                <div class="title-item">
+                    <div>Larchmount</div>
+                    <div>Kitchen</div>
+                </div>
+            </div>
+        </div>
+        <div class="title-wrap">
+            <div class="card">
+                <div class="image-card">
+                    <img src="static/images/Layer 3.png" alt="" srcset="">
+                </div>
+                <div class="title-item">
+                    <div>Larchmount</div>
+                    <div>Kitchen</div>
+                </div>
+            </div>
+        </div>
+        <div class="title-wrap">
+            <div class="card">
+                <div class="image-card">
+                    <img src="static/images/Layer 2.png" alt="" srcset="">
+                </div>
+                <div class="title-item">
+                    <div>Larchmount</div>
+                    <div>Kitchen</div>
+                </div>
+            </div>
         </div>
 
+        <div class="layer-text">
+
+            <div class="paginator-wrap">
+                <div class="current paginator-item">
+                    <div class="js-rotate">
+                        <div>05</div>
+                        <div>04</div>
+                        <div>03</div>
+                        <div>02</div>
+                        <div class='first active'>01</div>
+                    </div>
+                </div>
+                <div class="total paginator-item">05</div>
+            </div>
+
+        </div>
+        <div class="contact-mobile-screens">
+            <div class="contact-item">Contact</div>
+            <div class="contact-item">hello@pausesdesign.ca</div>
+            <div class="contact-item">437 886 5526</div>
+        </div>
+        <div class="footer-wrap">
+            <div class="footer">
+                <div class="footer-item link-item">
+                    instagram
+                </div>
+                <div class="footer-item center link-item">
+                    twitter
+                </div>
+                <div class="footer-item link-item">
+                    houzz
+                </div>
+            </div>
+
+        </div>
+
+        <div class="layer-slider">
+            <div id="js-mv-slide" class="slide-wrap">
+                <!-- I am wrapper -->
+                <div id="js-slide-l" class="slide-l">
+                    <!-- I am left column -->
+                    <div class="in">
+                        <div class="slide-cell js-slide-cell">
+                            <!-- I am one cell L -->
+                            <img src="static/images/Layer 2.png" alt="05" srcset="">
+                        </div>
+                        <div class="slide-cell js-slide-cell">
+                            <!-- I am one cell L -->
+                            <img src="static/images/Layer 3.png" alt="04" srcset="">
+                        </div>
+                        <div class="slide-cell js-slide-cell">
+                            <!-- I am one cell L -->
+                            <img src="static/images/Layer 2.png" alt="03" srcset="">
+                        </div>
+                        <div class="slide-cell js-slide-cell">
+                            <!-- I am one cell L -->
+                            <img src="static/images/Layer 3.png" alt="02" srcset="">
+                        </div>
+                        <div class="slide-cell js-slide-cell active">
+                            <!-- I am one cell L -->
+                            <img  src="static/images/Layer 2.png" alt="01" srcset="">
+                        </div>
+                    </div>
+                </div>
+                <div id="js-slide-r" class="slide-r">
+                    <!-- I am right column -->
+                    <div class="slide-cell js-slide-cell">
+                        <!-- I am one cell R -->
+                        <img src="static/images/Layer 3.png" alt="05" srcset="">
+                    </div>
+                    <div class="slide-cell js-slide-cell">
+                        <!-- I am one cell R -->
+                        <img src="static/images/Layer 2.png" alt="04" srcset="">
+                    </div>
+                    <div class="slide-cell js-slide-cell">
+                        <!-- I am one cell R -->
+                        <img src="static/images/Layer 3.png" alt="03" srcset="">
+                    </div>
+                    <div class="slide-cell js-slide-cell">
+                        <!-- I am one cell R -->
+                        <img src="static/images/Layer 2.png" alt="02" srcset="">
+                    </div>
+                    <div class="slide-cell js-slide-cell active">
+                        <!-- I am one cell R -->
+                        <img src="static/images/Layer 3.png" alt="01" srcset="">
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-    <div class="contact-mobile-screens">
-        <div class="contact-item">Contact</div>
-        <div class="contact-item">hello@pausesdesign.ca</div>
-        <div class="contact-item">437 886 5526</div>
+    <div class="projects-page disabled js-projects-page">
+        <div class="tiles-wrap">
+            <div class="vertical tile">
+                <div class="double-image">
+                    <div class="tile-image left"></div>
+                    <div class="tile-image right"></div>
+                </div>
+
+                <div class="tile-caption">Boiler Loft</div>
+
+            </div>
+            <div class="horizontal tile">
+                <div class="tile-image"></div>
+                <div class="tile-caption">Lakeshore Kitchen</div>
+            </div>
+        </div>
+        <div class="tiles-wrap">
+            <div class="horizontal tile">
+                <div class="tile-image"></div>
+                <div class="tile-caption">Lakeshore Kitchen</div>
+            </div>
+            <div class="vertical tile">
+                <div class="double-image">
+                    <div class="tile-image left"></div>
+                    <div class="tile-image right"></div>
+                </div>
+                <div class="tile-caption">Lakeshore Garden</div>
+            </div>
+
+        </div>
+        <div class="extra-space"></div>
     </div>
-    <div class="footer-wrap">
+    <div class="footer-wrap fixed disabled">
         <div class="footer">
-            <div class="footer-item">
+            <div class="footer-item link-item">
                 instagram
             </div>
-            <div class="footer-item center">
+            <div class="footer-item center link-item">
                 twitter
             </div>
-            <div class="footer-item">
+            <div class="footer-item link-item">
                 houzz
             </div>
         </div>
 
     </div>
-
-    <div class="layer-slider">
-        <div id="js-mv-slide" class="slide-wrap">
-            <!-- I am wrapper -->
-            <div id="js-slide-l" class="slide-l">
-                <!-- I am left column -->
-                <div class="in">
-                    <div class="slide-cell js-slide-cell">
-                        <!-- I am one cell L -->
-                        <img src="static/images/Layer 2.png" alt="05" srcset="">
-                    </div>
-                    <div class="slide-cell js-slide-cell">
-                        <!-- I am one cell L -->
-                        <img src="static/images/Layer 3.png" alt="04" srcset="">
-                    </div>
-                    <div class="slide-cell js-slide-cell">
-                        <!-- I am one cell L -->
-                        <img src="static/images/Layer 2.png" alt="03" srcset="">
-                    </div>
-                    <div class="slide-cell js-slide-cell">
-                        <!-- I am one cell L -->
-                        <img src="static/images/Layer 3.png" alt="02" srcset="">
-                    </div>
-                    <div class="slide-cell js-slide-cell active">
-                        <!-- I am one cell L -->
-                        <img src="static/images/Layer 2.png" alt="01" srcset="">
-                    </div>
-                </div>
-            </div>
-            <div id="js-slide-r" class="slide-r">
-                <!-- I am right column -->
-                <div class="slide-cell js-slide-cell">
-                    <!-- I am one cell R -->
-                    <img src="static/images/Layer 3.png" alt="05" srcset="">
-                </div>
-                <div class="slide-cell js-slide-cell">
-                    <!-- I am one cell R -->
-                    <img src="static/images/Layer 2.png" alt="04" srcset="">
-                </div>
-                <div class="slide-cell js-slide-cell">
-                    <!-- I am one cell R -->
-                    <img src="static/images/Layer 3.png" alt="03" srcset="">
-                </div>
-                <div class="slide-cell js-slide-cell">
-                    <!-- I am one cell R -->
-                    <img src="static/images/Layer 2.png" alt="02" srcset="">
-                </div>
-                <div class="slide-cell js-slide-cell active">
-                    <!-- I am one cell R -->
-                    <img src="static/images/Layer 3.png" alt="01" srcset="">
-                </div>
-            </div>
-        </div>
-    </div>
-
 
 
 
@@ -254,17 +307,23 @@
         // Dont show content until loaded
         $(window).on('load', function () {
             if (document.readyState === 'complete') {
+                $(window).scrollTop(0);
                 $('.splash').css({
                     'visibility': 'hidden',
-                    'opacity': '0'
+                    'opacity': '0',
+                    'widht': '0'
                 });
             }
         });
     </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.13/jquery.mousewheel.min.js"></script>
 
-
+    <!-- Including Paper and SimplexNoise -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/paper.js/0.12.0/paper-core.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/simplex-noise/2.4.0/simplex-noise.min.js"></script>
     <script src="js/main.js"></script>
+
+
 
 </body>
 

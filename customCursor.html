@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    /* Basic Colors and Layout */
+    body.tutorial {
+      --color-text: #fff;
+      --color-bg: #171717;
+      --color-link: #ff0000;
+      background-color: var(--color-bg);
+    }
+
+    .page {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .page__inner {
+      display: flex;
+      justify-content: center;
+      width: 100%;
+    }
+
+    /* The Basic Cursor Styles */
+    .cursor {
+      position: fixed;
+      left: 0;
+      top: 0;
+      pointer-events: none;
+    }
+
+    .cursor--small {
+      width: 5px;
+      height: 5px;
+      left: -2.5px;
+      top: -2.5px;
+      border-radius: 50%;
+      z-index: 11000;
+      background: var(--color-text);
+    }
+
+    .cursor--canvas {
+      width: 100vw;
+      height: 100vh;
+      z-index: 12000;
+    }
+
+
+    /* The Navigation and Link Styles */
+    .nav {
+      display: flex;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    .link {
+      display: flex;
+      width: 75px;
+      height: 75px;
+      margin: 0 5px;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .settings-icon {
+      display: block;
+      width: 40px;
+      height: 40px;
+    }
+
+    .settings-icon__line {
+      stroke: var(--color-text);
+      stroke-width: 5px;
+      transition: all 0.2s ease 0.05s;
+    }
+
+    .settings-icon__rect {
+      stroke: var(--color-text);
+      fill: var(--color-bg);
+      stroke-width: 5px;
+      transition: all 0.2s ease 0.05s;
+    }
+
+    .link:hover .settings-icon__line,
+    .link:hover .settings-icon__rect {
+      stroke: var(--color-link);
+      transition: all 0.2s ease 0.05s;
+    }
+
+    .link:hover .settings-icon__group--1 .settings-icon__rect {
+      transform: translateY(20px);
+    }
+
+    .link:hover .settings-icon__group--2 .settings-icon__rect {
+      transform: translateY(-20px);
+    }
+
+    .link:hover .settings-icon__group--3 .settings-icon__rect {
+      transform: translateY(25px);
+    }
+
+    /* Hiding the System Cursor */
+    .page,
+    .page a {
+      cursor: none;
+    }
+  </style>
+</head>
+
+
+<body class="tutorial">
+  <main class="page">
+    <div class="page__inner">
+
+      <!-- The cursor elements -->
+      <div class="cursor cursor--small"></div>
+      <canvas class="cursor cursor--canvas" resize></canvas>
+      <nav class="nav">
+        <a href="#" class="link">
+          <svg class="settings-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+            <g class="settings-icon__group settings-icon__group--1">
+              <line class="settings-icon__line" x1="79.69" y1="16.2" x2="79.69" y2="83.8" />
+              <rect class="settings-icon__rect" x="73.59" y="31.88" width="12.19" height="12.19" />
+            </g>
+            <g class="settings-icon__group settings-icon__group--2">
+              <line class="settings-icon__line" x1="50.41" y1="16.2" x2="50.41" y2="83.8" />
+              <rect class="settings-icon__rect" x="44.31" y="54.33" width="12.19" height="12.19" />
+            </g>
+            <g class="settings-icon__group settings-icon__group--3">
+              <line class="settings-icon__line" x1="20.31" y1="16.2" x2="20.31" y2="83.8" />
+              <rect class="settings-icon__rect" x="14.22" y="26.97" width="12.19" height="12.19" />
+            </g>
+          </svg>
+        </a>
+        <!-- you can add more links here -->
+      </nav>
+
+    </div>
+  </main>
+</body>
+
+<!-- Including Paper and SimplexNoise -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/paper.js/0.12.0/paper-core.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/simplex-noise/2.4.0/simplex-noise.min.js"></script>
+<script>
+  /* Animating the Small Dot Cursor   */
+
+  // set the starting position of the cursor outside of the screen
+  let clientX = -100;
+  let clientY = -100;
+  const innerCursor = document.querySelector(".cursor--small");
+
+  const initCursor = () => {
+    // add listener to track the current mouse position
+    document.addEventListener("mousemove", e => {
+      clientX = e.clientX;
+      clientY = e.clientY;
+    });
+
+    // transform the innerCursor to the current mouse position
+    // use requestAnimationFrame() for smooth performance
+    const render = () => {
+      innerCursor.style.transform = `translate(${clientX}px, ${clientY}px)`;
+      // if you are already using TweenMax in your project, you might as well
+      // use TweenMax.set() instead
+      // TweenMax.set(innerCursor, {
+      //   x: clientX,
+      //   y: clientY
+      // });
+
+      requestAnimationFrame(render);
+    };
+    requestAnimationFrame(render);
+  };
+
+  initCursor();
+
+  let lastX = 0;
+  let lastY = 0;
+  let isStuck = false;
+  let showCursor = false;
+  let group, stuckX, stuckY, fillOuterCursor;
+
+  const initCanvas = () => {
+    const canvas = document.querySelector(".cursor--canvas");
+    const shapeBounds = {
+      width: 75,
+      height: 75
+    };
+    paper.setup(canvas);
+    const strokeColor = "rgba(255, 0, 0, 0.5)";
+    const strokeWidth = 1;
+    const segments = 8;
+    const radius = 15;
+
+    // we'll need these later for the noisy circle
+    const noiseScale = 150; // speed
+    const noiseRange = 4; // range of distortion
+    let isNoisy = false; // state
+
+    // the base shape for the noisy circle
+    const polygon = new paper.Path.RegularPolygon(
+      new paper.Point(0, 0),
+      segments,
+      radius
+    );
+    polygon.strokeColor = strokeColor;
+    polygon.strokeWidth = strokeWidth;
+    polygon.smooth();
+    group = new paper.Group([polygon]);
+    group.applyMatrix = false;
+
+    const noiseObjects = polygon.segments.map(() => new SimplexNoise());
+    let bigCoordinates = [];
+
+    // function for linear interpolation of values
+    const lerp = (a, b, n) => {
+      return (1 - n) * a + n * b;
+    };
+
+    // function to map a value from one range to another range
+    const map = (value, in_min, in_max, out_min, out_max) => {
+      return (
+        ((value - in_min) * (out_max - out_min)) / (in_max - in_min) + out_min
+      );
+    };
+
+    // the draw loop of Paper.js 
+    // (60fps with requestAnimationFrame under the hood)
+    paper.view.onFrame = event => {
+      // using linear interpolation, the circle will move 0.2 (20%)
+      // of the distance between its current position and the mouse
+      // coordinates per Frame
+      lastX = lerp(lastX, clientX, 0.2);
+      lastY = lerp(lastY, clientY, 0.2);
+      group.position = new paper.Point(lastX, lastY);
+    }
+  }
+
+  initCanvas();
+  const initHovers = () => {
+
+    // find the center of the link element and set stuckX and stuckY
+    // these are needed to set the position of the noisy circle
+    const handleMouseEnter = e => {
+      const navItem = e.currentTarget;
+      const navItemBox = navItem.getBoundingClientRect();
+      stuckX = Math.round(navItemBox.left + navItemBox.width / 2);
+      stuckY = Math.round(navItemBox.top + navItemBox.height / 2);
+      isStuck = true;
+    };
+
+    // reset isStuck on mouseLeave
+    const handleMouseLeave = () => {
+      isStuck = false;
+    };
+
+    // add event listeners to all items
+    const linkItems = document.querySelectorAll(".link");
+    linkItems.forEach(item => {
+      item.addEventListener("mouseenter", handleMouseEnter);
+      item.addEventListener("mouseleave", handleMouseLeave);
+    });
+  };
+
+  initHovers();
+  
+</script>
+
+</html>

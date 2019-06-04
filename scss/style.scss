@@ -10,7 +10,6 @@
     src: url("../static/fonts/SF\ Pro/SF-Pro-Text-Regular.otf");
 }
 
-
 @font-face {
     font-family: Chronicle-Display-Bold;
     src: url("../static/fonts/HCo_ChronDisplay/OpenType/ChronicleDisp-Bold.otf");
@@ -21,45 +20,19 @@
     src: url("../static/fonts/HCo_ChronDisplay/OpenType/ChronicleDisp-Semibold.otf");
 }
 
-/*  GLOBAL STYLES  */
+/*---------+---------+---------+---------+---------*/
+/*           |HEADER + NAV + LOGO STYLES|          */
+/*---------+---------+---------+---------+---------*/
 
-// Zindex setup
 
 .site-header-button {
     z-index: 60;
 }
 
-.header,
-.title-wrap,
-.footer-wrap {
+.header {
     z-index: 5;
 }
 
-.slide-wrap,
-.slide-l {
-    z-index: 4;
-}
-
-.layer-text,
-.slide-r {
-    z-index: 2;
-}
-
-
-// Hovers
-*:hover {
-    cursor: default;
-}
-
-
-@media only screen and (min-width: 501px) {
-    body {
-        height: 100vh;
-        overflow: hidden;
-    }
-}
-
-/*  HEADING STYLES  */
 .header {
     position: relative;
     display: flex;
@@ -81,9 +54,12 @@
 }
 
 
+
+
 @media only screen and (min-width: 1581px) {
     .header {
         padding-top: 40px;
+        padding-bottom: 40px;
         width: 100%;
         max-width: 1440px;
         margin: 0 auto;
@@ -110,6 +86,7 @@
 @media only screen and (min-width: 1025px) and (max-width: 1580px) {
     .header {
         padding-top: 40px;
+        padding-bottom: 20px;
         padding-left: 70px;
         padding-right: 70px;
         max-width: 1440px;
@@ -136,6 +113,7 @@
 @media only screen and (min-width: 769px) and (max-width: 1024px) {
     .header {
         padding-top: 40px;
+        padding-bottom: 20px;
         padding-left: 50px;
         padding-right: 50px;
         max-width: 1440px;
@@ -162,6 +140,7 @@
 @media only screen and (min-width: 501px) and (max-width: 768px) {
     .header {
         padding-top: 40px;
+        padding-bottom: 20px;
         padding-left: 10.4vw;
         padding-right: 10.4vw;
         max-width: 1440px;
@@ -174,9 +153,20 @@
     }
 }
 
+
+.header-wrap.fixed {
+    position: fixed;
+    width: 100%;
+    z-index: 60;
+    background: #fff;
+    top: 0;
+}
+
+
 @media only screen and (max-width: 500px) {
     .header {
-        padding-top: 30px;
+        padding-top: 15px;
+        padding-bottom: 10px;
         padding-left: 20px;
         padding-right: 20px;
         max-width: 1440px;
@@ -188,6 +178,160 @@
         letter-spacing: 2px;
     }
 }
+
+
+/*---------+---------+---------+---------*/
+/*           |FOOTER STYLES|             */
+/*---------+---------+---------+---------*/
+
+// Footer for homepage
+.home-page .footer-wrap {
+    z-index: 5;
+}
+
+
+.footer-item {
+    font-family: SFProText-Regular;
+    color: #636466;
+    display: inline-block;
+    font-size: 12px;
+    letter-spacing: 1px;
+
+    &.center {
+        margin: 0 20px;
+    }
+}
+
+// Footer for all
+.footer-wrap.fixed {
+    text-align: center;
+    height: 95px;
+    position: fixed;
+    bottom: 0;
+    background: #fff;
+    width: 100%;
+
+    .footer {
+        text-align: center;
+        transform: translateY(-50%);
+        position: relative;
+        top: 50%;
+    }
+}
+
+
+
+@media only screen and (min-width: 501px) {
+    .home-page .footer-wrap {
+        position: absolute;
+        bottom: 40px;
+        width: 100%;
+        max-width: 1440px;
+        left: 50%;
+        transform: translateX(-50%);
+        text-align: center;
+    }
+
+    // Disabled footer by clicking the menu
+    .js-home-page .footer-wrap.disabled-by-projects {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .home-page .footer-wrap {
+        padding-bottom: 40px;
+        padding-top: 20px;
+        width: 100%;
+        max-width: 1440px;
+        text-align: center;
+    }
+
+    .footer-wrap.fixed.disabled-for-project {
+        display: none;
+    }
+
+}
+
+
+
+
+// Animation caused by navigation clicking
+
+.footer-wrap.fixed.disabled {
+    display: none;
+}
+
+
+/*---------+---------+---------+---------*/
+/*          |HOME PAGE STYLES|           */
+/*---------+---------+---------+---------*/
+
+
+.js-home-page.disabled {
+    display: none;
+}
+
+
+/*  GLOBAL STYLES  */
+
+// Zindex setup
+
+
+.title-wrap {
+    z-index: 5;
+}
+
+.slide-wrap,
+.slide-l {
+    z-index: 4;
+}
+
+.layer-text,
+.slide-r {
+    z-index: 2;
+}
+
+
+// Hovers
+*:hover {
+    // cursor: default;
+}
+
+
+
+@media only screen and (min-width: 501px) {
+
+    // body {
+    //     height: 100vh;
+    //     overflow: hidden;
+    // }
+
+    .js-home-page.disabled-by-projects {
+        display: none;
+    }
+
+    .home-page {
+        height: 100vh;
+        overflow: hidden;
+        position: absolute;
+        top: 0;
+        width: 100%;
+    }
+
+    .page.disabledScroll {
+        overflow: hidden;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .home-page {
+        margin-top: 70px;
+    }
+}
+
+
+
 
 
 /*  BODY STYLES */
@@ -283,6 +427,7 @@
 
         img {
             width: 100%;
+            height: 100%;
         }
     }
 
@@ -298,6 +443,12 @@
 
 
 /*  Pagination Styles */
+.layer-text {
+    top: 50%;
+    transform: translateY(-50%);
+    position: relative;
+}
+
 .paginator-item {
     font-family: Chronicle-Display-Bold;
     opacity: 0;
@@ -480,49 +631,9 @@
     }
 }
 
-/*  Image Slider Styles */
-
-/*  FOOTER STYLES */
-
-
-.footer-item {
-    font-family: SFProText-Regular;
-    color: #636466;
-    display: inline-block;
-
-    &.center {
-        margin: 0 20px;
-    }
-}
 
 
 
-.footer-item {
-    font-size: 12px;
-    letter-spacing: 1px;
-}
-
-@media only screen and (min-width: 501px) {
-    .footer-wrap {
-        position: absolute;
-        bottom: 40px;
-        width: 100%;
-        max-width: 1440px;
-        left: 50%;
-        transform: translateX(-50%);
-        text-align: center;
-    }
-}
-
-@media only screen and (max-width: 500px) {
-    .footer-wrap {
-        padding-bottom: 40px;
-        padding-top: 20px;
-        width: 100%;
-        max-width: 1440px;
-        text-align: center;
-    }
-}
 
 
 /*  HAMBURGER STYLES */
@@ -869,6 +980,8 @@ button {
 
 /*  PAGINATION ANIMATION STYLES */
 
+// Animation caused by scroll on homepage
+
 .total,
 .total.paginator-item::before,
 .js-rotate div {
@@ -900,7 +1013,23 @@ button {
     }
 }
 
+// Animation caused by navigation clicking
+
+.layer-text {
+    transition: 200ms;
+
+}
+
+.layer-text.disabled {
+    opacity: 0;
+}
+
+
 /*  TITLE ANIMATION STYLES */
+
+// Animation caused by scroll on homepage
+
+
 .js-title {
     transition: 900ms;
     background: none;
@@ -941,8 +1070,21 @@ button {
 }
 
 
+// Animation caused by navigation clicking
+
+.title-wrap {
+    transition: 400ms;
+}
+
+.title-wrap.disabled {
+    opacity: 0;
+}
+
 
 /*  SLIDER IMAGE ANIMATION STYLES */
+
+
+// Animation caused by scroll on homepage
 
 .slide-l .slide-cell {
     img {
@@ -1041,6 +1183,28 @@ button {
 
 }
 
+// Animation caused by navigation clicking
+
+#js-slide-l,
+#js-slide-r {
+    transition: 900ms;
+}
+
+#js-slide-l.disabled {
+    transform: translateY(-100vh);
+    opacity: 0;
+}
+
+#js-slide-r.disabled {
+    transform: translateY(100vh);
+    opacity: 0;
+}
+
+
+
+
+
+
 
 /*  HOVER AND SELECTED NAV STYLES */
 
@@ -1075,6 +1239,7 @@ button {
                 -webkit-text-fill-color: transparent;
             }
         }
+
         .wrapper {
             div {
                 color: #000;
@@ -1113,3 +1278,334 @@ button {
         }
     }
 }
+
+
+/*---------+---------+---------+---------*/
+/*         |PROJECT PAGE STYLES|         */
+/*---------+---------+---------+---------*/
+
+
+
+/*  STYLES */
+
+.extra-space {
+    height: 95px;
+}
+
+.tile-caption {
+    font-family: Chronicle-Display-Semibold;
+}
+
+@media only screen and (min-width: 1401px) {
+    .projects-page {
+        max-width: 1440px;
+        margin: 0 auto;
+        padding-top: 80px;
+    }
+
+    .tiles-wrap {
+        display: flex;
+        justify-content: space-between;
+        max-width: 1238px;
+        margin: 0 auto 80px auto;
+    }
+
+    .tile {
+        height: 513px;
+        position: relative;
+        display: inline-block;
+
+        &.vertical {
+            width: 364px;
+            background: #fff;
+        }
+
+        &.horizontal {
+            width: 750px;
+            background: #fff;
+        }
+    }
+
+    .tile-image {
+        height: 480px;
+        background: green;
+    }
+
+    .tile-caption {
+        position: absolute;
+        bottom: 0;
+        font-size: 18px;
+    }
+}
+
+@media only screen and (min-width: 1211px) and (max-width: 1400px) {
+    .projects-page {
+        max-width: 1400px;
+        margin: 0 auto;
+        padding-top: 80px;
+    }
+
+    .tiles-wrap {
+        display: flex;
+        justify-content: space-between;
+        max-width: 1070px;
+        margin: 0 auto 80px auto;
+    }
+
+    .tile {
+        height: 447px;
+        position: relative;
+        display: inline-block;
+
+        &.vertical {
+            width: 315px;
+            background: #fff;
+        }
+
+        &.horizontal {
+            width: 650px;
+            background: #fff;
+        }
+    }
+
+    .tile-image {
+        height: 416px;
+        background: green;
+    }
+
+    .tile-caption {
+        position: absolute;
+        bottom: 0;
+        font-size: 16px;
+    }
+}
+
+@media only screen and (min-width: 966px) and (max-width: 1210px) {
+    .projects-page {
+        max-width: 1210px;
+        margin: 0 auto;
+        padding-top: 80px;
+    }
+
+    .tiles-wrap {
+        display: flex;
+        justify-content: space-between;
+        max-width: 865px;
+        margin: 0 auto 55px auto;
+    }
+
+    .tile {
+        height: 360px;
+        position: relative;
+        display: inline-block;
+
+        &.vertical {
+            width: 255px;
+            background: #fff;
+        }
+
+        &.horizontal {
+            width: 524px;
+            background: #fff;
+        }
+    }
+
+    .tile-image {
+        height: 336px;
+        background: green;
+    }
+
+    .tile-caption {
+        position: absolute;
+        bottom: 0;
+        font-size: 14px;
+    }
+}
+
+@media only screen and (min-width: 966px) {
+    .tile-image.right {
+        display: none;
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 965px) {
+    .projects-page {
+        max-width: 768px;
+        margin: 0 auto;
+        padding-top: 80px;
+    }
+
+    .tiles-wrap {
+
+        max-width: 609px;
+        margin: 0 auto 55px auto;
+
+        .tile:last-child {
+            margin-top: 55px;
+        }
+    }
+
+    .tile {
+        height: 420px;
+        position: relative;
+
+
+        &.vertical {
+            background: #fff;
+
+            .double-image {
+                display: flex;
+                justify-content: space-between;
+
+                .tile-image {
+                    width: 295px;
+                }
+            }
+        }
+
+        &.horizontal {
+            width: 609px;
+            background: #fff;
+        }
+    }
+
+    .tile-image {
+        height: 390px;
+        background: green;
+    }
+
+    .tile-caption {
+        position: absolute;
+        bottom: 0;
+        font-size: 14px;
+    }
+}
+
+// responsive tiles
+@media only screen and (min-width: 501px) and (max-width: 767px) {
+
+    .projects-page {
+        max-width: 767px;
+        margin: 0 auto;
+        padding-top: 80px;
+    }
+
+    .tiles-wrap {
+
+        max-width: 609px;
+        margin: 0 10.4vw 55px 10.4vw;
+
+        .tile:last-child {
+            margin-top: 55px;
+        }
+    }
+
+    .tile {
+        // height: 420px;
+        height: 56vw;
+        position: relative;
+
+
+        &.vertical {
+            background: #fff;
+
+            .double-image {
+                display: flex;
+                justify-content: space-between;
+
+                .tile-image {
+                    // width: 295px;
+                    max-width: 295px;
+                    width: 47%;
+                }
+            }
+        }
+
+        &.horizontal {
+            // width: 609px;
+            max-width: 609px;
+            width: 100%;
+            background: #fff;
+        }
+    }
+
+    .tile-image {
+        height: 52vw;
+        // height: 390px;
+        background: green;
+    }
+
+    .tile-caption {
+        position: absolute;
+        bottom: 0;
+        font-size: 14px;
+    }
+}
+
+@media only screen and (min-width: 501px) {
+    .projects-page {
+        margin-top: 60px;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .projects-page {
+        display: none;
+    }
+}
+
+
+/*  PAGE ANIMATION STYLES */
+
+
+.projects-page {
+    transition: 900ms;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.projects-page.disabled {
+    // display: none;
+    visibility: hidden;
+    opacity: 0 !important;
+    transform: translateY(110vh) !important;
+}
+
+
+
+/*  CURSOR STYLES */
+/* Basic Colors and Layout */
+body.tutorial {
+    --color-text: #000;
+    --color-link: #000;
+}
+/* The Basic Cursor Styles */
+.cursor {
+    position: fixed;
+    left: 0;
+    top: 0;
+    pointer-events: none;
+}
+
+.cursor--small {
+    width: 5px;
+    height: 5px;
+    left: -2.5px;
+    top: -2.5px;
+    border-radius: 50%;
+    z-index: 11000;
+    background: var(--color-text);
+}
+
+.cursor--canvas {
+    width: 100vw;
+    height: 100vh;
+    z-index: 12000;
+}
+
+
+/* Hiding the System Cursor */
+*{
+    cursor: none;
+}
+

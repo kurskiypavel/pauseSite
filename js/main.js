@@ -1,3 +1,20 @@
+/*  CLEAR SCROLL POSITION ON RESIZE    */
+// Scroll top if resized from small to large for homepage
+
+const mobileScreen = 500;
+var scrollTopResize = false;
+$(window).resize(function () {
+    if ($(window).width() > mobileScreen && scrollTopResize === false) {
+        scrollTopResize = true;
+        $(window).scrollTop(0);
+        console.log('true');
+    } else if ($(window).width() < mobileScreen && scrollTopResize !== false) {
+        scrollTopResize = false;
+        console.log('false');
+
+    }
+});
+
 /*  HAMBURGER MENU ANIMATION BEGINS    */
 
 var hamburger = document.getElementById('toogle-hamburger');
@@ -339,8 +356,8 @@ $('.page').mousewheel(wheelHandler);
 const middleNav = document.getElementById('studioNav');
 
 // Event listener for navigation items
-$('.js-nav-wrap .nav-item').click(function(){
-    
+$('.js-nav-wrap .nav-item').click(function () {
+
     // Clear active sublings
     $('.js-nav-wrap .nav-item').removeClass('active');
     // Set clicked menu item as active
@@ -352,7 +369,7 @@ $('.js-nav-wrap .nav-item').click(function(){
     let navObject = this;
     // Run single menu item function
     activateMenu(navObject);
-    
+
 });
 
 // Main function for single menu item
@@ -360,25 +377,287 @@ function activateMenu(navObject) {
 
     // get clicked menu navigation item ID
     let id = navObject.id;
-    
+
     // get which one is clicked
     if (id === 'studioNav') {
 
-       
+
 
     } else if (id === 'contactNav') {
         // pseudo animation for middle navigation item
         middleNav.classList.remove('left-origin');
         middleNav.classList.add('right-origin');
 
-        
+
     } else {
         // pseudo animation for middle navigation item
         middleNav.classList.remove('right-origin');
         middleNav.classList.add('left-origin');
 
-        
+
     }
 }
 
 /*  NAVIGATION PSEUDO ENDS    */
+
+
+/*  PROJECT ANIMATION BEGINS    */
+
+// Animate home page
+function disableHomePage() {
+
+    // check if already disabled
+    if ($('.js-home-page').hasClass('disabled-by-projects') === false) {
+
+        // duing 900ms hide elements for homepage
+
+        // opacity on text
+        $('.desktop.title-wrap').addClass('disabled');
+        $('.layer-text').addClass('disabled');
+
+        // move tiles up and down
+        $('#js-slide-l').addClass('disabled');
+        $('#js-slide-r').addClass('disabled');
+
+        // hide homepage footer
+        $('.js-home-page .footer-wrap').addClass('disabled-by-projects');
+        // show general footer
+        $('.footer-wrap.fixed').removeClass('disabled');
+        // disable main footer for project page
+        $('.footer-wrap.fixed').addClass('disabled-for-project');
+
+        // animate projects page duting 900ms
+        setTimeout(function () {
+            $('.page.disabledScroll').removeClass('disabledScroll');
+            activateProjects();
+        }, 900);
+    }
+
+}
+
+function enableHomePage() {
+    $(window).scrollTop(0);
+    if ($('.js-home-page').hasClass('disabled-by-projects') === true) {
+        // remove active from navigation items
+        $('.js-nav-wrap .nav-item').removeClass('active');
+
+        $('.page').addClass('disabledScroll');
+        deactivateProjects();
+
+        setTimeout(function () {
+            // opacity on text
+            $('.desktop.title-wrap').removeClass('disabled');
+            $('.layer-text').removeClass('disabled');
+
+            // move tiles up and down
+            $('#js-slide-l').removeClass('disabled');
+            $('#js-slide-r').removeClass('disabled');
+
+            // hide homepage footer
+            $('.js-home-page .footer-wrap').removeClass('disabled-by-projects');
+
+            // enable main footer for project page
+            $('.footer-wrap.fixed').removeClass('disabled-for-project');
+            // show general footer
+            $('.footer-wrap.fixed').addClass('disabled');
+        }, 900);
+    }
+
+
+
+
+
+
+
+
+
+
+
+}
+
+// Animate projects page
+function activateProjects() {
+
+
+    $('.js-projects-page').removeClass('disabled');
+    setTimeout(function () {
+        $('.js-home-page').addClass('disabled-by-projects');
+    }, 900);
+}
+
+function deactivateProjects() {
+
+    $('.js-projects-page').addClass('disabled');
+    $('.js-home-page').removeClass('disabled-by-projects');
+}
+
+
+
+// Event listener for navigation project item
+$('#projectsNav').click(disableHomePage);
+
+
+/*  PROJECT ANIMATION ENDS    */
+
+
+
+/*  LOGO CLICK ANIMATION BEGINS    */
+
+// Event listener for navigation project item
+$('#headerLogo').click(enableHomePage);
+
+/*  LOGO CLICK ANIMATION ENDS    */
+
+
+/*  CURSOR EVENTS BEGINS    */
+
+/* Animating the Small Dot Cursor   */
+
+// set the starting position of the cursor outside of the screen
+let clientX = -100;
+let clientY = -100;
+const innerCursor = document.querySelector(".cursor--small");
+
+const initCursor = () => {
+    // add listener to track the current mouse position
+    document.addEventListener("mousemove", e => {
+        clientX = e.clientX;
+        clientY = e.clientY;
+    });
+
+    // transform the innerCursor to the current mouse position
+    // use requestAnimationFrame() for smooth performance
+    const render = () => {
+        innerCursor.style.transform = `translate(${clientX}px, ${clientY}px)`;
+        // if you are already using TweenMax in your project, you might as well
+        // use TweenMax.set() instead
+        // TweenMax.set(innerCursor, {
+        //   x: clientX,
+        //   y: clientY
+        // });
+
+        requestAnimationFrame(render);
+    };
+    requestAnimationFrame(render);
+};
+
+initCursor();
+
+// Setting up the Circle on Canvas
+let lastX = 0;
+let lastY = 0;
+let isStuck = false;
+let showCursor = false;
+let group, stuckX, stuckY, fillOuterCursor;
+
+const initCanvas = () => {
+    const canvas = document.querySelector(".cursor--canvas");
+    const shapeBounds = {
+        width: 75,
+        height: 75
+    };
+    paper.setup(canvas);
+    const strokeColor = "rgba(0, 0, 0, 0.5)";
+    const strokeColorHover = "rgba(0, 0, 0, 0)";
+    const strokeWidth = 1;
+    const segments = 8;
+    const radius = 15;
+
+    // we'll need these later for the noisy circle
+    const noiseScale = 150; // speed
+    const noiseRange = 4; // range of distortion
+    let isNoisy = false; // state
+
+    // the base shape for the noisy circle
+    const polygon = new paper.Path.RegularPolygon(
+        new paper.Point(0, 0),
+        segments,
+        radius
+    );
+    polygon.strokeColor = strokeColor;
+    polygon.strokeWidth = strokeWidth;
+    polygon.smooth();
+    group = new paper.Group([polygon]);
+    group.applyMatrix = false;
+
+    const noiseObjects = polygon.segments.map(() => new SimplexNoise());
+    let bigCoordinates = [];
+
+    // function for linear interpolation of values
+    const lerp = (a, b, n) => {
+        return (1 - n) * a + n * b;
+    };
+
+    // function to map a value from one range to another range
+    const map = (value, in_min, in_max, out_min, out_max) => {
+        return (
+            ((value - in_min) * (out_max - out_min)) / (in_max - in_min) + out_min
+        );
+    };
+
+    // the draw loop of Paper.js 
+    // (60fps with requestAnimationFrame under the hood)
+    paper.view.onFrame = event => {
+        // using linear interpolation, the circle will move 0.2 (20%)
+        // of the distance between its current position and the mouse
+        // coordinates per Frame
+        lastX = lerp(lastX, clientX, 0.2);
+        lastY = lerp(lastY, clientY, 0.2);
+        group.position = new paper.Point(lastX, lastY);
+    }
+    const initHovers = () => {
+
+        // find the center of the link element and set stuckX and stuckY
+        // these are needed to set the position of the noisy circle
+        const handleMouseEnter = e => {
+            polygon.strokeColor = strokeColorHover;
+        };
+
+        // reset isStuck on mouseLeave
+        const handleMouseLeave = () => {
+            polygon.strokeColor = strokeColor;
+        };
+
+        // add event listeners to all items
+        const linkItems = document.querySelectorAll(".link-item");
+        linkItems.forEach(item => {
+            item.addEventListener("mouseenter", handleMouseEnter);
+            item.addEventListener("mouseleave", handleMouseLeave);
+        });
+    };
+
+    initHovers();
+
+
+}
+
+initCanvas();
+
+/*  CURSOR EVENTS ENDS    */
+
+/*  TILE IMAGE MOVE HOMEPAGE  BEGINS    */
+
+$('.slide-l .js-slide-cell.active')
+    // tile mouse actions
+    .on('mouseover', function () {
+        $(this).children('img').css({
+            'transform': 'scale(1.1)',
+            'transition': '0ms'
+        });
+    })
+    .on('mouseout', function () {
+        $(this).children('img').css({
+            'transform': 'scale(1)',
+            'transition': '900ms'
+        });
+    })
+    .on('mousemove', function (e) {
+        $(this).children('img').css({
+            'transform-origin': ((e.pageX - $(this).offset().left) / $(this).width()) * 100 + '% ' + ((e.pageY - $(this).offset().top) / $(this).height()) * 100 + '%'
+        });
+    })
+
+
+
+
+/*    TILE IMAGE MOVE HOMEPAGE ENDS    */
