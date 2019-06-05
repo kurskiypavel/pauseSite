@@ -183,7 +183,10 @@ function animateDown() {
 
     }
 
+    
+
 }
+imageMoveByMouse();
 
 // Animation on scroll backward / UP
 function animateUp() {
@@ -637,27 +640,15 @@ initCanvas();
 
 /*  TILE IMAGE MOVE HOMEPAGE  BEGINS    */
 
-$('.slide-l .js-slide-cell.active')
-    // tile mouse actions
-    .on('mouseover', function () {
-        $(this).children('img').css({
-            'transform': 'scale(1.1)',
-            'transition': '0ms'
-        });
-    })
-    .on('mouseout', function () {
-        $(this).children('img').css({
-            'transform': 'scale(1)',
-            'transition': '900ms'
-        });
-    })
-    .on('mousemove', function (e) {
-        $(this).children('img').css({
-            'transform-origin': ((e.pageX - $(this).offset().left) / $(this).width()) * 100 + '% ' + ((e.pageY - $(this).offset().top) / $(this).height()) * 100 + '%'
-        });
-    })
+function imageMoveByMouse() {
 
+    $('.slide-l .js-slide-cell.active')
+        .on('mousemove', function (e) {
+            $(this).children('img').css({
+                'transform-origin': ((e.pageX - $(this).offset().left) / $(this).width()) * 100 + '% ' + ((e.pageY - $(this).offset().top) / $(this).height()) * 100 + '%'
+            });
+        });
 
-
+}
 
 /*    TILE IMAGE MOVE HOMEPAGE ENDS    */
