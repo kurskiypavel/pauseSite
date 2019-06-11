@@ -20,6 +20,7 @@
     src: url("../static/fonts/HCo_ChronDisplay/OpenType/ChronicleDisp-Semibold.otf");
 }
 
+
 /*---------+---------+---------+---------+---------*/
 /*           |HEADER + NAV + LOGO STYLES|          */
 /*---------+---------+---------+---------+---------*/
@@ -41,7 +42,7 @@
     .logo {
         font-family: SFProText-Bold;
         flex: 1 1 auto;
-        
+
     }
 
     .nav-wrap {
@@ -155,7 +156,7 @@
 }
 
 @media only screen and (min-width: 769px) {
-    .header .logo{
+    .header .logo {
         max-width: 260px;
     }
 }
@@ -302,11 +303,6 @@
     z-index: 2;
 }
 
-
-// Hovers
-*:hover {
-    // cursor: default;
-}
 
 
 
@@ -864,7 +860,8 @@ button {
         top: 50%;
         transform: translateY(-50%);
         max-width: 542px;
-        img{
+
+        img {
             height: 100%;
         }
     }
@@ -1169,7 +1166,8 @@ button {
 
 // Animation caused by scroll on homepage
 
-.slide-r .slide-cell,.slide-l .slide-cell {
+.slide-r .slide-cell,
+.slide-l .slide-cell {
     z-index: 0;
 
     img {
@@ -1181,6 +1179,7 @@ button {
 
         img {
             transform: translateY(0) scale(1);
+
             &:hover {
                 transition: 0ms;
                 transform: translateY(0) scale(1.1);
@@ -1276,7 +1275,8 @@ button {
 
 // Animation caused by hovering over the image
 
-.slide-r .slide-cell.active,.slide-l .slide-cell.active {
+.slide-r .slide-cell.active,
+.slide-l .slide-cell.active {
     img:hover {
         animation: scaleOnHover 400ms linear;
     }
@@ -1662,6 +1662,7 @@ button {
     visibility: hidden;
     opacity: 0 !important;
     transform: translateY(110vh) !important;
+    display: none;
 }
 
 /*@media only screen and (min-width: 768px) and (max-width:1024px){
@@ -1672,38 +1673,48 @@ button {
 
 
 /*  CURSOR STYLES */
-/* Basic Colors and Layout */
-body.tutorial {
-    --color-text: #000;
-    --color-link: #000;
+
+
+
+
+@media only screen and (min-width: 1025px) {
+    /* Hiding the System Cursor */
+    * {
+        cursor: none;
+    }
+
+    /* Basic Colors and Layout */
+    body.tutorial {
+        --color-text: #000;
+        --color-link: #000;
+    }
+
+    /* The Basic Cursor Styles */
+    .cursor {
+        position: fixed;
+        left: 0;
+        top: 0;
+        pointer-events: none;
+    }
+
+    .cursor--small {
+        width: 5px;
+        height: 5px;
+        left: -2.5px;
+        top: -2.5px;
+        border-radius: 50%;
+        z-index: 11000;
+        background: var(--color-text);
+    }
+
+    .cursor--canvas {
+        width: 100vw;
+        height: 100vh;
+        z-index: 12000;
+    }
 }
-
-/* The Basic Cursor Styles */
-.cursor {
-    position: fixed;
-    left: 0;
-    top: 0;
-    pointer-events: none;
-}
-
-.cursor--small {
-    width: 5px;
-    height: 5px;
-    left: -2.5px;
-    top: -2.5px;
-    border-radius: 50%;
-    z-index: 11000;
-    background: var(--color-text);
-}
-
-.cursor--canvas {
-    width: 100vw;
-    height: 100vh;
-    z-index: 12000;
-}
-
-
-/* Hiding the System Cursor */
-* {
-    cursor: none;
+@media only screen and (max-width: 1024px) {
+    .cursor{
+        display: none;
+    }
 }

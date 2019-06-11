@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="format-detection" content="telephone=no">
     <title>Pause Architects & Design</title>
     <style>
         .splash {
@@ -222,7 +223,7 @@
                         </div>
                         <div class="slide-cell js-slide-cell active">
                             <!-- I am one cell L -->
-                            <img  src="static/images/Layer 2.png" alt="01" srcset="">
+                            <img src="static/images/Layer 2.png" alt="01" srcset="">
                         </div>
                     </div>
                 </div>
@@ -314,13 +315,14 @@
                     'widht': '0'
                 });
                 setTimeout(() => {
-                    $('.splash').css('display','none');
+                    $('.splash').css('display', 'none');
                 }, 300);
             }
         });
     </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.13/jquery.mousewheel.min.js"></script>
-    <script src="/static/js-libs/hammer.min.js"></script>
+    <!-- <script src="/static/js-libs/hammer.min.js"></script> -->
+    <script src="https://hammerjs.github.io/dist/hammer.js"></script>
     <!-- Including Paper and SimplexNoise -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/paper.js/0.12.0/paper-core.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/simplex-noise/2.4.0/simplex-noise.min.js"></script>

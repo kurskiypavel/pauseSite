@@ -1,3 +1,4 @@
+
 /*  CLEAR SCROLL POSITION ON RESIZE    */
 // Scroll top if resized from small to large for homepage
 
@@ -316,7 +317,7 @@ function myLoop() {
 }
 
 
-// Global animation
+// Global animation for desktop
 function animate() {
     // Get scroll direction
     if (event.deltaY > 0) {
@@ -331,8 +332,33 @@ function animate() {
         $('.page').bind('mousewheel', wheelHandler);
         toogleScrollEvent = true;
     }, 2000);
+}
 
+// Global animation for mobile devices
+function animateMobile() {
+    // Get scroll direction
+    if (swipeDirection === 'down') {
+        scrollDirection = 'down';
+    } else if (swipeDirection === 'up') {
+        scrollDirection = 'up';
+    }
+    myLoop();
 
+    // Run animation
+    setTimeout(function () {
+        mc.on("swipedown", function (e) {
+            // scroll down analog - next items animation
+            swipeDirection = 'up';
+            swipeHandler();
+        });
+
+        mc.on("swipeup", function (e) {
+            // scroll up analog - previuos items animation
+            swipeDirection = 'down';
+            swipeHandler();
+        });
+        toogleScrollEvent = true;
+    }, 2000);
 }
 
 // Prevent from many scrolling
@@ -343,11 +369,20 @@ function wheelHandler() {
 
 
         // Disable scrolling
-        // desktop
         $('.page').unbind('mousewheel', wheelHandler);
-
-        // mobile devices
         animate();
+    }
+}
+
+function swipeHandler() {
+    if (toogleScrollEvent === true) {
+        toogleScrollEvent = false;
+
+
+        // Disable swiping
+        mc.off("swipedown", function (e) {});
+        mc.off("swipeup", function (e) {});
+        animateMobile();
     }
 }
 
@@ -358,22 +393,27 @@ $('.page').mousewheel(wheelHandler);
 
 
 
-// mobile devices
+// Mobile devices
 
+// Init library
 var myHammer = document.getElementById('hammer');
 var mc = new Hammer(myHammer);
-
+var swipeDirection = '';
+mc.get('swipe').set({
+    direction: Hammer.DIRECTION_ALL
+});
+// Add event listeners
+// reverse up and down comparing scroll direction
 mc.on("swipedown", function (e) {
-    // do scroll up stuff
-    console.log('up');
-
-
+    // scroll down analog - next items animation
+    swipeDirection = 'up';
+    swipeHandler();
 });
 
 mc.on("swipeup", function (e) {
-    // do scroll down stuff
-    console.log('down');
-
+    // scroll up analog - previuos items animation
+    swipeDirection = 'down';
+    swipeHandler();
 });
 
 /*  SCROLL ANIMATION ENDS    */
@@ -453,11 +493,13 @@ function disableHomePage() {
         $('.footer-wrap.fixed').removeClass('disabled');
         // disable main footer for project page
         $('.footer-wrap.fixed').addClass('disabled-for-project');
+        
+        
+        // special for iPad scroll
+        $('.projects-page.disabled').css('display', 'block');
 
         // animate projects page duting 900ms
         setTimeout(function () {
-            // fix for iPad scroll
-            $('.projects-page.disabled').css('display', 'block');
             $('.page.disabledScroll').removeClass('disabledScroll');
             activateProjects();
         }, 900);
@@ -490,6 +532,9 @@ function enableHomePage() {
             $('.footer-wrap.fixed').removeClass('disabled-for-project');
             // show general footer
             $('.footer-wrap.fixed').addClass('disabled');
+
+            // special for iPad scroll
+            $('.projects-page').css('display', 'none');
         }, 900);
     }
 
@@ -685,29 +730,3 @@ function imageMoveByMouse() {
 imageMoveByMouse();
 /*    TILE IMAGE MOVE HOMEPAGE ENDS    */
 
-
-
-// mobile devices scroll event listener+ scroll direction
-$(window).on('touchstart', function (e) {
-
-    var swipe = e.originalEvent.touches,
-        start = swipe[0].pageY;
-
-    $(this).on('touchmove', function (e) {
-
-            var contact = e.originalEvent.touches,
-                end = contact[0].pageY,
-                distance = end - start;
-
-            if (distance < -30) {
-                console.log('up');
-            } // up
-            if (distance > 30) {
-                console.log('down');
-            } // down
-        })
-        .one('touchend', function () {
-
-            $(this).off('touchmove touchend');
-        });
-});
