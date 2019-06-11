@@ -24,7 +24,7 @@
     <link rel="stylesheet" href="/css/style.css">
 </head>
 
-<body class="page disabledScroll tutorial">
+<body id="hammer" class="page disabledScroll tutorial">
     <!-- The cursor elements -->
     <div class="cursor cursor--small"></div>
     <canvas class="cursor cursor--canvas" resize></canvas>
@@ -313,11 +313,14 @@
                     'opacity': '0',
                     'widht': '0'
                 });
+                setTimeout(() => {
+                    $('.splash').css('display','none');
+                }, 300);
             }
         });
     </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.13/jquery.mousewheel.min.js"></script>
-
+    <script src="/static/js-libs/hammer.min.js"></script>
     <!-- Including Paper and SimplexNoise -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/paper.js/0.12.0/paper-core.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/simplex-noise/2.4.0/simplex-noise.min.js"></script>

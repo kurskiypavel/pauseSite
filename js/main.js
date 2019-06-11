@@ -118,6 +118,7 @@ function animateDown() {
             // Drop pagination rotated
             $('.js-rotate .rotated').removeClass('rotated');
             // duration = transition in styles
+
         }, 900);
 
 
@@ -183,10 +184,10 @@ function animateDown() {
 
     }
 
-    
+
 
 }
-imageMoveByMouse();
+
 
 // Animation on scroll backward / UP
 function animateUp() {
@@ -342,14 +343,38 @@ function wheelHandler() {
 
 
         // Disable scrolling
+        // desktop
         $('.page').unbind('mousewheel', wheelHandler);
+
+        // mobile devices
         animate();
     }
 }
 
 
 // Main scroll event listener
+// desktop
 $('.page').mousewheel(wheelHandler);
+
+
+
+// mobile devices
+
+var myHammer = document.getElementById('hammer');
+var mc = new Hammer(myHammer);
+
+mc.on("swipedown", function (e) {
+    // do scroll up stuff
+    console.log('up');
+
+
+});
+
+mc.on("swipeup", function (e) {
+    // do scroll down stuff
+    console.log('down');
+
+});
 
 /*  SCROLL ANIMATION ENDS    */
 
@@ -431,6 +456,8 @@ function disableHomePage() {
 
         // animate projects page duting 900ms
         setTimeout(function () {
+            // fix for iPad scroll
+            $('.projects-page.disabled').css('display', 'block');
             $('.page.disabledScroll').removeClass('disabledScroll');
             activateProjects();
         }, 900);
@@ -480,7 +507,6 @@ function enableHomePage() {
 
 // Animate projects page
 function activateProjects() {
-
 
     $('.js-projects-page').removeClass('disabled');
     setTimeout(function () {
@@ -642,13 +668,46 @@ initCanvas();
 
 function imageMoveByMouse() {
 
-    $('.slide-l .js-slide-cell.active')
+    $('.slide-l .js-slide-cell')
         .on('mousemove', function (e) {
             $(this).children('img').css({
                 'transform-origin': ((e.pageX - $(this).offset().left) / $(this).width()) * 100 + '% ' + ((e.pageY - $(this).offset().top) / $(this).height()) * 100 + '%'
             });
         });
-
+    $('.slide-r .js-slide-cell')
+        .on('mousemove', function (e) {
+            $(this).children('img').css({
+                'transform-origin': ((e.pageX - $(this).offset().left) / $(this).width()) * 100 + '% ' + ((e.pageY - $(this).offset().top) / $(this).height()) * 100 + '%'
+            });
+        });
 }
 
+imageMoveByMouse();
 /*    TILE IMAGE MOVE HOMEPAGE ENDS    */
+
+
+
+// mobile devices scroll event listener+ scroll direction
+$(window).on('touchstart', function (e) {
+
+    var swipe = e.originalEvent.touches,
+        start = swipe[0].pageY;
+
+    $(this).on('touchmove', function (e) {
+
+            var contact = e.originalEvent.touches,
+                end = contact[0].pageY,
+                distance = end - start;
+
+            if (distance < -30) {
+                console.log('up');
+            } // up
+            if (distance > 30) {
+                console.log('down');
+            } // down
+        })
+        .one('touchend', function () {
+
+            $(this).off('touchmove touchend');
+        });
+});

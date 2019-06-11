@@ -41,6 +41,7 @@
     .logo {
         font-family: SFProText-Bold;
         flex: 1 1 auto;
+        
     }
 
     .nav-wrap {
@@ -153,6 +154,11 @@
     }
 }
 
+@media only screen and (min-width: 769px) {
+    .header .logo{
+        max-width: 260px;
+    }
+}
 
 .header-wrap.fixed {
     position: fixed;
@@ -347,11 +353,33 @@
     font-family: Chronicle-Display-Semibold;
     position: relative;
 }
-.title-wrap{
+
+.title-wrap {
     pointer-events: none;
 }
 
-@media only screen and (min-width: 1601px) {
+@media only screen and (min-width: 1920px) {
+    .title-wrap {
+        position: absolute;
+        top: 50%;
+        margin: 0 auto;
+        left: 0;
+        right: 0;
+        width: 1920px;
+        transform: translateY(-50%);
+    }
+
+    .title-item {
+        font-size: 101px;
+        line-height: 103px;
+    }
+
+    .js-title-wrap {
+        height: 103px;
+    }
+}
+
+@media only screen and (min-width: 1601px) and (max-width: 1919px) {
     .title-wrap {
         position: absolute;
         top: 50%;
@@ -801,8 +829,7 @@ button {
     display: none;
 }
 
-
-@media only screen and (min-width: 1601px) {
+@media only screen and (min-width: 1920px) {
 
     .slide-l {
         width: 30%;
@@ -824,7 +851,50 @@ button {
         margin-right: 19%;
 
         .slide-cell {
-            width: 100%;
+            width: auto;
+            left: 0;
+            right: auto;
+        }
+    }
+
+    .slide-cell {
+        position: absolute;
+        overflow: hidden;
+        height: 750px;
+        top: 50%;
+        transform: translateY(-50%);
+        max-width: 542px;
+        img{
+            height: 100%;
+        }
+    }
+}
+
+@media only screen and (min-width: 1601px) and (max-width: 1919px) {
+
+    .slide-l {
+        width: 30%;
+        margin-left: 19%;
+
+        .slide-cell {
+            width: auto;
+            right: 0;
+            left: auto;
+        }
+    }
+
+    .slide-r {
+        display: block;
+        margin-left: 0;
+        left: auto;
+        right: 0;
+        width: 30%;
+        margin-right: 19%;
+
+        .slide-cell {
+            width: auto;
+            left: 0;
+            right: auto;
         }
     }
 
@@ -858,7 +928,9 @@ button {
         margin-right: 17%;
 
         .slide-cell {
-            width: 100%;
+            width: auto;
+            left: 0;
+            right: auto;
         }
     }
 
@@ -892,7 +964,9 @@ button {
         margin-right: 17%;
 
         .slide-cell {
-            width: 100%;
+            width: auto;
+            left: 0;
+            right: auto;
         }
     }
 
@@ -930,7 +1004,9 @@ button {
         margin-right: 17%;
 
         .slide-cell {
-            width: 100%;
+            width: auto;
+            left: 0;
+            right: auto;
         }
     }
 
@@ -1093,43 +1169,27 @@ button {
 
 // Animation caused by scroll on homepage
 
-.slide-l .slide-cell {
+.slide-r .slide-cell,.slide-l .slide-cell {
     z-index: 0;
+
     img {
         transition: 900ms;
-        will-change: transform;
-        // display: none;
     }
 
     &.active {
         z-index: 1;
+
         img {
-            transform: translate3d(0, 0, 0) scale(1);
-            // display: block;
-            &:hover{
+            transform: translateY(0) scale(1);
+            &:hover {
                 transition: 0ms;
-                transform: translate3d(0, 0, 0) scale(1.1);
+                transform: translateY(0) scale(1.1);
             }
         }
 
     }
 }
 
-.slide-r .slide-cell {
-    img {
-        transition: 900ms;
-        will-change: transform;
-        // display: none;
-    }
-
-    &.active {
-        img {
-            transform: translate3d(0, 0, 0);
-            // display: block;
-        }
-
-    }
-}
 
 @media only screen and (min-width: 1601px) {
     .slide-r .slide-cell {
@@ -1211,6 +1271,27 @@ button {
 #js-slide-r.disabled {
     transform: translateY(100vh);
     opacity: 0;
+}
+
+
+// Animation caused by hovering over the image
+
+.slide-r .slide-cell.active,.slide-l .slide-cell.active {
+    img:hover {
+        animation: scaleOnHover 400ms linear;
+    }
+}
+
+
+
+@keyframes scaleOnHover {
+    0% {
+        transform: scale(1);
+    }
+
+    100% {
+        transform: scale(1.1);
+    }
 }
 
 
@@ -1578,12 +1659,16 @@ button {
 }
 
 .projects-page.disabled {
-    // display: none;
     visibility: hidden;
     opacity: 0 !important;
     transform: translateY(110vh) !important;
 }
 
+/*@media only screen and (min-width: 768px) and (max-width:1024px){
+    .projects-page.disabled {
+        display: none;
+    }
+}*/
 
 
 /*  CURSOR STYLES */
