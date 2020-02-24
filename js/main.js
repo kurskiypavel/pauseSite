@@ -38,7 +38,7 @@ hamburger.addEventListener('click', function () {
 
 var toogleScrollEvent = true;
 // in future scroll count equals index and equals lenght of array - 5
-var index = 4;
+var index = 3;
 var scrollDirection = '';
 
 
@@ -159,7 +159,7 @@ function animateDown() {
             firstSlideLeft.classList.add('active');
             firstSlideRight.classList.add('active');
             // Drop index to initial
-            index = 4;
+            index = 3;
 
             // Call loop over
             // myLoop();
@@ -193,7 +193,7 @@ function animateDown() {
 // Animation on scroll backward / UP
 function animateUp() {
     // Drop styles for first element for new Loop
-    if (index === titleArrayOne.length - 4) {
+    if (index === titleArrayOne.length - 3) {
         // ANIMATE TITLES
         firstTitleOne.classList.remove('active');
         firstTitleTwo.classList.remove('active');
@@ -207,7 +207,7 @@ function animateUp() {
     }
 
     // Beginning of loop
-    if (index < 4) {
+    if (index < 3) {
 
 
         // ANIMATE TITLES AND SLIDES

@@ -354,20 +354,21 @@
     pointer-events: none;
 }
 
-@media only screen and (min-width: 1920px) {
+@media only screen and (min-width: 1660px) {
     .title-wrap {
         position: absolute;
         top: 50%;
         margin: 0 auto;
         left: 0;
         right: 0;
-        width: 1920px;
+        width: 1660px;
         transform: translateY(-50%);
     }
 
     .title-item {
         font-size: 101px;
         line-height: 103px;
+        letter-spacing: -1px;
     }
 
     .js-title-wrap {
@@ -375,7 +376,7 @@
     }
 }
 
-@media only screen and (min-width: 1601px) and (max-width: 1919px) {
+@media only screen and (min-width: 1601px) and (max-width: 1659px) {
     .title-wrap {
         position: absolute;
         top: 50%;
@@ -385,6 +386,7 @@
     .title-item {
         font-size: 101px;
         line-height: 103px;
+        letter-spacing: -1px;
     }
 
     .js-title-wrap {
@@ -825,7 +827,7 @@ button {
     display: none;
 }
 
-@media only screen and (min-width: 1920px) {
+@media only screen and (min-width: 1660px) {
 
     .slide-l {
         width: 30%;
@@ -867,7 +869,7 @@ button {
     }
 }
 
-@media only screen and (min-width: 1601px) and (max-width: 1919px) {
+@media only screen and (min-width: 1601px) and (max-width: 1659px) {
 
     .slide-l {
         width: 30%;
@@ -1169,9 +1171,10 @@ button {
 .slide-r .slide-cell,
 .slide-l .slide-cell {
     z-index: 0;
-
+    
     img {
         transition: 900ms;
+        height: 100%;
     }
 
     &.active {
@@ -1390,6 +1393,41 @@ button {
     font-family: Chronicle-Display-Semibold;
 }
 
+.left.row-one--vertical-image{
+    background: url('../static/images/Homepage\ 121221\ Jason\ Ho\ 0131_edit.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.right.row-one--vertical-image{
+    background: url('../static/images/Homepage\ 121221\ Jason\ Ho\ 0167_edit.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.left.row-two--vertical-image{
+        background: url('../static/images/Homepage 131226_PauseStudioA_0066-Edit.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+}
+
+.right.row-two--vertical-image{
+    background: url('../static/images/Homepage 131226_PauseStudioA_0219-Edit.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+.row-one--horizontal-image{
+    background: url('../static/images/kitchen.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.row-two--horizontal-image{
+    background: url('../static/images/pause.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
 @media only screen and (min-width: 1401px) {
     .projects-page {
         max-width: 1440px;
@@ -1422,7 +1460,7 @@ button {
 
     .tile-image {
         height: 480px;
-        background: green;
+        // background: green;
     }
 
     .tile-caption {
@@ -1464,7 +1502,7 @@ button {
 
     .tile-image {
         height: 416px;
-        background: green;
+        // background: green;
     }
 
     .tile-caption {
@@ -1506,7 +1544,7 @@ button {
 
     .tile-image {
         height: 336px;
-        background: green;
+        // background: green;
     }
 
     .tile-caption {
@@ -1565,7 +1603,7 @@ button {
 
     .tile-image {
         height: 390px;
-        background: green;
+        // background: green;
     }
 
     .tile-caption {
@@ -1626,7 +1664,7 @@ button {
     .tile-image {
         height: 52vw;
         // height: 390px;
-        background: green;
+        // background: green;
     }
 
     .tile-caption {
@@ -1644,7 +1682,7 @@ button {
 
 @media only screen and (max-width: 500px) {
     .projects-page {
-        display: none;
+        display: none !important;
     }
 }
 
@@ -1718,3 +1756,4 @@ button {
         display: none;
     }
 }
+
