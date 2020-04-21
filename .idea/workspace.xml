@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="7e7be36b-dde4-4dda-baf8-192cea4b4d63" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/style.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/css/style.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/menu.html" beforeDir="false" afterPath="$PROJECT_DIR$/menu.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scss/style.scss" beforeDir="false" afterPath="$PROJECT_DIR$/scss/style.scss" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1almRXW9x32LHXSzs3m0N7pqUy6" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="terminal" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="7e7be36b-dde4-4dda-baf8-192cea4b4d63" name="Default Changelist" comment="" />
+      <created>1587318563829</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1587318563829</updated>
+      <workItem from="1587318596519" duration="1043000" />
+      <workItem from="1587320567446" duration="3578000" />
+      <workItem from="1587497701773" duration="191000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="2" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="444" y="161" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1587320652167">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state x="444" y="161" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1366.738@0.0.1366.738" timestamp="1587320652167" />
+    <state x="358" y="138" key="EditFileWatcherDialog" timestamp="1587320835622">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state x="358" y="138" key="EditFileWatcherDialog/0.0.1366.738@0.0.1366.738" timestamp="1587320835622" />
+    <state x="151" y="18" key="SettingsEditor" timestamp="1587320523268">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state x="151" y="18" key="SettingsEditor/0.0.1366.738@0.0.1366.738" timestamp="1587320523268" />
+    <state x="380" y="100" width="579" height="568" key="find.popup" timestamp="1587332732072">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state x="380" y="100" width="579" height="568" key="find.popup/0.0.1366.738@0.0.1366.738" timestamp="1587332732072" />
+    <state x="339" y="22" width="672" height="676" key="search.everywhere.popup" timestamp="1587320408344">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state x="339" y="22" width="672" height="676" key="search.everywhere.popup/0.0.1366.738@0.0.1366.738" timestamp="1587320408344" />
+  </component>
+</project>

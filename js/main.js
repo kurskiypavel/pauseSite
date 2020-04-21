@@ -1,4 +1,3 @@
-
 /*  CLEAR SCROLL POSITION ON RESIZE    */
 // Scroll top if resized from small to large for homepage
 
@@ -28,7 +27,6 @@ hamburger.addEventListener('click', function () {
 });
 
 /*  HAMBURGER MENU ANIMATION ENDS    */
-
 
 
 /*  SCROLL ANIMATION BEGINS    */
@@ -70,8 +68,6 @@ const lastSlideRight = slidesArrayRight[0];
 const firstSlideRight = slidesArrayRight[slidesArrayRight.length - 1];
 
 
-
-
 // Animation on scroll forward / DOWN
 function animateDown() {
     // Drop styles for last element for new Loop
@@ -104,7 +100,6 @@ function animateDown() {
         // wait until current animated
 
 
-
         setTimeout(function () {
             // TITLES
             // Show next title
@@ -121,8 +116,6 @@ function animateDown() {
             // duration = transition in styles
 
         }, 900);
-
-
 
 
         // ANIMATE PAGINATION
@@ -170,7 +163,6 @@ function animateDown() {
         }, 900);
 
 
-
         // ANIMATE PAGINATION
         // Rotate last element
         lastPage.classList.add('rotated');
@@ -184,7 +176,6 @@ function animateDown() {
         pagesArray[index + 1].classList.remove('rotated');
 
     }
-
 
 
 }
@@ -240,8 +231,6 @@ function animateUp() {
         }, 900);
 
 
-
-
         // ANIMATE PAGINATION
         // Rotate current down
         pagesArray[index].classList.add('rotated');
@@ -284,7 +273,6 @@ function animateUp() {
         }, 900);
 
 
-
         // ANIMATE PAGINATION
         // Rotate first element
         firstPage.classList.add('rotated');
@@ -298,11 +286,8 @@ function animateUp() {
         pagesArray[index - 1].classList.remove('rotated');
 
 
-
     }
 }
-
-
 
 
 // Main loop for animation
@@ -380,8 +365,10 @@ function swipeHandler() {
 
 
         // Disable swiping
-        mc.off("swipedown", function (e) {});
-        mc.off("swipeup", function (e) {});
+        mc.off("swipedown", function (e) {
+        });
+        mc.off("swipeup", function (e) {
+        });
         animateMobile();
     }
 }
@@ -392,29 +379,34 @@ function swipeHandler() {
 $('.page').mousewheel(wheelHandler);
 
 
-
 // Mobile devices
 
-// Init library
-var myHammer = document.getElementById('hammer');
-var mc = new Hammer(myHammer);
-var swipeDirection = '';
-mc.get('swipe').set({
-    direction: Hammer.DIRECTION_ALL
-});
+if ($(window).width() < 768) {
+    $('#hammer').removeAttr("style");
+} else {
+    // Init library
+    var myHammer = document.getElementById('hammer');
+    var mc = new Hammer(myHammer);
+    var swipeDirection = '';
+    mc.get('swipe').set({
+        direction: Hammer.DIRECTION_ALL
+    });
 // Add event listeners
 // reverse up and down comparing scroll direction
-mc.on("swipedown", function (e) {
-    // scroll down analog - next items animation
-    swipeDirection = 'up';
-    swipeHandler();
-});
+    mc.on("swipedown", function (e) {
+        // scroll down analog - next items animation
+        swipeDirection = 'up';
+        swipeHandler();
+    });
 
-mc.on("swipeup", function (e) {
-    // scroll up analog - previuos items animation
-    swipeDirection = 'down';
-    swipeHandler();
-});
+    mc.on("swipeup", function (e) {
+        // scroll up analog - previuos items animation
+        swipeDirection = 'down';
+        swipeHandler();
+    });
+}
+
+
 
 /*  SCROLL ANIMATION ENDS    */
 
@@ -432,7 +424,6 @@ $('.js-nav-wrap .nav-item').click(function () {
     $(this).addClass('active');
 
 
-
     // Get clicked navigation item object
     let navObject = this;
     // Run single menu item function
@@ -448,7 +439,6 @@ function activateMenu(navObject) {
 
     // get which one is clicked
     if (id === 'studioNav') {
-
 
 
     } else if (id === 'contactNav') {
@@ -493,8 +483,8 @@ function disableHomePage() {
         $('.footer-wrap.fixed').removeClass('disabled');
         // disable main footer for project page
         $('.footer-wrap.fixed').addClass('disabled-for-project');
-        
-        
+
+
         // special for iPad scroll
         $('.projects-page.disabled').css('display', 'block');
 
@@ -539,15 +529,6 @@ function enableHomePage() {
     }
 
 
-
-
-
-
-
-
-
-
-
 }
 
 // Animate projects page
@@ -566,13 +547,11 @@ function deactivateProjects() {
 }
 
 
-
 // Event listener for navigation project item
 $('#projectsNav').click(disableHomePage);
 
 
 /*  PROJECT ANIMATION ENDS    */
-
 
 
 /*  LOGO CLICK ANIMATION BEGINS    */
