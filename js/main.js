@@ -18,11 +18,76 @@ $(window).resize(function () {
 /*  HAMBURGER MENU ANIMATION BEGINS    */
 
 var hamburger = document.getElementById('toogle-hamburger');
+let mobileMenuHTML = `
+       <div  style="position: fixed;top: 0;z-index: 59;height: 100vh;background: white;width: 100vw;">
+           <div style="position: relative;top: 50%;transform: translateY(-50%);">
+               <ul class="mobileMenuContainer" style="font-family: SFProText-Light;font-size: 48px;text-align: center;line-height: 78px;">
+                   <li>Projects</li>
+                   <li>Studio</li>
+                   <li>Contact</li>
+               </ul>
+            </div>
+            <div class="footerMobileMenuContainer" style="position: absolute;bottom: 0px;width: 100%;">
+                   <div class="contact-mobile-menu">
+                        <div class="contact-item">hello@pausesdesign.ca</div>
+                        <div class="contact-item">437 886 5526</div>
+                    </div>
+                    <div class="footer-wrap" style="padding-bottom: 40px;padding-top: 20px;position: relative;bottom: 0;text-align: center;">
+                        <div class="footer">
+                            <div class="footer-item link-item">
+                                instagram
+                            </div>
+                            <div class="footer-item center link-item">
+                                twitter
+                            </div>
+                            <div class="footer-item link-item">
+                                houzz
+                            </div>
+                        </div>
+                    </div>
+            </div>
+        </div>
+`;
+
+function activateMobileMenu() {
+    $('#menuModule').toggleClass('active');
+    setTimeout(() => {
+
+        $('#menuModule').html(mobileMenuHTML);
+
+        let listItems = $('.mobileMenuContainer li');
+
+        listItems.each(function (index) {
+            index++;
+            setTimeout(() => {
+                $(this).toggleClass('active');
+            }, 150 * index);
+        });
+        setTimeout(() => {
+            $('.footerMobileMenuContainer').toggleClass('active');
+        }, 450);
+
+
+    }, 500);
+
+}
+
+function deactivateMobileMenu() {
+    $('#menuModule').toggleClass('active');
+    $('.footerMobileMenuContainer').toggleClass('active');
+
+    setTimeout(() => {
+        $('#menuModule').html("");
+    }, 500);
+}
+
 hamburger.addEventListener('click', function () {
     if (hamburger.classList.contains('is-active')) {
         hamburger.classList.remove('is-active');
+        deactivateMobileMenu();
     } else {
         hamburger.classList.add('is-active');
+        activateMobileMenu();
     }
 });
 
@@ -407,7 +472,6 @@ if ($(window).width() < 768) {
 }
 
 
-
 /*  SCROLL ANIMATION ENDS    */
 
 /*  NAVIGATION PSEUDO BEGINS    */
@@ -549,6 +613,52 @@ function deactivateProjects() {
 
 // Event listener for navigation project item
 $('#projectsNav').click(disableHomePage);
+
+
+// row-zero--vertical-image
+$('.row-zero--vertical-image').mouseenter(() => {
+    $('#row-zero--vertical-tile').addClass('hover');
+});
+
+$('.row-zero--vertical-image').mouseleave(() => {
+    $('#row-zero--vertical-tile').removeClass('hover');
+});
+
+// row-one--vertical-image
+$('.row-one--vertical-image').mouseenter(() => {
+    $('#row-one--vertical-tile').addClass('hover');
+});
+
+$('.row-one--vertical-image').mouseleave(() => {
+    $('#row-one--vertical-tile').removeClass('hover');
+});
+
+// row-one--horizontal-image
+$('.row-one--horizontal-image').mouseenter(() => {
+    $('#row-one--horizontal-tile').addClass('hover');
+});
+
+$('.row-one--horizontal-image').mouseleave(() => {
+    $('#row-one--horizontal-tile').removeClass('hover');
+});
+
+// row-two--vertical-image
+$('.row-two--vertical-image').mouseenter(() => {
+    $('#row-two--vertical-tile').addClass('hover');
+});
+
+$('.row-two--vertical-image').mouseleave(() => {
+    $('#row-two--vertical-tile').removeClass('hover');
+});
+
+// row-two--horizontal-image
+$('.row-two--horizontal-image').mouseenter(() => {
+    $('#row-two--horizontal-tile').addClass('hover');
+});
+
+$('.row-two--horizontal-image').mouseleave(() => {
+    $('#row-two--horizontal-tile').removeClass('hover');
+});
 
 
 /*  PROJECT ANIMATION ENDS    */
