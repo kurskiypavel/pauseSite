@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="format-detection" content="telephone=no">
-    <title>Pause Architects & Design</title>
+    <title>Pause</title>
     <style>
         .splash {
             z-index: 1000;
@@ -26,277 +26,162 @@
 </head>
 
 <body id="hammer" class="page disabledScroll tutorial">
-    <!-- The cursor elements -->
-    <div class="cursor cursor--small"></div>
-    <canvas class="cursor cursor--canvas" resize></canvas>
-    <div class="splash">
+<!-- The cursor elements -->
+<div class="cursor cursor--small"></div>
+<canvas class="cursor cursor--canvas" resize></canvas>
+<div class="splash">
+</div>
+<div class="header-wrap fixed">
+    <div class="header">
+        <div id="headerLogo" class="logo link-item">Pause</div>
+        <div class="nav-wrap js-nav-wrap">
+            <div id="projectsNav" class="nav-item projects left link-item">
+                <div class="wrapper">
+                    <div>Projects</div>
+                </div>
+            </div>
+            <div id="aboutNav" class="nav-item center left-origin link-item">
+
+                <div class="wrapper">
+                    <div>About</div>
+                </div>
+            </div>
+            <div id="contactNav" class="nav-item right link-item">
+
+                <div class="wrapper">
+                    <div>Contact</div>
+                </div>
+            </div>
+
+        </div>
+        <button type="button" class="site-header-button" id='toogle-hamburger' title="Toggle menu">
+            <span class="u-visually-hidden">Toggle menu</span>
+            <span class="button-bar button-bar--1"></span>
+            <span class="button-bar button-bar--2"></span>
+            <span class="button-bar button-bar--3"></span>
+        </button>
     </div>
-    <div class="header-wrap fixed">
-        <div class="header">
-            <div id="headerLogo" class="logo link-item">Pause Architects & Design</div>
-            <div class="nav-wrap js-nav-wrap">
-                <div id="projectsNav" class="nav-item projects left link-item">
-                    <div class="wrapper">
-                        <div>Projects</div>
-                    </div>
-                </div>
-                <div id="studioNav" class="nav-item center left-origin link-item">
+</div>
 
-                    <div class="wrapper">
-                        <div>Studio</div>
-                    </div>
-                </div>
-                <div id="contactNav" class="nav-item right link-item">
-
-                    <div class="wrapper">
-                        <div>Contact</div>
-                    </div>
-                </div>
-
+<div class="home-page js-home-page">
+    <div class="desktop title-wrap">
+        <div class="card">
+            <div class="image-card">
+                <!-- <img src="static/images/Layer 2.png" alt="" srcset=""> -->
             </div>
-            <button type="button" class="site-header-button" id='toogle-hamburger' title="Toggle menu">
-                <span class="u-visually-hidden">Toggle menu</span>
-                <span class="button-bar button-bar--1"></span>
-                <span class="button-bar button-bar--2"></span>
-                <span class="button-bar button-bar--3"></span>
-            </button>
-        </div>
-    </div>
+            <div class="current title-item">
+                <div class="js-title-wrap row-one">
 
-    <div class="home-page js-home-page">
-        <div class="desktop title-wrap">
-            <div class="card">
-                <div class="image-card">
-                    <!-- <img src="static/images/Layer 2.png" alt="" srcset=""> -->
-                </div>
-                <div class="current title-item">
-                    <div class="js-title-wrap row-one">
-
-                        <div class="js-title">
-                            <div>Pause</div>
-                        </div>
-                        <div class="js-title">
-                            <div>Larchmount</div>
-                        </div>
-                        <div class="js-title">
-                            <div>Boiler</div>
-                        </div>
-
-                        <div class="js-title first active">
-                            <div>Linsmore</div>
-                        </div>
+                    <div class="js-title">
+                        <div>Pause</div>
                     </div>
-                    <div class="js-title-wrap row-two">
+                    <div class="js-title">
+                        <div>Larchmount</div>
+                    </div>
+                    <div class="js-title">
+                        <div>Boiler</div>
+                    </div>
 
-                        <div class="js-title">
-                            <div>Studio</div>
-                        </div>
-                        <div class="js-title">
-                            <div>Kitchen</div>
-                        </div>
-                        <div class="js-title">
-                            <div>Loft</div>
-                        </div>
-                        <div class="js-title first active">
-                            <div>House</div>
-                        </div>
+                    <div class="js-title first active">
+                        <div>Linsmore</div>
                     </div>
                 </div>
-            </div>
-        </div>
-        <div class="title-wrap">
-            <div class="card">
-                <div class="image-card">
-                    <img src="static/images/LinsmoreMobileHP.jpg" alt="" srcset="">
-                </div>
-                <div class="title-item">
-                    <div>Linsmore</div>
-                    <div>House</div>
-                </div>
-            </div>
-        </div>
+                <div class="js-title-wrap row-two">
 
-        <div class="title-wrap single-line">
-            <div class="card">
-                <div class="image-card">
-                    <img src="static/images/Homepage 121221 Jason Ho 0131_edit.jpg" alt="" srcset="">
-                </div>
-                <div class="title-item">
-                    <div>Boiler Loft</div>
-                </div>
-            </div>
-        </div>
-        <div class="title-wrap">
-            <div class="card">
-                <div class="image-card">
-                    <img src="static/images/Larchmountkitchenmobile.png" alt="" srcset="">
-                </div>
-                <div class="title-item">
-                    <div>Larchmount</div>
-                    <div>Kitchen</div>
-                </div>
-            </div>
-        </div>
-        <div class="title-wrap single-line">
-            <div class="card">
-                <div class="image-card">
-                    <img src="static/images/Homepage 131226_PauseStudioA_0066-Edit.jpg" alt="" srcset="">
-                </div>
-                <div class="title-item pause-studio-item">
-                    <div>Pause Studio</div>
-                </div>
-            </div>
-        </div>
-        <div class="title-wrap">
-            <div class="card">
-                <div class="image-card">
-                    <img src="static/images/Larchmount front yard  - 5.jpg" alt="" srcset="">
-                </div>
-                <div class="title-item">
-                    <div>Larchmount</div>
-                    <div>Garden</div>
-                </div>
-            </div>
-        </div>
-
-
-        <div class="layer-text">
-
-            <div class="paginator-wrap">
-                <div class="current paginator-item">
-                    <div class="js-rotate">
-                        <!-- <div>05</div> -->
-                        <div>04</div>
-                        <div>03</div>
-                        <div>02</div>
-                        <div class='first active'>01</div>
+                    <div class="js-title">
+                        <div>About</div>
                     </div>
-                </div>
-                <div class="total paginator-item">04</div>
-            </div>
-
-        </div>
-        <div class="contact-mobile-screens">
-            <div class="contact-item">Contact</div>
-            <div class="contact-item">hello@pausesdesign.ca</div>
-            <div class="contact-item">437 886 5526</div>
-        </div>
-        <div class="footer-wrap">
-            <div class="footer">
-                <div class="footer-item link-item">
-                    instagram
-                </div>
-                <div class="footer-item center link-item">
-                    twitter
-                </div>
-                <div class="footer-item link-item">
-                    houzz
-                </div>
-            </div>
-
-        </div>
-
-        <div class="layer-slider">
-            <div id="js-mv-slide" class="slide-wrap">
-                <!-- I am wrapper -->
-                <div id="js-slide-l" class="slide-l">
-                    <!-- I am left column -->
-                    <div class="in">
-                        <!-- <div class="slide-cell js-slide-cell">
-
-                            <img src="static/images/Layer 2.png" alt="05" srcset="">
-                        </div> -->
-                        <div class="slide-cell js-slide-cell">
-                            <!-- I am one cell L -->
-<!--                            <img src="static/images/Larchmount front yard  - 5.jpg" alt="04" srcset="">-->
-                            <img src="static/images/Homepage 131226_PauseStudioA_0219-Edit.jpg" alt="04" srcset="">
-                        </div>
-                        <div class="slide-cell js-slide-cell">
-                            <!-- I am one cell L -->
-                            <img src="static/images/Pause_LarchmountKitchen_0110-Edit.jpg" alt="03" srcset="">
-                        </div>
-                        <div class="slide-cell js-slide-cell">
-                            <!-- I am one cell L -->
-                            <img src="static/images/Homepage 121221 Jason Ho 0131_edit.jpg" alt="02" srcset="">
-                        </div>
-                        <div class="slide-cell js-slide-cell active">
-                            <!-- I am one cell L -->
-                            <img src="static/images/LinsmoreHP_1.jpg" alt="01" srcset="">
-                        </div>
+                    <div class="js-title">
+                        <div>Kitchen</div>
                     </div>
-                </div>
-                <div id="js-slide-r" class="slide-r">
-                    <!-- I am right column -->
-                    <!-- <div class="slide-cell js-slide-cell">
-
-                        <img src="static/images/Layer 3.png" alt="05" srcset="">
-                    </div> -->
-                    <div class="slide-cell js-slide-cell">
-                        <!-- I am one cell R -->
-<!--                        <img src="static/images/Larchmount front yard  - 2.jpg" alt="04" srcset="">-->
-                        <img src="static/images/Homepage 131226_PauseStudioA_0066-Edit.jpg" alt="04" srcset="">
+                    <div class="js-title">
+                        <div>Loft</div>
                     </div>
-                    <div class="slide-cell js-slide-cell">
-                        <!-- I am one cell R -->
-                        <img src="static/images/Larchmountkitchenmobile.png" alt="03" srcset="">
-                    </div>
-                    <div class="slide-cell js-slide-cell">
-                        <!-- I am one cell R -->
-                        <img src="static/images/Homepage 121221 Jason Ho 0167_edit.jpg" alt="02" srcset="">
-                    </div>
-                    <div class="slide-cell js-slide-cell active">
-                        <!-- I am one cell R -->
-                        <img src="static/images/LinsmoreHP_2.jpg" alt="01" srcset="">
+                    <div class="js-title first active">
+                        <div>House</div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <div class="projects-page disabled js-projects-page">
-        <div class="tiles-wrap">
-            <div class="full-vertical tile" style="width: 100%;">
-                <div class="double-image">
-                    <div class="tile-image row-zero--vertical-image" style=""></div>
-                </div>
-
-                <div id="row-zero--vertical-tile" class="tile-caption">Linsmore House</div>
-
+    <div class="title-wrap">
+        <div class="card">
+            <div class="image-card">
+                <img src="static/images/LinsmoreMobileHP.jpg" alt="" srcset="">
             </div>
-
-
-        </div>
-        <div class="tiles-wrap">
-            <div class="vertical tile">
-                <div class="double-image">
-                    <div class="tile-image left row-one--vertical-image"></div>
-                    <div class="tile-image right row-one--vertical-image"></div>
-                </div>
-
-                <div id="row-one--vertical-tile" class="tile-caption">Boiler Loft</div>
-
-            </div>
-            <div class="horizontal tile">
-                <div class="tile-image row-one--horizontal-image"></div>
-                <div id="row-one--horizontal-tile" class="tile-caption">Larchmount Kitchen</div>
+            <div class="title-item">
+                <div>Linsmore</div>
+                <div>House</div>
             </div>
         </div>
-        <div class="tiles-wrap">
-            <div class="horizontal tile">
-                <div class="tile-image row-two--horizontal-image"></div>
-                <div id="row-two--horizontal-tile" class="tile-caption">Larchmount Garden</div>
-            </div>
-            <div class="vertical tile">
-                <div class="double-image">
-                    <div class="tile-image left row-two--vertical-image"></div>
-                    <div class="tile-image right row-two--vertical-image"></div>
-                </div>
-                <div id="row-two--vertical-tile" class="tile-caption">Pause Studio</div>
-            </div>
-
-        </div>
-        <div class="extra-space"></div>
     </div>
-    <div class="footer-wrap fixed disabled">
+
+    <div class="title-wrap single-line">
+        <div class="card">
+            <div class="image-card">
+                <img src="static/images/Homepage 121221 Jason Ho 0131_edit.jpg" alt="" srcset="">
+            </div>
+            <div class="title-item">
+                <div>Boiler Loft</div>
+            </div>
+        </div>
+    </div>
+    <div class="title-wrap">
+        <div class="card">
+            <div class="image-card">
+                <img src="static/images/Larchmountkitchenmobile.png" alt="" srcset="">
+            </div>
+            <div class="title-item">
+                <div>Larchmount</div>
+                <div>Kitchen</div>
+            </div>
+        </div>
+    </div>
+    <div class="title-wrap single-line">
+        <div class="card">
+            <div class="image-card">
+                <img src="static/images/Homepage 131226_PauseStudioA_0066-Edit.jpg" alt="" srcset="">
+            </div>
+            <div class="title-item pause-studio-item">
+                <div>Pause Studio</div>
+            </div>
+        </div>
+    </div>
+    <div class="title-wrap">
+        <div class="card">
+            <div class="image-card">
+                <img src="static/images/Larchmount front yard  - 2.jpg" alt="" srcset="">
+            </div>
+            <div class="title-item">
+                <div>Larchmount</div>
+                <div>Garden</div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="layer-text">
+
+        <div class="paginator-wrap">
+            <div class="current paginator-item">
+                <div class="js-rotate">
+                    <!-- <div>05</div> -->
+                    <div>04</div>
+                    <div>03</div>
+                    <div>02</div>
+                    <div class='first active'>01</div>
+                </div>
+            </div>
+            <div class="total paginator-item">04</div>
+        </div>
+
+    </div>
+    <div class="contact-mobile-screens">
+        <div class="contact-item">Contact</div>
+        <div class="contact-item">hello@pausesdesign.ca</div>
+        <div class="contact-item">437 886 5526</div>
+    </div>
+    <div class="footer-wrap">
         <div class="footer">
             <div class="footer-item link-item">
                 instagram
@@ -311,37 +196,166 @@
 
     </div>
 
-    <div class="menuModule" id="menuModule">
+    <div class="layer-slider">
+        <div id="js-mv-slide" class="slide-wrap">
+            <!-- I am wrapper -->
+            <div id="js-slide-l" class="slide-l">
+                <!-- I am left column -->
+                <div class="in">
+                    <!-- <div class="slide-cell js-slide-cell">
+
+                        <img src="static/images/Layer 2.png" alt="05" srcset="">
+                    </div> -->
+                    <div class="slide-cell js-slide-cell">
+                        <!-- I am one cell L -->
+                        <!--                            <img src="static/images/Larchmount front yard  - 2.jpg" alt="04" srcset="">-->
+                        <img src="static/images/Homepage 131226_PauseStudioA_0219-Edit.jpg" alt="04" srcset="">
+                    </div>
+                    <div class="slide-cell js-slide-cell">
+                        <!-- I am one cell L -->
+                        <img src="static/images/Pause_LarchmountKitchen_0110-Edit.jpg" alt="03" srcset="">
+                    </div>
+                    <div class="slide-cell js-slide-cell">
+                        <!-- I am one cell L -->
+                        <img src="static/images/Homepage 121221 Jason Ho 0131_edit.jpg" alt="02" srcset="">
+                    </div>
+                    <div class="slide-cell js-slide-cell active">
+                        <!-- I am one cell L -->
+                        <img src="static/images/LinsmoreHP_1.jpg" alt="01" srcset="">
+                    </div>
+                </div>
+            </div>
+            <div id="js-slide-r" class="slide-r">
+                <!-- I am right column -->
+                <!-- <div class="slide-cell js-slide-cell">
+
+                    <img src="static/images/Layer 3.png" alt="05" srcset="">
+                </div> -->
+                <div class="slide-cell js-slide-cell">
+                    <!-- I am one cell R -->
+                    <!--                        <img src="static/images/Larchmount front yard  - 2.jpg" alt="04" srcset="">-->
+                    <img src="static/images/Homepage 131226_PauseStudioA_0066-Edit.jpg" alt="04" srcset="">
+                </div>
+                <div class="slide-cell js-slide-cell">
+                    <!-- I am one cell R -->
+                    <img src="static/images/Larchmountkitchenmobile.png" alt="03" srcset="">
+                </div>
+                <div class="slide-cell js-slide-cell">
+                    <!-- I am one cell R -->
+                    <img src="static/images/Homepage 121221 Jason Ho 0167_edit.jpg" alt="02" srcset="">
+                </div>
+                <div class="slide-cell js-slide-cell active">
+                    <!-- I am one cell R -->
+                    <img src="static/images/LinsmoreHP_2.jpg" alt="01" srcset="">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="projects-page disabled js-projects-page">
+    <div class="projects-page-title">
+        <span>Featured</span>
+        <span class="white">Projects</span>
+    </div>
+    <div class="tiles-wrap">
+        <div class="full-vertical tile" style="width: 100%;">
+            <div class="double-image">
+                <div class="tile-image row-zero--vertical-image" style=""></div>
+            </div>
+
+            <div id="row-zero--vertical-tile" class="tile-caption">Linsmore House</div>
+
+        </div>
+
 
     </div>
+    <div class="tiles-wrap">
+        <div class="vertical tile">
+            <div class="double-image">
+                <div class="tile-image left row-one--vertical-image"></div>
+                <div class="tile-image right row-one--vertical-image"></div>
+            </div>
+
+            <div id="row-one--vertical-tile" class="tile-caption">Boiler Loft</div>
+
+        </div>
+        <div class="horizontal tile">
+            <div class="tile-image row-one--horizontal-image"></div>
+            <div id="row-one--horizontal-tile" class="tile-caption">Larchmount Kitchen</div>
+        </div>
+    </div>
+    <div class="tiles-wrap">
+        <div class="horizontal tile">
+            <div class="tile-image row-two--horizontal-image"></div>
+            <div id="row-two--horizontal-tile" class="tile-caption">Larchmount Garden</div>
+        </div>
+        <div class="vertical tile">
+            <div class="double-image">
+                <div class="tile-image left row-two--vertical-image"></div>
+                <div class="tile-image right row-two--vertical-image"></div>
+            </div>
+            <div id="row-two--vertical-tile" class="tile-caption">Pause Studio</div>
+        </div>
+
+    </div>
+    <div class="contact-us">
+        <p>Let’s start the conversation </p>
+        <div class="btn" onclick="location.href='mailto:scott@pausedesign.ca'">
+            <div class="v-align">
+                <div class="cell">
+                    <p>Ask us anything</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="extra-space"></div>
+</div>
 
 
+<div class="footer-wrap fixed disabled">
+    <div class="footer">
+        <div class="footer-item link-item">
+            instagram
+        </div>
+        <div class="footer-item center link-item">
+            twitter
+        </div>
+        <div class="footer-item link-item">
+            houzz
+        </div>
+    </div>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script>
-        // Dont show content until loaded
-        $(window).on('load', function () {
-            if (document.readyState === 'complete') {
-                $(window).scrollTop(0);
-                $('.splash').css({
-                    'visibility': 'hidden',
-                    'opacity': '0',
-                    'widht': '0'
-                });
-                setTimeout(() => {
-                    $('.splash').css('display', 'none');
-                }, 300);
-            }
-        });
-    </script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.13/jquery.mousewheel.min.js"></script>
-    <!-- <script src="/static/js-libs/hammer.min.js"></script> -->
-    <script src="https://hammerjs.github.io/dist/hammer.js"></script>
-    <!-- Including Paper and SimplexNoise -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/paper.js/0.12.0/paper-core.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/simplex-noise/2.4.0/simplex-noise.min.js"></script>
-    <script src="js/main.js"></script>
+</div>
 
+<div class="menuModule" id="menuModule">
+
+</div>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script>
+    // Dont show content until loaded
+    $(window).on('load', function () {
+        if (document.readyState === 'complete') {
+            $(window).scrollTop(0);
+            $('.splash').css({
+                'visibility': 'hidden',
+                'opacity': '0',
+                'widht': '0'
+            });
+            setTimeout(() => {
+                $('.splash').css('display', 'none');
+            }, 300);
+        }
+    });
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.13/jquery.mousewheel.min.js"></script>
+<!-- <script src="/static/js-libs/hammer.min.js"></script> -->
+<script src="https://hammerjs.github.io/dist/hammer.js"></script>
+<!-- Including Paper and SimplexNoise -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/paper.js/0.12.0/paper-core.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/simplex-noise/2.4.0/simplex-noise.min.js"></script>
+<script src="js/main.js"></script>
 
 
 </body>

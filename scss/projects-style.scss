@@ -1,0 +1,581 @@
+//sass --watch scss/projects-style.scss css/projects-style.css --style compressed
+
+
+.project-content {
+  .project-name p {
+    font-family: SFProText-Medium;
+    text-align: center;
+  }
+
+  .header-content {
+    text-align: center;
+    font-family: ChronicleDisp-Semibold, serif;
+
+    .text-over-image {
+      position: relative;
+
+      span {
+        position: absolute;
+        color: white;
+      }
+    }
+  }
+
+  .container {
+    .project-info {
+      border-top: 1px solid #636466;
+
+      .row {
+        &:not(.desktop) {
+          justify-content: space-between;
+          display: flex;
+        }
+
+
+        .item {
+          float: left;
+
+          .headline {
+            font-family: SFProText-Bold, serif;
+          }
+
+          .text {
+            font-family: SFProText-Light, serif;
+          }
+        }
+      }
+    }
+
+    .body-copy {
+      .copy {
+        font-family: SFProText-Regular, serif;
+      }
+
+      .quote {
+        .text p {
+          font-family: ChronicleDisp-Semibold, serif;
+        }
+
+        .reference p {
+          font-family: SFProText-Medium, serif;
+        }
+      }
+
+      .contact-us {
+        .footer-wrap {
+          text-align: center;
+        }
+      }
+
+      .siblings {
+        * {
+          display: block;
+          text-align: center;
+        }
+
+        img {
+          max-width: 186px;
+          margin: 0 auto;
+        }
+
+        span {
+          font-family: SFProText-Regular, serif;
+        }
+
+        .title.next, .title.prev {
+          font-family: Chronicle-Display-Semibold, serif;
+        }
+
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+  .project-content {
+    margin-top: 54px;
+
+    .project-name {
+      margin-top: 100px;
+
+      p {
+        font-size: 12px;
+      }
+    }
+
+    .header-content {
+      font-size: 60px;
+      margin-top: 25px;
+
+
+      .text-over-image {
+        top: 10px;
+
+        .phone-header-image {
+          display: none;
+        }
+
+        .ipad-header-image {
+          width: 100%;
+        }
+
+        span {
+          top: -5px;
+          width: 100%;
+        }
+      }
+    }
+
+    .container {
+
+      .project-info {
+        padding-top: 25px;
+        margin: 80px 10.4vw 95px;
+
+        &.phone {
+          display: none;
+        }
+
+
+        .row {
+          .column {
+            width: 90px;
+          }
+
+          .column-copy {
+            width: 430px;
+          }
+
+          .item {
+            margin-top: 15px;
+
+            font-size: 13px;
+
+            .text {
+              margin-top: 3px;
+            }
+          }
+
+        }
+      }
+
+      .body-copy {
+        img.body-image {
+          display: none;
+        }
+
+        .img-block.start {
+          padding-right: 10.4vw;
+          height: 488px;
+          max-width: 100%;
+          display: flex;
+          justify-content: start;
+
+          .column {
+            max-width: 329px;
+            width: 50%;
+            background-size: cover;
+            background-repeat: no-repeat;
+            height: 100%;
+
+            &.img-one {
+              background-image: url('../projects/linsmore/images/1.png');
+              margin-right: 40px;
+            }
+
+            &.img-two {
+              background-image: url('../projects/linsmore/images/2.png');
+            }
+          }
+        }
+
+        .img-block.middle {
+          max-width: 100%;
+          padding: 0 10.4vw;
+          margin-top: 80px;
+
+          img {
+            width: 100%;
+          }
+        }
+
+        .img-block.full {
+          max-width: 100%;
+          margin-top: 80px;
+
+          img {
+            width: 100%;
+          }
+        }
+
+        .img-block.end {
+          padding-left: 10.4vw;
+          height: 488px;
+          max-width: 100%;
+          display: flex;
+          justify-content: start;
+          margin-top: 80px;
+
+          .column {
+            max-width: 329px;
+            width: 50%;
+            background-size: cover;
+            background-repeat: no-repeat;
+            height: 100%;
+
+            &.img-one {
+              background-image: url('../projects/linsmore/images/8.png');
+              margin-right: 40px;
+            }
+
+            &.img-two {
+              background-image: url('../projects/linsmore/images/9.png');
+            }
+          }
+        }
+
+        .desktop .copy {
+          font-size: 19.5px;
+          line-height: 28px;
+        }
+
+        .copy.mobile {
+          display: none;
+        }
+
+        .quote {
+          &.end {
+            max-width: 100%;
+            padding-left: 10.4vw;
+            margin-top: 80px;
+
+            img {
+              width: 100%;
+            }
+          }
+
+          .text {
+            font-size: 32px;
+            line-height: 35px;
+            margin-top: 75px;
+          }
+
+          .reference {
+            font-size: 10px;
+          }
+        }
+
+        .contact-us {
+          border-top: 1px solid #636466;
+          border-bottom: 1px solid #636466;
+          margin-top: 80px;
+          margin-bottom: 80px;
+          height: auto !important;
+
+          > p {
+            font-size: 32px;
+            line-height: 36px;
+          }
+
+          .btn {
+            display: table;
+            width: 183px;
+            height: 40px;
+            margin: 80px auto 0 auto;
+            border-radius: 16px;
+
+            .v-align {
+              padding: 10px;
+              display: table-cell;
+              text-align: center;
+              vertical-align: middle;
+
+              .cell {
+                display: inline-block;
+                vertical-align: top;
+              }
+            }
+
+            p {
+              font-size: 16px;
+            }
+          }
+
+          .footer-wrap {
+            margin-top: 80px;
+            margin-bottom: 80px;
+          }
+        }
+
+        .siblings {
+          &.mobile {
+            display: none;
+          }
+
+          height: 244px;
+          max-width: 100%;
+          display: flex;
+          justify-content: center;
+          padding: 0 10.4vw;
+          position: relative;
+          margin-top: 80px;
+          margin-bottom: 80px;
+
+          .column {
+            max-width: 186px;
+            width: 50%;
+            background-size: cover;
+            background-repeat: no-repeat;
+            height: 100%;
+
+            &.prev {
+              background-image: url('../projects/linsmore/images/sibling-prev.jpg');
+              position: relative;
+              margin-right: 30px;
+            }
+
+            &.next {
+              background-image: url('../projects/linsmore/images/sibling-next.png');
+              position: relative;
+              margin-left: 30px;
+            }
+          }
+
+          span {
+            font-size: 9.18px;
+          }
+
+          .title.next, .title.prev {
+            font-size: 32px;
+          }
+
+          .title.prev {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            text-align: left;
+            left: 10.4vw;
+            z-index: 60;
+          }
+
+          .title.next {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            text-align: right;
+            right: 10.4vw;
+            z-index: 60;
+            left: auto;
+          }
+        }
+      }
+
+    }
+  }
+
+}
+
+@media only screen and (max-width: 767px) {
+  img {
+    width: 100%;
+  }
+  .project-content {
+    margin-top: 54px;
+
+    .project-name {
+      margin-top: 100px;
+
+      p {
+        font-size: 12px;
+      }
+    }
+
+    .header-content {
+      font-size: 38px;
+      margin-top: 25px;
+
+      .text-over-image {
+        top: 10px;
+
+        .ipad-header-image {
+          display: none;
+        }
+
+        span {
+          top: -5px;
+          width: 100%;
+        }
+      }
+    }
+
+    .container {
+
+
+      .project-info {
+        &.desktop {
+          display: none;
+        }
+
+        margin-top: 50px;
+        padding-top: 25px;
+
+        .row {
+          .item {
+            width: 88px;
+            font-size: 12px;
+
+          }
+
+          &:nth-child(2) {
+            margin: 20px 0;
+          }
+        }
+      }
+
+      .body-copy {
+        margin-top: 32px;
+
+        img {
+          margin-top: 18px;
+        }
+
+        .img-block.start, .img-block.full {
+          display: none;
+        }
+
+        .copy {
+          font-size: 16px;
+          line-height: 24px;
+          margin-bottom: 22px;
+        }
+
+        .quote {
+          .text {
+            font-size: 28px;
+            line-height: 35px;
+            margin-top: 35px;
+          }
+
+          .reference {
+            font-size: 10px;
+            margin-top: 5px;
+          }
+        }
+
+        .contact-us {
+          border-top: 1px solid #636466;
+          border-bottom: 1px solid #636466;
+          height: auto !important;
+
+          margin-top: 50px;
+
+          > p {
+            font-size: 28px;
+            line-height: 32px;
+            margin-top: 50px;
+          }
+
+          span {
+            display: block;
+          }
+
+          .btn {
+            display: table;
+            width: 183px;
+            height: 40px;
+            margin: 30px auto 0 auto;
+            border-radius: 16px;
+
+            .v-align {
+              padding: 10px;
+              display: table-cell;
+              text-align: center;
+              vertical-align: middle;
+
+              .cell {
+                display: inline-block;
+                vertical-align: top;
+              }
+            }
+
+            p {
+              font-size: 14px;
+            }
+          }
+
+          .footer-wrap {
+            margin-top: 35px;
+            margin-bottom: 50px;
+          }
+        }
+
+        .siblings {
+          &.desktop {
+            display: none;
+          }
+
+          padding-bottom: 50px;
+          padding-top: 50px;
+
+          span {
+            font-size: 9.18px;
+            margin-top: 15px;
+          }
+
+          .title.next {
+            font-size: 28px;
+            margin-top: 8px;
+          }
+        }
+      }
+
+    }
+  }
+
+}
+
+
+/*container margin padding folowing header begins*/
+
+@media only screen and (min-width: 1581px) {
+  .container {
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+  }
+
+}
+
+@media only screen and (min-width: 1025px) and (max-width: 1580px) {
+  .container {
+    padding-left: 70px;
+    padding-right: 70px;
+  }
+
+}
+
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+  .container {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+
+}
+
+@media only screen and (min-width: 501px) and (max-width: 768px) {
+  .container {
+    padding-left: 10.4vw;
+    padding-right: 10.4vw;
+  }
+
+}
+
+@media only screen and (max-width: 500px) {
+  .container {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+}
+
+/*container margin padding folowing header ends*/

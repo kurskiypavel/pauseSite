@@ -4,6 +4,15 @@
   font-family: SFProText-Bold;
   src: url("../static/fonts/SF Pro/SF-Pro-Text-Bold.otf");
 }
+@font-face {
+  font-family: SF-Pro-Text-Semibold;
+  src: url("../static/fonts/SF Pro/SF-Pro-Text-Semibold.otf");
+}
+
+@font-face {
+  font-family: SFProText-Medium;
+  src: url("../static/fonts/SF Pro/SF-Pro-Text-Medium.otf");
+}
 
 @font-face {
   font-family: SFProText-Regular;
@@ -18,6 +27,11 @@
 @font-face {
   font-family: Chronicle-Display-Bold;
   src: url("../static/fonts/HCo_ChronDisplay/OpenType/ChronicleDisp-Bold.otf");
+}
+
+@font-face {
+  font-family: ChronicleDisp-Semibold;
+  src: url("../static/fonts/HCo_ChronDisplay/OpenType/ChronicleDisp-Semibold.otf");
 }
 
 @font-face {
@@ -61,13 +75,13 @@
 }
 
 
-@media only screen and (min-width: 769px){
-  .menuModule{
+@media only screen and (min-width: 769px) {
+  .menuModule {
     display: none;
   }
 }
 
-@media only screen and (max-width: 768px){
+@media only screen and (max-width: 768px) {
   .menuModule {
     position: absolute;
     top: 0;
@@ -483,7 +497,53 @@
   }
 }
 
-@media only screen and (max-width: 500px) {
+@media only screen and  (min-width: 414px) and (max-width: 500px) {
+  .title-wrap {
+    margin: 20px;
+    position: relative;
+
+    &:not(.single-line) {
+      height: 550px;
+    }
+
+    &.single-line {
+      height: 508px;
+    }
+
+    &.desktop {
+      display: none;
+    }
+  }
+
+  .image-card {
+    // background: yellow;
+    height: 450px;
+    max-width: 334px;
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  .title-item {
+    font-size: 50px;
+    line-height: 42px;
+    position: absolute;
+    bottom: 31px;
+    opacity: 1;
+
+    &:not(.pause-studio-item) {
+      left: 61px;
+    }
+
+    &.pause-studio-item {
+      left: 50px;
+    }
+  }
+}
+
+@media only screen and (max-width: 413px) {
   .title-wrap {
     margin: 20px;
     position: relative;
@@ -729,7 +789,6 @@ button {
 }
 
 
-
 .u-visually-hidden {
   border: 0;
   clip: rect(0 0 0 0);
@@ -846,7 +905,11 @@ button {
   line-height: 24px;
   letter-spacing: 1px;
   text-align: center;
-  margin-top: 85px;
+  padding-top: 30px;
+  border-top: 2px solid #636466;
+  margin-left: 20px;
+  margin-right: 20px;
+  max-width: 100%;
 }
 
 @media only screen and (min-width: 501px) {
@@ -1406,13 +1469,13 @@ button {
   }
 
   #projectsNav,
-  #studioNav.right-origin {
+  #aboutNav.right-origin {
     &::before {
       transform-origin: center;
     }
   }
 
-  #studioNav.left-origin,
+  #aboutNav.left-origin,
   #contactNav {
     &::before {
       transform-origin: center;
@@ -1494,11 +1557,56 @@ button {
   background-size: cover;
 }
 
+.projects-page-title {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  z-index: 60;
+  font-family: Chronicle-Display-Semibold, serif;
+  top: 0;
+
+  span {
+    display: block;
+  }
+
+  .white {
+    color: white;
+  }
+}
+
+.contact-us {
+  & > p {
+    font-family: Chronicle-Display-Semibold, serif;
+    text-align: center;
+  }
+
+  .btn {
+    transition: .3s;
+    background: #ecebec;
+
+    &:hover {
+      background: black;
+
+      * {
+        color: white;
+      }
+    }
+
+    p {
+      font-family: SF-Pro-Text-Semibold, serif;
+      transition: .3s;
+      color: black;
+    }
+  }
+
+
+}
+
 @media only screen and (min-width: 1401px) {
   .projects-page {
     max-width: 1440px;
     margin: 0 auto;
-    padding-top: 80px;
+    padding-top: 100px;
   }
 
   .tiles-wrap {
@@ -1524,7 +1632,7 @@ button {
 
     &.full-vertical {
       width: 100%;
-      height: 676px;
+      height: 789px;
     }
 
     &.horizontal {
@@ -1541,7 +1649,7 @@ button {
     }
 
     &.row-zero--vertical-image {
-      height: 643px;
+      height: 756px;
     }
   }
 
@@ -1550,13 +1658,51 @@ button {
     bottom: 0;
     font-size: 18px;
   }
+
+  .contact-us {
+    height: 275px;
+    border-top: 1px solid #58595b;
+    max-width: 1238px;
+    margin: 0 auto;
+
+    & > p {
+      font-size: 50px;
+      padding-top: 65px;
+    }
+
+    .btn {
+      display: table;
+      width: 183px;
+      height: 40px;
+      margin: 60px auto 0 auto;
+      border-radius: 16px;
+
+
+      .v-align {
+        padding: 10px;
+        display: table-cell;
+        text-align: center;
+        vertical-align: middle;
+
+        .cell {
+          display: inline-block;
+          vertical-align: top;
+
+          p {
+            font-size: 16px;
+          }
+        }
+      }
+    }
+  }
+
 }
 
 @media only screen and (min-width: 1211px) and (max-width: 1400px) {
   .projects-page {
     max-width: 1400px;
     margin: 0 auto;
-    padding-top: 80px;
+    padding-top: 100px;
   }
 
   .tiles-wrap {
@@ -1581,7 +1727,7 @@ button {
 
     &.full-vertical {
       width: 100%;
-      height: 587px;
+      height: 716px;
     }
 
     &.horizontal {
@@ -1597,7 +1743,7 @@ button {
     }
 
     &.row-zero--vertical-image {
-      height: 556px;
+      height: 685px;
     }
   }
 
@@ -1606,13 +1752,51 @@ button {
     bottom: 0;
     font-size: 16px;
   }
+
+  .contact-us {
+    height: 275px;
+    border-top: 1px solid #58595b;
+    max-width: 1070px;
+    margin: 0 auto;
+
+    & > p {
+      font-size: 50px;
+      padding-top: 65px;
+    }
+
+    .btn {
+      display: table;
+      width: 183px;
+      height: 40px;
+      margin: 60px auto 0 auto;
+      border-radius: 16px;
+
+
+      .v-align {
+        padding: 10px;
+        display: table-cell;
+        text-align: center;
+        vertical-align: middle;
+
+        .cell {
+          display: inline-block;
+          vertical-align: top;
+
+          p {
+            font-size: 16px;
+          }
+        }
+      }
+    }
+  }
+
 }
 
 @media only screen and (min-width: 966px) and (max-width: 1210px) {
   .projects-page {
     max-width: 1210px;
     margin: 0 auto;
-    padding-top: 80px;
+    padding-top: 100px;
   }
 
   .tiles-wrap {
@@ -1637,7 +1821,7 @@ button {
 
     &.full-vertical {
       width: 100%;
-      height: 474px;
+      height: 552px;
     }
 
     &.horizontal {
@@ -1653,7 +1837,7 @@ button {
     }
 
     &.row-zero--vertical-image {
-      height: 450px;
+      height: 528px;
     }
   }
 
@@ -1662,6 +1846,44 @@ button {
     bottom: 0;
     font-size: 14px;
   }
+
+  .contact-us {
+    height: 250px;
+    border-top: 1px solid #58595b;
+    max-width: 865px;
+    margin: 0 auto;
+
+    & > p {
+      font-size: 40px;
+      padding-top: 65px;
+    }
+
+    .btn {
+      display: table;
+      width: 183px;
+      height: 40px;
+      margin: 60px auto 0 auto;
+      border-radius: 16px;
+
+
+      .v-align {
+        padding: 10px;
+        display: table-cell;
+        text-align: center;
+        vertical-align: middle;
+
+        .cell {
+          display: inline-block;
+          vertical-align: top;
+
+          p {
+            font-size: 16px;
+          }
+        }
+      }
+    }
+  }
+
 }
 
 @media only screen and (min-width: 966px) {
@@ -1670,7 +1892,7 @@ button {
   }
 }
 
-@media only screen and (min-width: 768px) and (max-width: 965px) {
+@media only screen and (min-width: 769px) and (max-width: 965px) {
   .projects-page {
     max-width: 768px;
     margin: 0 auto;
@@ -1681,14 +1903,18 @@ button {
 
     max-width: 609px;
     margin: 0 auto 55px auto;
+    //padding-left: 10.4vw;
+    //padding-right: 10.4vw;
+    display: flex;
+    justify-content: space-between;
 
-    .tile:last-child {
-      margin-top: 55px;
+    .tile:last-child:not(.full-vertical) {
+      //margin-top: 55px;
     }
   }
 
   .tile {
-    height: 420px;
+    height: 270px;
     position: relative;
 
 
@@ -1700,23 +1926,36 @@ button {
         justify-content: space-between;
 
         .tile-image {
-          width: 295px;
+          width: 179px;
+          height: 236px;
+
+          &.right {
+            display: none;
+          }
         }
       }
     }
 
     &.full-vertical {
       width: 100%;
+      height: 407px;
     }
 
     &.horizontal {
-      width: 609px;
+      width: 369px;
       background: #fff;
     }
   }
 
   .tile-image {
-    height: 390px;
+    &:not(.row-zero--vertical-image) {
+      height: 236px;
+    }
+
+    &.row-zero--vertical-image {
+      height: 372px;
+    }
+
     // background: green;
   }
 
@@ -1725,10 +1964,161 @@ button {
     bottom: 0;
     font-size: 14px;
   }
+
+  .contact-us {
+    height: 250px;
+    border-top: 1px solid #58595b;
+    max-width: 609px;
+    margin: 0 auto;
+
+    & > p {
+      font-size: 40px;
+      padding-top: 65px;
+    }
+
+    .btn {
+      display: table;
+      width: 183px;
+      height: 40px;
+      margin: 60px auto 0 auto;
+      border-radius: 16px;
+
+
+      .v-align {
+        padding: 10px;
+        display: table-cell;
+        text-align: center;
+        vertical-align: middle;
+
+        .cell {
+          display: inline-block;
+          vertical-align: top;
+
+          p {
+            font-size: 16px;
+          }
+        }
+      }
+    }
+  }
+
+}
+
+@media only screen and (min-width: 701px) and (max-width: 768px) {
+  .projects-page {
+    max-width: 768px;
+    margin: 0 auto;
+    padding-top: 80px;
+  }
+
+  .tiles-wrap {
+
+    max-width: 609px;
+    margin-bottom: 55px;
+    padding-left: 10.4vw;
+    padding-right: 10.4vw;
+    display: flex;
+    justify-content: space-between;
+
+    .tile:last-child:not(.full-vertical) {
+      //margin-top: 55px;
+    }
+  }
+
+  .tile {
+    height: 270px;
+    position: relative;
+
+
+    &.vertical {
+      background: #fff;
+
+      .double-image {
+        display: flex;
+        justify-content: space-between;
+
+        .tile-image {
+          width: 179px;
+          height: 236px;
+
+          &.right {
+            display: none;
+          }
+        }
+      }
+    }
+
+    &.full-vertical {
+      width: 100%;
+      height: 407px;
+    }
+
+    &.horizontal {
+      width: 369px;
+      background: #fff;
+    }
+  }
+
+  .tile-image {
+    &:not(.row-zero--vertical-image) {
+      height: 236px;
+    }
+
+    &.row-zero--vertical-image {
+      height: 372px;
+    }
+
+    // background: green;
+  }
+
+  .tile-caption {
+    position: absolute;
+    bottom: 0;
+    font-size: 14px;
+  }
+
+  .contact-us {
+    height: 250px;
+    border-top: 1px solid #58595b;
+    margin-left: 10.4vw;
+    margin-right: 10.4vw;
+    width: auto;
+
+    & > p {
+      font-size: 32px;
+      padding-top: 65px;
+    }
+
+    .btn {
+      display: table;
+      width: 183px;
+      height: 40px;
+      margin: 60px auto 0 auto;
+      border-radius: 16px;
+
+
+      .v-align {
+        padding: 10px;
+        display: table-cell;
+        text-align: center;
+        vertical-align: middle;
+
+        .cell {
+          display: inline-block;
+          vertical-align: top;
+
+          p {
+            font-size: 16px;
+          }
+        }
+      }
+    }
+  }
+
 }
 
 // responsive tiles
-@media only screen and (min-width: 501px) and (max-width: 767px) {
+@media only screen and (min-width: 501px) and (max-width: 700px) {
 
   .projects-page {
     max-width: 767px;
@@ -1741,7 +2131,7 @@ button {
     max-width: 609px;
     margin: 0 10.4vw 55px 10.4vw;
 
-    .tile:last-child {
+    .tile:last-child:not(.full-vertical) {
       margin-top: 55px;
     }
   }
@@ -1790,11 +2180,50 @@ button {
     bottom: 0;
     font-size: 14px;
   }
+
+  .contact-us {
+    height: 250px;
+    border-top: 1px solid #58595b;
+    margin-left: 10.4vw;
+    margin-right: 10.4vw;
+    width: auto;
+
+    & > p {
+      font-size: 32px;
+      padding-top: 65px;
+    }
+
+    .btn {
+      display: table;
+      width: 183px;
+      height: 40px;
+      margin: 60px auto 0 auto;
+      border-radius: 16px;
+
+
+      .v-align {
+        padding: 10px;
+        display: table-cell;
+        text-align: center;
+        vertical-align: middle;
+
+        .cell {
+          display: inline-block;
+          vertical-align: top;
+
+          p {
+            font-size: 16px;
+          }
+        }
+      }
+    }
+  }
+
 }
 
 @media only screen and (min-width: 501px) {
   .projects-page {
-    margin-top: 60px;
+    margin-top: 130px;
   }
 }
 
@@ -1804,6 +2233,20 @@ button {
   }
 }
 
+// projects-page-title
+@media only screen and (min-width: 966px) {
+  .projects-page-title {
+    font-size: 110px;
+    line-height: 100px;
+  }
+}
+
+@media only screen and (max-width: 965px) {
+  .projects-page-title {
+    font-size: 80px;
+    line-height: 76px;
+  }
+}
 
 /*  PAGE ANIMATION STYLES */
 

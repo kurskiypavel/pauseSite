@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="format-detection" content="telephone=no">
+    <title>Pause</title>
+    <style>
+        .splash {
+            z-index: 1000;
+            display: block;
+            transition: 0.3s;
+            position: fixed;
+            top: 0;
+            left: 0;
+            background: #fff;
+            width: 100%;
+            height: 100%;
+            max-height: 100vh;
+        }
+    </style>
+    <link rel="stylesheet" href="../../css/reset.css">
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/projects-style.css">
+</head>
+<body>
+<!-- The cursor elements -->
+<div class="cursor cursor--small"></div>
+<canvas class="cursor cursor--canvas" resize></canvas>
+<div class="splash">
+</div>
+<div class="header-wrap fixed">
+    <div class="header">
+        <div id="headerLogo" class="logo link-item">Pause</div>
+        <div class="nav-wrap js-nav-wrap">
+            <div id="projectsNav" class="nav-item projects left link-item">
+                <div class="wrapper">
+                    <div>Projects</div>
+                </div>
+            </div>
+            <div id="aboutNav" class="nav-item center left-origin link-item">
+
+                <div class="wrapper">
+                    <div>About</div>
+                </div>
+            </div>
+            <div id="contactNav" class="nav-item right link-item">
+
+                <div class="wrapper">
+                    <div>Contact</div>
+                </div>
+            </div>
+
+        </div>
+        <button type="button" class="site-header-button" id='toogle-hamburger' title="Toggle menu">
+            <span class="u-visually-hidden">Toggle menu</span>
+            <span class="button-bar button-bar--1"></span>
+            <span class="button-bar button-bar--2"></span>
+            <span class="button-bar button-bar--3"></span>
+        </button>
+    </div>
+</div>
+<div class="project-content">
+    <div class="project-name"><p>Linsmore House</p></div>
+    <div class="header-content">
+        <span>Renovating the idea</span>
+        <div class="text-over-image">
+            <span>of multi-use space</span>
+            <img class="phone-header-image" src="images/header.png" alt="">
+            <img class="ipad-header-image" src="images/headerIpad.jpg" alt="">
+        </div>
+    </div>
+    <div class="container">
+        <div class="project-info phone">
+            <div class="row">
+                <div class="item">
+                    <div class="headline">Sector</div>
+                    <div class="text">Residential</div>
+                </div>
+                <div class="item">
+                    <div class="headline">Time Span</div>
+                    <div class="text">6 Months</div>
+                </div>
+                <div class="item">
+                    <div class="headline">Size</div>
+                    <div class="text">2,000 sq.ft</div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="item">
+                    <div class="headline">Location</div>
+                    <div class="text">Toronto
+                        Canada
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="headline">Client</div>
+                    <div class="text">Linsmore House</div>
+                </div>
+                <div class="item">
+                    <div class="headline">Status</div>
+                    <div class="text">Complete</div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="item">
+                    <div class="headline">Type</div>
+                    <div class="text">House</div>
+                </div>
+                <div class="item">
+                    <div class="headline">Service</div>
+                    <div class="text">Interior Design
+                        Build
+                    </div>
+                </div>
+                <div class="item">
+
+                </div>
+            </div>
+        </div>
+
+
+        <div class="body-copy">
+            <p class="mobile copy">Renovating this 1970s duplex in East York began by completely
+                re-thinking the first-floor
+                living space
+                and
+                introducing an open-concept design. We then persuaded the owner not to put on an addition, but
+                rather to
+                reorganize the interior with an aim to achieving multi-functionality. We were able to take the
+                money
+                saved
+                and
+                re-allocate it into upgrading design details that created beautiful, impactful spaces. Large
+                built-in
+                storage
+                and amenities were hidden to create a comfortable and simplistic living area that complimented
+                the
+                owners’
+                lifestyle.</p>
+            <div class="project-info desktop">
+                <div class="row">
+                    <div class="column">
+                        <div class="column" style="">
+                            <div class="item">
+                                <div class="headline">Sector</div>
+                                <div class="text">Residential</div>
+                            </div>
+                            <div class="item">
+                                <div class="headline">Location</div>
+                                <div class="text">Toronto
+                                    Canada
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="headline">Type</div>
+                                <div class="text">House</div>
+                            </div>
+                            <div class="item">
+                                <div class="headline">Time Span</div>
+                                <div class="text">6 Months</div>
+                            </div>
+                        </div>
+                        <div class="column">
+                            <div class="item">
+                                <div class="headline">Client</div>
+                                <div class="text">Linsmore House</div>
+                            </div>
+                            <div class="item">
+                                <div class="headline">Service</div>
+                                <div class="text">Interior Design
+                                    Build
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="headline">Size</div>
+                                <div class="text">2,000 sq.ft</div>
+                            </div>
+                            <div class="item">
+                                <div class="headline">Status</div>
+                                <div class="text">Complete</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="column-copy"><p class="copy">Renovating this 1970s duplex in East York began by completely
+                        re-thinking the first-floor
+                        living space
+                        and
+                        introducing an open-concept design. We then persuaded the owner not to put on an addition, but
+                        rather to
+                        reorganize the interior with an aim to achieving multi-functionality. We were able to take the
+                        money
+                        saved
+                        and
+                        re-allocate it into upgrading design details that created beautiful, impactful spaces. Large
+                        built-in
+                        storage
+                        and amenities were hidden to create a comfortable and simplistic living area that complimented
+                        the
+                        owners’
+                        lifestyle.</p></div>
+                </div>
+            </div>
+            <div class="row img-block start">
+                <div class="column img-one">
+                </div>
+                <div class="column img-two">
+                </div>
+            </div>
+            <img class="body-image" src="images/1.png" alt="">
+            <img class="body-image" src="images/2.png" alt="">
+            <div class="quote end">
+                <img src="images/3.png" alt="">
+                <div class="text">
+                    <p>“We juxtapose the beauty of the art with the functionality and efficiency of the archive,
+                        transforming
+                        storage into a feature.”</p>
+                    <div class="reference">
+                        <p>—Jason Ho, Partner at Pause Architects &amp; Design</p>
+                    </div>
+                </div>
+            </div>
+            <img class="body-image" src="images/4.png" alt="">
+            <div class="quote end">
+                <img src="images/5.png" alt="">
+                <div class="text">
+                    <p>“Quote from client scele the risque mas quis aliq uam nulla, the Integer vene natiser enim in
+                        tortor
+                        and
+                        there dictum antlm.”</p>
+                    <div class="reference">
+                        <p>—Perter Linsmore, Owner</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row img-block middle">
+                <img src="images/6.png" alt="">
+            </div>
+            <div class="row img-block full">
+                <img src="images/7-lg.jpg" alt="">
+            </div>
+            <img class="body-image" src="images/7.png" alt="">
+            <div class="row img-block end">
+                <div class="column img-one">
+                </div>
+                <div class="column img-two">
+                </div>
+            </div>
+            <img class="body-image" src="images/8.png" alt="">
+            <img class="body-image" src="images/9.png" alt="">
+            <div class="contact-us">
+                <p><span>Let’s start </span><span>the conversation</span></p>
+                <div class="btn" onclick="location.href='mailto:scott@pausedesign.ca'">
+                    <div class="v-align">
+                        <div class="cell">
+                            <p>Ask us anything</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-wrap ">
+                    <div class="footer">
+                        <div class="footer-item link-item">
+                            instagram
+                        </div>
+                        <div class="footer-item center link-item">
+                            twitter
+                        </div>
+                        <div class="footer-item link-item">
+                            houzz
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="siblings mobile">
+                <img src="images/sibling-next.png" alt="">
+                <span>NEXT</span>
+                <div class="title next">Boiler Loft</div>
+            </div>
+            <div class="siblings desktop">
+                <div class="title prev">
+                    Pause<br>Studio
+                </div>
+                <div class="column prev">
+                </div>
+                <div class="title next">
+                    Boiler<br>Loft
+                </div>
+                <div class="column next">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script>
+    // Dont show content until loaded
+    $(window).on('load', function () {
+        if (document.readyState === 'complete') {
+            $(window).scrollTop(0);
+            $('.splash').css({
+                'visibility': 'hidden',
+                'opacity': '0',
+                'widht': '0'
+            });
+            setTimeout(() => {
+                $('.splash').css('display', 'none');
+            }, 300);
+        }
+    });
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.13/jquery.mousewheel.min.js"></script>
+<!-- <script src="/static/js-libs/hammer.min.js"></script> -->
+<!--<script src="https://hammerjs.github.io/dist/hammer.js"></script>-->
+<!-- Including Paper and SimplexNoise -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/paper.js/0.12.0/paper-core.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/simplex-noise/2.4.0/simplex-noise.min.js"></script>
+<!--<script src="../../js/main.js"></script>-->
+</body>
+</html>

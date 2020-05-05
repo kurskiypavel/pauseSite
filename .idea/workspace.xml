@@ -2,21 +2,25 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7e7be36b-dde4-4dda-baf8-192cea4b4d63" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/static/images/LinsmoreHP_1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/LinsmoreHP_2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/LinsmoreMobileHP.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/LinsmorePJ.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/css/style.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/css/style.css.map" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/main.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/scss/style.scss" beforeDir="false" afterPath="$PROJECT_DIR$/scss/style.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/images/LinsmorePJ.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/static/images/LinsmorePJ.jpg" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -29,13 +33,17 @@
   </component>
   <component name="PropertiesComponent">
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../kurskiiv2/particles" />
-    <property name="settings.editor.selected.configurable" value="liveEdit" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Color Scheme Font" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\akurskaya\Documents\pauseSite\projects\linsmore" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\akurskaya\Documents\pauseSite\static\images" />
     </key>
@@ -65,6 +73,13 @@
       <workItem from="1587497701773" duration="8622000" />
       <workItem from="1587577647141" duration="5604000" />
       <workItem from="1587899275536" duration="13992000" />
+      <workItem from="1588111145524" duration="1393000" />
+      <workItem from="1588188665367" duration="7602000" />
+      <workItem from="1588426773055" duration="13210000" />
+      <workItem from="1588451842263" duration="11000" />
+      <workItem from="1588525743360" duration="12368000" />
+      <workItem from="1588595729961" duration="14538000" />
+      <workItem from="1588700214177" duration="3616000" />
     </task>
     <servers />
   </component>
@@ -148,21 +163,21 @@
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state width="1031" height="197" key="GridCell.Tab.3.right/0.0.1366.738@0.0.1366.738" timestamp="1587921694716" />
-    <state x="365" y="29" key="SettingsEditor" timestamp="1587913490514">
+    <state x="365" y="29" key="SettingsEditor" timestamp="1588193351913">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state x="365" y="29" key="SettingsEditor/0.0.1366.738@0.0.1366.738" timestamp="1587913490514" />
-    <state x="380" y="100" width="579" height="588" key="find.popup" timestamp="1587901813229">
+    <state x="365" y="29" key="SettingsEditor/0.0.1366.738@0.0.1366.738" timestamp="1588193351913" />
+    <state x="490" y="89" width="579" height="588" key="find.popup" timestamp="1588537123183">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state x="380" y="100" width="579" height="588" key="find.popup/0.0.1366.738@0.0.1366.738" timestamp="1587901813229" />
-    <state x="487" y="158" key="run.anything.popup" timestamp="1587504372038">
+    <state x="490" y="89" width="579" height="588" key="find.popup/0.0.1366.738@0.0.1366.738" timestamp="1588537123183" />
+    <state x="487" y="158" key="run.anything.popup" timestamp="1588436812589">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state x="487" y="158" key="run.anything.popup/0.0.1366.738@0.0.1366.738" timestamp="1587504372038" />
-    <state x="339" y="22" width="672" height="676" key="search.everywhere.popup" timestamp="1587320408344">
+    <state x="487" y="158" key="run.anything.popup/0.0.1366.738@0.0.1366.738" timestamp="1588436812589" />
+    <state x="339" y="22" width="672" height="676" key="search.everywhere.popup" timestamp="1588199337608">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state x="339" y="22" width="672" height="676" key="search.everywhere.popup/0.0.1366.738@0.0.1366.738" timestamp="1587320408344" />
+    <state x="339" y="22" width="672" height="676" key="search.everywhere.popup/0.0.1366.738@0.0.1366.738" timestamp="1588199337608" />
   </component>
 </project>

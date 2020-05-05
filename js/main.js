@@ -19,15 +19,15 @@ $(window).resize(function () {
 
 var hamburger = document.getElementById('toogle-hamburger');
 let mobileMenuHTML = `
-       <div  style="position: fixed;top: 0;z-index: 59;height: 100vh;background: white;width: 100vw;">
-           <div style="position: relative;top: 50%;transform: translateY(-50%);">
+       <div  style="position: fixed;top: 0;z-index: 59;height: 100%;background: white;width: 100%;">
+           <div style="position: relative;top: 50%; transform: translateY(-50%) translateY(-54px);">
                <ul class="mobileMenuContainer" style="font-family: SFProText-Light;font-size: 48px;text-align: center;line-height: 78px;">
                    <li>Projects</li>
-                   <li>Studio</li>
+                   <li>About</li>
                    <li>Contact</li>
                </ul>
             </div>
-            <div class="footerMobileMenuContainer" style="position: absolute;bottom: 0px;width: 100%;">
+            <div class="footerMobileMenuContainer" style="position: absolute;bottom: 20px;width: 100%;">
                    <div class="contact-mobile-menu">
                         <div class="contact-item">hello@pausesdesign.ca</div>
                         <div class="contact-item">437 886 5526</div>
@@ -476,8 +476,8 @@ if ($(window).width() < 768) {
 
 /*  NAVIGATION PSEUDO BEGINS    */
 
-// Set the studio navigation item
-const middleNav = document.getElementById('studioNav');
+// Set the about navigation item
+const middleNav = document.getElementById('aboutNav');
 
 // Event listener for navigation items
 $('.js-nav-wrap .nav-item').click(function () {
@@ -502,7 +502,7 @@ function activateMenu(navObject) {
     let id = navObject.id;
 
     // get which one is clicked
-    if (id === 'studioNav') {
+    if (id === 'aboutNav') {
 
 
     } else if (id === 'contactNav') {
