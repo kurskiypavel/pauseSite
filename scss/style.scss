@@ -1659,42 +1659,45 @@ button {
     font-size: 18px;
   }
 
-  .contact-us {
-    height: 275px;
-    border-top: 1px solid #58595b;
-    max-width: 1238px;
-    margin: 0 auto;
+  .projects-page{
+    .contact-us {
+      height: 275px;
+      border-top: 1px solid #58595b;
+      max-width: 1238px;
+      margin: 0 auto;
 
-    & > p {
-      font-size: 50px;
-      padding-top: 65px;
-    }
+      & > p {
+        font-size: 50px;
+        padding-top: 65px;
+      }
 
-    .btn {
-      display: table;
-      width: 183px;
-      height: 40px;
-      margin: 60px auto 0 auto;
-      border-radius: 16px;
+      .btn {
+        display: table;
+        width: 183px;
+        height: 40px;
+        margin: 60px auto 0 auto;
+        border-radius: 16px;
 
 
-      .v-align {
-        padding: 10px;
-        display: table-cell;
-        text-align: center;
-        vertical-align: middle;
+        .v-align {
+          padding: 10px;
+          display: table-cell;
+          text-align: center;
+          vertical-align: middle;
 
-        .cell {
-          display: inline-block;
-          vertical-align: top;
+          .cell {
+            display: inline-block;
+            vertical-align: top;
 
-          p {
-            font-size: 16px;
+            p {
+              font-size: 16px;
+            }
           }
         }
       }
     }
   }
+
 
 }
 
@@ -1753,37 +1756,39 @@ button {
     font-size: 16px;
   }
 
-  .contact-us {
-    height: 275px;
-    border-top: 1px solid #58595b;
-    max-width: 1070px;
-    margin: 0 auto;
+  .projects-page {
+    .contact-us {
+      height: 275px;
+      border-top: 1px solid #58595b;
+      max-width: 1070px;
+      margin: 0 auto;
 
-    & > p {
-      font-size: 50px;
-      padding-top: 65px;
-    }
+      & > p {
+        font-size: 50px;
+        padding-top: 65px;
+      }
 
-    .btn {
-      display: table;
-      width: 183px;
-      height: 40px;
-      margin: 60px auto 0 auto;
-      border-radius: 16px;
+      .btn {
+        display: table;
+        width: 183px;
+        height: 40px;
+        margin: 60px auto 0 auto;
+        border-radius: 16px;
 
 
-      .v-align {
-        padding: 10px;
-        display: table-cell;
-        text-align: center;
-        vertical-align: middle;
+        .v-align {
+          padding: 10px;
+          display: table-cell;
+          text-align: center;
+          vertical-align: middle;
 
-        .cell {
-          display: inline-block;
-          vertical-align: top;
+          .cell {
+            display: inline-block;
+            vertical-align: top;
 
-          p {
-            font-size: 16px;
+            p {
+              font-size: 16px;
+            }
           }
         }
       }
@@ -1847,41 +1852,44 @@ button {
     font-size: 14px;
   }
 
-  .contact-us {
-    height: 250px;
-    border-top: 1px solid #58595b;
-    max-width: 865px;
-    margin: 0 auto;
+  .projects-page {
+    .contact-us {
+      height: 250px;
+      border-top: 1px solid #58595b;
+      max-width: 865px;
+      margin: 0 auto;
 
-    & > p {
-      font-size: 40px;
-      padding-top: 65px;
-    }
+      & > p {
+        font-size: 40px;
+        padding-top: 65px;
+      }
 
-    .btn {
-      display: table;
-      width: 183px;
-      height: 40px;
-      margin: 60px auto 0 auto;
-      border-radius: 16px;
+      .btn {
+        display: table;
+        width: 183px;
+        height: 40px;
+        margin: 60px auto 0 auto;
+        border-radius: 16px;
 
 
-      .v-align {
-        padding: 10px;
-        display: table-cell;
-        text-align: center;
-        vertical-align: middle;
+        .v-align {
+          padding: 10px;
+          display: table-cell;
+          text-align: center;
+          vertical-align: middle;
 
-        .cell {
-          display: inline-block;
-          vertical-align: top;
+          .cell {
+            display: inline-block;
+            vertical-align: top;
 
-          p {
-            font-size: 16px;
+            p {
+              font-size: 16px;
+            }
           }
         }
       }
     }
+
   }
 
 }
@@ -1965,37 +1973,39 @@ button {
     font-size: 14px;
   }
 
-  .contact-us {
-    height: 250px;
-    border-top: 1px solid #58595b;
-    max-width: 609px;
-    margin: 0 auto;
+  .projects-page {
+    .contact-us {
+      height: 250px;
+      border-top: 1px solid #58595b;
+      max-width: 609px;
+      margin: 0 auto;
 
-    & > p {
-      font-size: 40px;
-      padding-top: 65px;
-    }
+      & > p {
+        font-size: 40px;
+        padding-top: 65px;
+      }
 
-    .btn {
-      display: table;
-      width: 183px;
-      height: 40px;
-      margin: 60px auto 0 auto;
-      border-radius: 16px;
+      .btn {
+        display: table;
+        width: 183px;
+        height: 40px;
+        margin: 60px auto 0 auto;
+        border-radius: 16px;
 
 
-      .v-align {
-        padding: 10px;
-        display: table-cell;
-        text-align: center;
-        vertical-align: middle;
+        .v-align {
+          padding: 10px;
+          display: table-cell;
+          text-align: center;
+          vertical-align: middle;
 
-        .cell {
-          display: inline-block;
-          vertical-align: top;
+          .cell {
+            display: inline-block;
+            vertical-align: top;
 
-          p {
-            font-size: 16px;
+            p {
+              font-size: 16px;
+            }
           }
         }
       }
@@ -2077,42 +2087,45 @@ button {
     font-size: 14px;
   }
 
-  .contact-us {
-    height: 250px;
-    border-top: 1px solid #58595b;
-    margin-left: 10.4vw;
-    margin-right: 10.4vw;
-    width: auto;
+  .projects-page{
+    .contact-us {
+      height: 250px;
+      border-top: 1px solid #58595b;
+      margin-left: 10.4vw;
+      margin-right: 10.4vw;
+      width: auto;
 
-    & > p {
-      font-size: 32px;
-      padding-top: 65px;
-    }
+      & > p {
+        font-size: 32px;
+        padding-top: 65px;
+      }
 
-    .btn {
-      display: table;
-      width: 183px;
-      height: 40px;
-      margin: 60px auto 0 auto;
-      border-radius: 16px;
+      .btn {
+        display: table;
+        width: 183px;
+        height: 40px;
+        margin: 60px auto 0 auto;
+        border-radius: 16px;
 
 
-      .v-align {
-        padding: 10px;
-        display: table-cell;
-        text-align: center;
-        vertical-align: middle;
+        .v-align {
+          padding: 10px;
+          display: table-cell;
+          text-align: center;
+          vertical-align: middle;
 
-        .cell {
-          display: inline-block;
-          vertical-align: top;
+          .cell {
+            display: inline-block;
+            vertical-align: top;
 
-          p {
-            font-size: 16px;
+            p {
+              font-size: 16px;
+            }
           }
         }
       }
     }
+
   }
 
 }
@@ -2181,38 +2194,40 @@ button {
     font-size: 14px;
   }
 
-  .contact-us {
-    height: 250px;
-    border-top: 1px solid #58595b;
-    margin-left: 10.4vw;
-    margin-right: 10.4vw;
-    width: auto;
+  .projects-page {
+    .contact-us {
+      height: 250px;
+      border-top: 1px solid #58595b;
+      margin-left: 10.4vw;
+      margin-right: 10.4vw;
+      width: auto;
 
-    & > p {
-      font-size: 32px;
-      padding-top: 65px;
-    }
+      & > p {
+        font-size: 32px;
+        padding-top: 65px;
+      }
 
-    .btn {
-      display: table;
-      width: 183px;
-      height: 40px;
-      margin: 60px auto 0 auto;
-      border-radius: 16px;
+      .btn {
+        display: table;
+        width: 183px;
+        height: 40px;
+        margin: 60px auto 0 auto;
+        border-radius: 16px;
 
 
-      .v-align {
-        padding: 10px;
-        display: table-cell;
-        text-align: center;
-        vertical-align: middle;
+        .v-align {
+          padding: 10px;
+          display: table-cell;
+          text-align: center;
+          vertical-align: middle;
 
-        .cell {
-          display: inline-block;
-          vertical-align: top;
+          .cell {
+            display: inline-block;
+            vertical-align: top;
 
-          p {
-            font-size: 16px;
+            p {
+              font-size: 16px;
+            }
           }
         }
       }
