@@ -7,9 +7,13 @@
       <change beforePath="$PROJECT_DIR$/css/projects-style.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/css/projects-style.css.map" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/css/style.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/css/style.css.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projects/linsmore/images/5.png" beforeDir="false" afterPath="$PROJECT_DIR$/projects/linsmore/images/5.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projects/linsmore/images/8.png" beforeDir="false" afterPath="$PROJECT_DIR$/projects/linsmore/images/8.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projects/linsmore/images/9.png" beforeDir="false" afterPath="$PROJECT_DIR$/projects/linsmore/images/9.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/linsmore/images/1.png" beforeDir="false" afterPath="$PROJECT_DIR$/projects/linsmore/images/1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/linsmore/images/2.png" beforeDir="false" afterPath="$PROJECT_DIR$/projects/linsmore/images/2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/linsmore/images/3.png" beforeDir="false" afterPath="$PROJECT_DIR$/projects/linsmore/images/3.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/linsmore/images/6.png" beforeDir="false" afterPath="$PROJECT_DIR$/projects/linsmore/images/6.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/linsmore/images/7-lg.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/linsmore/images/sibling-next.png" beforeDir="false" afterPath="$PROJECT_DIR$/projects/linsmore/images/sibling-next.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/projects/linsmore/linsmore.html" beforeDir="false" afterPath="$PROJECT_DIR$/projects/linsmore/linsmore.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/scss/projects-style.scss" beforeDir="false" afterPath="$PROJECT_DIR$/scss/projects-style.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/scss/style.scss" beforeDir="false" afterPath="$PROJECT_DIR$/scss/style.scss" afterDir="false" />
@@ -85,7 +89,10 @@
       <workItem from="1588595729961" duration="14538000" />
       <workItem from="1588700214177" duration="8465000" />
       <workItem from="1588775356621" duration="10679000" />
-      <workItem from="1588887068976" duration="371000" />
+      <workItem from="1588887068976" duration="572000" />
+      <workItem from="1588889222304" duration="4518000" />
+      <workItem from="1588946640813" duration="5893000" />
+      <workItem from="1589106783930" duration="8776000" />
     </task>
     <servers />
   </component>
@@ -177,10 +184,10 @@
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state x="490" y="89" width="579" height="588" key="find.popup/0.0.1366.738@0.0.1366.738" timestamp="1588537123183" />
-    <state x="487" y="158" key="run.anything.popup" timestamp="1588436812589">
+    <state x="487" y="158" key="run.anything.popup" timestamp="1588947784433">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state x="487" y="158" key="run.anything.popup/0.0.1366.738@0.0.1366.738" timestamp="1588436812589" />
+    <state x="487" y="158" key="run.anything.popup/0.0.1366.738@0.0.1366.738" timestamp="1588947784433" />
     <state x="339" y="22" width="672" height="676" key="search.everywhere.popup" timestamp="1588792743925">
       <screen x="0" y="0" width="1366" height="738" />
     </state>

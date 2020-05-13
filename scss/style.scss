@@ -76,13 +76,13 @@
 }
 
 
-@media only screen and (min-width: 769px) {
+@media only screen and (min-device-width: 769px) {
   .menuModule {
     display: none;
   }
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-device-width: 768px) {
   .menuModule {
     position: absolute;
     top: 0;
@@ -125,7 +125,7 @@
 }
 
 
-@media only screen and (min-width: 1581px) {
+@media only screen and (min-device-width: 1581px) {
   .header {
     padding-top: 40px;
     padding-bottom: 40px;
@@ -152,7 +152,7 @@
   }
 }
 
-@media only screen and (min-width: 1025px) and (max-width: 1580px) {
+@media only screen and (min-device-width: 1025px) and (max-device-width: 1580px) {
   .header {
     padding-top: 40px;
     padding-bottom: 20px;
@@ -179,7 +179,7 @@
   }
 }
 
-@media only screen and (min-width: 769px) and (max-width: 1024px) {
+@media only screen and (min-device-width: 769px) and (max-device-width: 1024px) {
   .header {
     padding: 40px 50px 20px;
     max-width: 1440px;
@@ -203,7 +203,7 @@
   }
 }
 
-@media only screen and (min-width: 501px) and (max-width: 768px) {
+@media only screen and (min-device-width: 501px) and (max-device-width: 768px) {
   .header {
     padding-top: 40px;
     padding-bottom: 20px;
@@ -219,7 +219,7 @@
   }
 }
 
-@media only screen and (min-width: 769px) {
+@media only screen and (min-device-width: 769px) {
   .header .logo {
     max-width: 260px;
   }
@@ -235,7 +235,7 @@
 }
 
 
-@media only screen and (max-width: 500px) {
+@media only screen and (max-device-width: 500px) {
   .header {
     padding-top: 15px;
     padding-bottom: 10px;
@@ -292,7 +292,7 @@
 }
 
 
-@media only screen and (min-width: 501px) {
+@media only screen and (min-device-width: 501px) {
   .home-page .footer-wrap {
     position: absolute;
     bottom: 0;
@@ -312,7 +312,7 @@
   }
 }
 
-@media only screen and (max-width: 500px) {
+@media only screen and (max-device-width: 500px) {
   .home-page .footer-wrap {
     padding-bottom: 40px;
     padding-top: 20px;
@@ -365,7 +365,7 @@
 }
 
 
-@media only screen and (min-width: 501px) {
+@media only screen and (min-device-width: 501px) {
 
   // body {
   //     height: 100vh;
@@ -389,7 +389,7 @@
   }
 }
 
-@media only screen and (max-width: 500px) {
+@media only screen and (max-device-width: 500px) {
   .home-page {
     margin-top: 70px;
   }
@@ -410,7 +410,7 @@
   pointer-events: none;
 }
 
-@media only screen and (min-width: 1660px) {
+@media only screen and (min-device-width: 1660px) {
   .title-wrap {
     position: absolute;
     top: 50%;
@@ -432,7 +432,7 @@
   }
 }
 
-@media only screen and (min-width: 1601px) and (max-width: 1659px) {
+@media only screen and (min-device-width: 1601px) and (max-device-width: 1659px) {
   .title-wrap {
     position: absolute;
     top: 50%;
@@ -450,7 +450,7 @@
   }
 }
 
-@media only screen and (min-width: 1025px) and (max-width: 1600px) {
+@media only screen and (min-device-width: 1025px) and (max-device-width: 1600px) {
   .title-wrap {
     position: absolute;
     top: 50%;
@@ -467,7 +467,7 @@
   }
 }
 
-@media only screen and (min-width: 501px) and (max-width: 1024px) {
+@media only screen and (min-device-width: 501px) and (max-device-width: 1024px) {
   .title-wrap {
     position: absolute;
     top: 50%;
@@ -484,7 +484,7 @@
   }
 }
 
-@media only screen and (min-width: 501px) {
+@media only screen and (min-device-width: 501px) {
   .image-card {
     display: none;
   }
@@ -498,7 +498,7 @@
   }
 }
 
-@media only screen and (min-width: 414px) and (max-width: 500px) {
+@media only screen and (min-device-width: 414px) and (max-device-width: 500px) {
   .title-wrap {
     margin: 20px;
     position: relative;
@@ -544,7 +544,7 @@
   }
 }
 
-@media only screen and (max-width: 413px) {
+@media only screen and (max-device-width: 413px) {
   .title-wrap {
     margin: 20px;
     position: relative;
@@ -613,7 +613,7 @@
   }
 }
 
-@media only screen and (min-width: 1601px) {
+@media only screen and (min-device-width: 1601px) {
   .layer-text {
 
     max-width: 1440px;
@@ -653,7 +653,7 @@
   }
 }
 
-@media only screen and (min-width: 1025px) and (max-width: 1600px) {
+@media only screen and (min-device-width: 1025px) and (max-device-width: 1600px) {
   .layer-text {
 
     max-width: 1440px;
@@ -694,7 +694,7 @@
   }
 }
 
-@media only screen and (min-width: 769px) and (max-width: 1024px) {
+@media only screen and (min-device-width: 769px) and (max-device-width: 1024px) {
   .layer-text {
 
     max-width: 1440px;
@@ -733,7 +733,7 @@
   }
 }
 
-@media only screen and (min-width: 501px) and (max-width: 768px) {
+@media only screen and (min-device-width: 501px) and (max-device-width: 768px) {
   .layer-text {
 
     max-width: 1440px;
@@ -772,7 +772,7 @@
   }
 }
 
-@media only screen and (max-width: 500px) {
+@media only screen and (max-device-width: 500px) {
   .layer-text {
     display: none;
   }
@@ -877,13 +877,13 @@ button {
   transition: transform .6s cubic-bezier(.165, .84, .44, 1), opacity .3s cubic-bezier(.165, .84, .44, 1), background-color .6s cubic-bezier(.165, .84, .44, 1), -webkit-transform .6s cubic-bezier(.165, .84, .44, 1);
 }
 
-@media only screen and (min-width: 769px) {
+@media only screen and (min-device-width: 769px) {
   .site-header-button {
     display: none;
   }
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-device-width: 768px) {
   .nav-wrap {
     display: none;
   }
@@ -913,7 +913,7 @@ button {
   max-width: 100%;
 }
 
-@media only screen and (min-width: 501px) {
+@media only screen and (min-device-width: 501px) {
   .contact-mobile-screens {
     display: none;
   }
@@ -951,7 +951,7 @@ button {
   display: none;
 }
 
-@media only screen and (min-width: 1660px) {
+@media only screen and (min-device-width: 1660px) {
 
   .slide-l {
     width: 30%;
@@ -993,7 +993,7 @@ button {
   }
 }
 
-@media only screen and (min-width: 1601px) and (max-width: 1659px) {
+@media only screen and (min-device-width: 1601px) and (max-device-width: 1659px) {
 
   .slide-l {
     width: 30%;
@@ -1030,7 +1030,7 @@ button {
   }
 }
 
-@media only screen and (min-width: 1281px) and (max-width: 1600px) {
+@media only screen and (min-device-width: 1281px) and (max-device-width: 1600px) {
   .slide-l {
     width: 32%;
     margin-left: 17%;
@@ -1066,7 +1066,7 @@ button {
   }
 }
 
-@media only screen and (min-width: 1025px) and (max-width: 1280px) {
+@media only screen and (min-device-width: 1025px) and (max-device-width: 1280px) {
   .slide-l {
     width: 32%;
     margin-left: 17%;
@@ -1106,7 +1106,7 @@ button {
   }
 }
 
-@media only screen and (min-width: 769px) and (max-width: 1024px) {
+@media only screen and (min-device-width: 769px) and (max-device-width: 1024px) {
   .slide-l {
     width: 32%;
     margin-left: 17%;
@@ -1146,7 +1146,7 @@ button {
   }
 }
 
-@media only screen and (min-width: 501px) and (max-width: 768px) {
+@media only screen and (min-device-width: 501px) and (max-device-width: 768px) {
   .slide-r {
     display: none;
   }
@@ -1176,7 +1176,7 @@ button {
   }
 }
 
-@media only screen and (max-width: 500px) {
+@media only screen and (max-device-width: 500px) {
   .layer-slider {
     display: none;
   }
@@ -1262,13 +1262,13 @@ button {
 
 }
 
-@media only screen and (min-width: 769px) {
+@media only screen and (min-device-width: 769px) {
   .js-title-wrap {
     width: 60vw;
   }
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-device-width: 768px) {
   .js-title-wrap {
     width: 73vw;
   }
@@ -1316,7 +1316,7 @@ button {
 }
 
 
-@media only screen and (min-width: 1601px) {
+@media only screen and (min-device-width: 1601px) {
   .slide-r .slide-cell {
     img {
       transform: translate3d(0, 900px, 0);
@@ -1330,7 +1330,7 @@ button {
   }
 }
 
-@media only screen and (min-width: 1281px) and (max-width: 1600px) {
+@media only screen and (min-device-width: 1281px) and (max-device-width: 1600px) {
   .slide-r .slide-cell {
     img {
       transform: translate3d(0, 900px, 0);
@@ -1344,7 +1344,7 @@ button {
   }
 }
 
-@media only screen and (min-width: 1025px) and (max-width: 1280px) {
+@media only screen and (min-device-width: 1025px) and (max-device-width: 1280px) {
   .slide-r .slide-cell {
     img {
       transform: translate3d(0, 800px, 0);
@@ -1358,7 +1358,7 @@ button {
   }
 }
 
-@media only screen and (min-width: 769px) and (max-width: 1024px) {
+@media only screen and (min-device-width: 769px) and (max-device-width: 1024px) {
   .slide-r .slide-cell {
     img {
       transform: translate3d(0, 700px, 0);
@@ -1372,7 +1372,7 @@ button {
   }
 }
 
-@media only screen and (min-width: 501px) and (max-width: 768px) {
+@media only screen and (min-device-width: 501px) and (max-device-width: 768px) {
   .slide-l .slide-cell {
     img {
       transform: translate3d(0, -90vh, 0);
@@ -1422,7 +1422,7 @@ button {
 
 /*  HOVER AND SELECTED NAV STYLES */
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-device-width: 768px) {
   .nav-item {
     position: relative;
 
@@ -1603,7 +1603,7 @@ button {
 
 }
 
-@media only screen and (min-width: 1401px) {
+@media only screen and (min-device-width: 1401px) {
   .projects-page {
     max-width: 1440px;
     margin: 0 auto;
@@ -1702,7 +1702,7 @@ button {
 
 }
 
-@media only screen and (min-width: 1211px) and (max-width: 1400px) {
+@media only screen and (min-device-width: 1211px) and (max-device-width: 1400px) {
   .projects-page {
     max-width: 1400px;
     margin: 0 auto;
@@ -1798,7 +1798,7 @@ button {
 
 }
 
-@media only screen and (min-width: 966px) and (max-width: 1210px) {
+@media only screen and (min-device-width: 966px) and (max-device-width: 1210px) {
   .projects-page {
     max-width: 1210px;
     margin: 0 auto;
@@ -1895,13 +1895,13 @@ button {
 
 }
 
-@media only screen and (min-width: 966px) {
+@media only screen and (min-device-width: 966px) {
   .tile-image.right {
     display: none;
   }
 }
 
-@media only screen and (min-width: 769px) and (max-width: 965px) {
+@media only screen and (min-device-width: 769px) and (max-device-width: 965px) {
   .projects-page {
     max-width: 768px;
     margin: 0 auto;
@@ -2015,7 +2015,7 @@ button {
 
 }
 
-@media only screen and (min-width: 701px) and (max-width: 768px) {
+@media only screen and (min-device-width: 701px) and (max-device-width: 768px) {
   .projects-page {
     max-width: 768px;
     margin: 0 auto;
@@ -2132,7 +2132,7 @@ button {
 }
 
 // responsive tiles
-@media only screen and (min-width: 501px) and (max-width: 700px) {
+@media only screen and (min-device-width: 501px) and (max-device-width: 700px) {
 
   .projects-page {
     max-width: 767px;
@@ -2237,27 +2237,27 @@ button {
 
 }
 
-@media only screen and (min-width: 501px) {
+@media only screen and (min-device-width: 501px) {
   .projects-page {
     margin-top: 130px;
   }
 }
 
-@media only screen and (max-width: 500px) {
+@media only screen and (max-device-width: 500px) {
   .projects-page {
     display: none !important;
   }
 }
 
 // projects-page-title
-@media only screen and (min-width: 966px) {
+@media only screen and (min-device-width: 966px) {
   .projects-page-title {
     font-size: 110px;
     line-height: 100px;
   }
 }
 
-@media only screen and (max-width: 965px) {
+@media only screen and (max-device-width: 965px) {
   .projects-page-title {
     font-size: 80px;
     line-height: 76px;
@@ -2280,7 +2280,7 @@ button {
   display: none;
 }
 
-/*@media only screen and (min-width: 768px) and (max-width:1024px){
+/*@media only screen and (min-device-width: 768px) and (max-device-width:1024px){
     .projects-page.disabled {
         display: none;
     }
@@ -2290,7 +2290,7 @@ button {
 /*  CURSOR STYLES */
 
 
-@media only screen and (min-width: 1025px) {
+@media only screen and (min-device-width: 1025px) {
   /* Hiding the System Cursor */
   .home-page, .projects-page {
     * {
@@ -2329,7 +2329,7 @@ button {
   }
 }
 
-@media only screen and (max-width: 1024px) {
+@media only screen and (max-device-width: 1024px) {
   .cursor {
     display: none;
   }
