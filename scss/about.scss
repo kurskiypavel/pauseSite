@@ -1,5 +1,10 @@
 //sass --watch scss/about.scss css/about.css --style compressed
 
+//TO DELETE!
+.about-content .header-content.mobile .text-over-image span{
+  color: white !important;
+}
+
 .about-content {
   .about-name p {
     font-family: SFProText-Medium;
@@ -15,7 +20,7 @@
 
       span {
         position: absolute;
-        color: white;
+        color: black;
       }
     }
 
@@ -33,7 +38,7 @@
         font-family: SFProText-Regular, serif;
       }
       .services{
-        font-family: SFProText-Medium, serif;
+        font-family: SFProText-Regular, serif;
       }
 
       .member-name {
@@ -85,8 +90,8 @@
       }
 
       &.weare {
-        margin-top: 97px;
-        border-top: 1px solid #636466;
+        //margin-top: 97px;
+        //border-top: 1px solid #636466;
         padding-top:90px;
       }
     }
@@ -187,6 +192,10 @@
 
       }
 
+      .weareLine{
+        border-top: 1px solid #636466;margin-top: 97px;
+      }
+
     }
   }
 
@@ -225,8 +234,8 @@
       }
 
       &.weare {
-        margin-top: 97px;
-        border-top: 1px solid #636466;
+        //margin-top: 97px;
+        //border-top: 1px solid #636466;
         padding-top:90px;
       }
     }
@@ -326,7 +335,9 @@
         }
 
       }
-
+      .weareLine{
+        border-top: 1px solid #636466;margin-top: 97px;
+      }
     }
   }
 
@@ -365,8 +376,8 @@
       }
 
       &.weare {
-        margin-top: 97px;
-        border-top: 1px solid #636466;
+        //margin-top: 97px;
+        //border-top: 1px solid #636466;
         padding-top:90px;
       }
     }
@@ -467,6 +478,9 @@
 
       }
 
+      .weareLine{
+        border-top: 1px solid #636466;margin-top: 97px;
+      }
     }
   }
 
@@ -504,8 +518,8 @@
       }
 
       &.weare {
-        margin-top: 40px;
-        border-top: 1px solid #636466;
+        //margin-top: 40px;
+        //border-top: 1px solid #636466;
         padding-top: 40px;
       }
     }
@@ -551,10 +565,10 @@
 
 
         .contact-us {
-          border-top: 1px solid #636466;
+          //border-top: 1px solid #636466;
           border-bottom: 1px solid #636466;
 
-          margin-top: 50px;
+          //margin-top: 50px;
 
           > p {
             font-size: 28px;
@@ -598,6 +612,9 @@
 
       }
 
+      .weareLine{
+        border-top: 1px solid #636466;margin-top: 40px;
+      }
     }
   }
 

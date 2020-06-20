@@ -1561,7 +1561,8 @@ button {
 
 .projects-page-title {
   position: absolute;
-  width: 100%;
+  left: 50%;
+  transform: translateX(-50%);
   text-align: center;
   z-index: 60;
   font-family: Chronicle-Display-Semibold, serif;
@@ -1606,16 +1607,17 @@ button {
 
 @media only screen and (min-width: 1401px) {
   .projects-page {
-    max-width: 1440px;
-    margin: 0 auto;
+    //max-width: 1440px;
+    //margin: 0 auto;
     padding-top: 100px;
   }
 
   .tiles-wrap {
     display: flex;
     justify-content: space-between;
-    max-width: 1238px;
-    margin: 0 auto 80px auto;
+    //max-width: 1238px;
+    //margin: 0 auto 80px auto;
+    margin-bottom: 80px;
   }
 
 
@@ -1665,7 +1667,7 @@ button {
     .contact-us {
       height: 275px;
       border-top: 1px solid #58595b;
-      max-width: 1238px;
+      //max-width: 1238px;
       margin: 0 auto;
 
       & > p {
@@ -1705,16 +1707,18 @@ button {
 
 @media only screen and (min-width: 1211px) and (max-width: 1400px) {
   .projects-page {
-    max-width: 1400px;
-    margin: 0 auto;
+    //max-width: 1400px;
+    //margin: 0 auto;
     padding-top: 100px;
   }
 
   .tiles-wrap {
     display: flex;
     justify-content: space-between;
-    max-width: 1070px;
-    margin: 0 auto 80px auto;
+    //max-width: 1070px;
+    //margin: 0 auto 80px auto;
+    margin-bottom: 80px;
+
   }
 
   .tile {
@@ -1762,7 +1766,7 @@ button {
     .contact-us {
       height: 275px;
       border-top: 1px solid #58595b;
-      max-width: 1070px;
+      //max-width: 1070px;
       margin: 0 auto;
 
       & > p {
@@ -1801,16 +1805,18 @@ button {
 
 @media only screen and (min-width: 966px) and (max-width: 1210px) {
   .projects-page {
-    max-width: 1210px;
-    margin: 0 auto;
+    //max-width: 1210px;
+    //margin: 0 auto;
     padding-top: 100px;
   }
 
   .tiles-wrap {
     display: flex;
     justify-content: space-between;
-    max-width: 865px;
-    margin: 0 auto 55px auto;
+    //max-width: 865px;
+    //margin: 0 auto 55px auto;
+    margin-bottom: 55px;
+
   }
 
   .tile {
@@ -1858,7 +1864,7 @@ button {
     .contact-us {
       height: 250px;
       border-top: 1px solid #58595b;
-      max-width: 865px;
+      //max-width: 865px;
       margin: 0 auto;
 
       & > p {
@@ -1904,15 +1910,17 @@ button {
 
 @media only screen and (min-width: 769px) and (max-width: 965px) {
   .projects-page {
-    max-width: 768px;
-    margin: 0 auto;
+    //max-width: 768px;
+    //margin: 0 auto;
     padding-top: 80px;
   }
 
   .tiles-wrap {
 
-    max-width: 609px;
-    margin: 0 auto 55px auto;
+    //max-width: 609px;
+    //margin: 0 auto 55px auto;
+    margin-bottom: 55px;
+
     //padding-left: 10.4vw;
     //padding-right: 10.4vw;
     display: flex;
@@ -1979,7 +1987,7 @@ button {
     .contact-us {
       height: 250px;
       border-top: 1px solid #58595b;
-      max-width: 609px;
+      //max-width: 609px;
       margin: 0 auto;
 
       & > p {
@@ -2018,14 +2026,14 @@ button {
 
 @media only screen and (min-width: 701px) and (max-width: 768px) {
   .projects-page {
-    max-width: 768px;
-    margin: 0 auto;
+    //max-width: 768px;
+    //margin: 0 auto;
     padding-top: 80px;
   }
 
   .tiles-wrap {
 
-    max-width: 609px;
+    //max-width: 609px;
     margin-bottom: 55px;
     padding-left: 10.4vw;
     padding-right: 10.4vw;
@@ -2136,14 +2144,14 @@ button {
 @media only screen and (min-width: 501px) and (max-width: 700px) {
 
   .projects-page {
-    max-width: 767px;
-    margin: 0 auto;
+    //max-width: 767px;
+    //margin: 0 auto;
     padding-top: 80px;
   }
 
   .tiles-wrap {
 
-    max-width: 609px;
+    //max-width: 609px;
     margin: 0 10.4vw 55px 10.4vw;
 
     .tile:last-child:not(.full-vertical) {
@@ -2263,6 +2271,50 @@ button {
     font-size: 80px;
     line-height: 76px;
   }
+}
+
+
+
+/* PROJECT PAGE CONTAINER */
+
+@media only screen and (min-width: 1581px) {
+  .projects-page {
+    width: 100%;
+    max-width: 1440px;
+    margin-top: 130px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
+
+@media only screen and (min-width: 1025px) and (max-width: 1580px) {
+  .projects-page {
+    padding-left: 70px;
+    padding-right: 70px;
+    max-width: 1440px;
+  }
+
+
+}
+
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+  .projects-page {
+    padding-left: 50px;
+    padding-right: 50px;
+    max-width: 1440px;
+  }
+
+
+}
+
+@media only screen and (min-width: 501px) and (max-width: 768px) {
+  .projects-page {
+/*    padding-left: 10.4vw;
+    padding-right: 10.4vw;
+    max-width: 1440px;*/
+  }
+
+
 }
 
 /*  PAGE ANIMATION STYLES */
