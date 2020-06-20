@@ -614,6 +614,16 @@ function deactivateProjects() {
 // Event listener for navigation project item
 $('#projectsNav').click(disableHomePage);
 
+$(function () {
+    if(location.hash === '#projects'){
+        disableHomePage();
+        $.each($('.nav-item'),function( index, value ) {
+            $(value).removeClass('active');
+        });
+        $('#projectsNav').addClass('active');
+    }
+})
+
 
 // row-zero--vertical-image
 $('.row-zero--vertical-image').mouseenter(() => {

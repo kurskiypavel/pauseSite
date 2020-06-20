@@ -1,0 +1,706 @@
+//sass --watch scss/about.scss css/about.css --style compressed
+
+.about-content {
+  .about-name p {
+    font-family: SFProText-Medium;
+    text-align: center;
+  }
+
+  .header-content {
+    text-align: center;
+    font-family: ChronicleDisp-Semibold, serif;
+
+    .text-over-image {
+      position: relative;
+
+      span {
+        position: absolute;
+        color: white;
+      }
+    }
+
+
+  }
+
+  h4 {
+    font-family: SFProText-Light, serif;
+  }
+
+  .container {
+
+    .body-copy {
+      .copy {
+        font-family: SFProText-Regular, serif;
+      }
+      .services{
+        font-family: SFProText-Medium, serif;
+      }
+
+      .member-name {
+        font-family: SFProText-Medium, serif;
+      }
+
+      .contact-us {
+        .footer-wrap {
+          text-align: center;
+        }
+      }
+    }
+  }
+}
+
+
+
+
+@media only screen and (min-width: 1280px)  {
+  img {
+    width: 100%;
+  }
+  .about-content {
+    margin-top: 154px;
+
+    .header-content {
+      font-size: 110px;
+      margin-top: 25px;
+
+      &.mobile{
+        display: none;
+      }
+
+      .text-over-image {
+        top: 10px;
+
+        .ipad-header-image {
+          display: none;
+        }
+
+        span {
+          top: -5px;
+          width: 100%;
+        }
+      }
+
+      .member-name {
+
+      }
+
+      &.weare {
+        margin-top: 97px;
+        border-top: 1px solid #636466;
+        padding-top:90px;
+      }
+    }
+
+    .row.img-block.full {
+      display: none;
+    }
+
+    .container {
+
+      &.mobile{
+        display: none;
+      }
+      &.desktop{
+        .body-copy{
+          display: flex;
+        }
+      }
+
+      .body-copy {
+        margin-top: 100px;
+        border-top: 1px solid #636466;
+        padding-top: 25px;
+
+
+        h4 {
+          font-size: 48px;
+          line-height: 59px;
+        }
+
+        .col-one{
+          margin-right: 100px;
+          h4{
+            min-width: 315px;
+          }
+        }
+        .member-name {
+          font-size: 26px;
+          line-height: 38px;
+        }
+
+        .copy {
+          &:not(:first-child){
+            margin-top: 25px;
+          }
+          font-size: 26px;
+          line-height: 38px;
+          *{
+            display: block;
+          }
+        }
+        .services{
+          font-size: 26px;
+          line-height: 38px;
+          margin-top: 18px;
+        }
+
+        .contact-us {
+          margin-top: 80px;
+          margin-bottom: 80px;
+
+          > p {
+            font-size: 50px;
+            line-height: 54px;
+            margin-top: 70px;
+          }
+
+          .btn {
+            display: table;
+            width: 183px;
+            height: 40px;
+            margin: 80px auto 0 auto;
+            border-radius: 16px;
+
+            .v-align {
+              padding: 10px;
+              display: table-cell;
+              text-align: center;
+              vertical-align: middle;
+
+              .cell {
+                display: inline-block;
+                vertical-align: top;
+              }
+            }
+
+            p {
+              font-size: 16px;
+            }
+          }
+
+          .footer-wrap {
+            margin-top: 80px;
+            margin-bottom: 80px;
+          }
+        }
+
+
+      }
+
+    }
+  }
+
+}
+
+@media only screen and (min-width: 1024px) and (max-width: 1279px)  {
+  img {
+    width: 100%;
+  }
+  .about-content {
+    margin-top: 154px;
+
+    .header-content {
+      font-size: 110px;
+      margin-top: 25px;
+
+      &.mobile{
+        display: none;
+      }
+
+      .text-over-image {
+        top: 10px;
+
+        .ipad-header-image {
+          display: none;
+        }
+
+        span {
+          top: -5px;
+          width: 100%;
+        }
+      }
+
+      .member-name {
+
+      }
+
+      &.weare {
+        margin-top: 97px;
+        border-top: 1px solid #636466;
+        padding-top:90px;
+      }
+    }
+
+    .row.img-block.full {
+      display: none;
+    }
+
+    .container {
+
+      &.mobile{
+        display: none;
+      }
+      &.desktop{
+        .body-copy{
+          display: flex;
+        }
+      }
+
+      .body-copy {
+        margin-top: 100px;
+        border-top: 1px solid #636466;
+        padding-top: 25px;
+
+
+        h4 {
+          font-size: 32px;
+          line-height: 38px;
+        }
+
+        .col-one{
+          margin-right: 90px;
+          h4{
+            min-width: 210px;
+          }
+        }
+        .member-name {
+          font-size: 19.5px;
+          line-height: 28px;
+        }
+
+        .copy {
+          &:not(:first-child){
+            margin-top: 25px;
+          }
+          font-size: 19.5px;
+          line-height: 28px;
+          *{
+            display: block;
+          }
+        }
+        .services{
+          font-size: 19.5px;
+          line-height: 21px;
+          margin-top: 18px;
+        }
+
+
+        .contact-us {
+          margin-top: 80px;
+          margin-bottom: 80px;
+
+          > p {
+            font-size: 40px;
+            line-height: 44px;
+            margin-top: 70px;
+          }
+
+          .btn {
+            display: table;
+            width: 183px;
+            height: 40px;
+            margin: 80px auto 0 auto;
+            border-radius: 16px;
+
+            .v-align {
+              padding: 10px;
+              display: table-cell;
+              text-align: center;
+              vertical-align: middle;
+
+              .cell {
+                display: inline-block;
+                vertical-align: top;
+              }
+            }
+
+            p {
+              font-size: 16px;
+            }
+          }
+
+          .footer-wrap {
+            margin-top: 80px;
+            margin-bottom: 80px;
+          }
+        }
+
+      }
+
+    }
+  }
+
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1023px)  {
+  img {
+    width: 100%;
+  }
+  .about-content {
+    margin-top: 154px;
+
+    .header-content {
+      font-size: 80px;
+      margin-top: 25px;
+
+      &.mobile{
+        display: none;
+      }
+
+      .text-over-image {
+        top: 10px;
+
+        .ipad-header-image {
+          display: none;
+        }
+
+        span {
+          top: -5px;
+          width: 100%;
+        }
+      }
+
+      .member-name {
+
+      }
+
+      &.weare {
+        margin-top: 97px;
+        border-top: 1px solid #636466;
+        padding-top:90px;
+      }
+    }
+
+    .row.img-block.full {
+      display: none;
+    }
+
+    .container {
+
+      &.mobile{
+        display: none;
+      }
+      &.desktop{
+        .body-copy{
+          display: flex;
+        }
+      }
+
+      .body-copy {
+        margin-top: 100px;
+        border-top: 1px solid #636466;
+        padding-top: 25px;
+
+
+        h4 {
+          font-size: 32px;
+          line-height: 38px;
+        }
+
+        .col-one{
+          margin-right: 55px;
+          h4{
+            min-width: 114px;
+          }
+        }
+        .member-name {
+          font-size: 19.5px;
+          line-height: 28px;
+        }
+
+        .copy {
+          &:not(:first-child){
+            margin-top: 25px;
+          }
+          font-size: 19.5px;
+          line-height: 28px;
+          *{
+            display: block;
+          }
+        }
+        .services{
+          font-size: 19.5px;
+          line-height: 21px;
+          margin-top: 18px;
+        }
+
+
+        .contact-us {
+          margin-top: 80px;
+          margin-bottom: 80px;
+
+          > p {
+            font-size: 32px;
+            line-height: 36px;
+            margin-top: 70px;
+          }
+
+          .btn {
+            display: table;
+            width: 183px;
+            height: 40px;
+            margin: 80px auto 0 auto;
+            border-radius: 16px;
+
+            .v-align {
+              padding: 10px;
+              display: table-cell;
+              text-align: center;
+              vertical-align: middle;
+
+              .cell {
+                display: inline-block;
+                vertical-align: top;
+              }
+            }
+
+            p {
+              font-size: 16px;
+            }
+          }
+
+          .footer-wrap {
+            margin-top: 80px;
+            margin-bottom: 80px;
+          }
+        }
+
+      }
+
+    }
+  }
+
+}
+
+@media only screen and (max-width: 767px) {
+  img {
+    width: 100%;
+  }
+  .about-content {
+    margin-top: 99px;
+
+    .header-content {
+      font-size: 60px;
+      margin-top: 25px;
+      &.desktop{
+        display: none;
+      }
+
+      .text-over-image {
+        top: 10px;
+
+        .ipad-header-image {
+          display: none;
+        }
+
+        span {
+          top: -5px;
+          width: 100%;
+        }
+      }
+
+      .member-name {
+
+      }
+
+      &.weare {
+        margin-top: 40px;
+        border-top: 1px solid #636466;
+        padding-top: 40px;
+      }
+    }
+
+    .row.img-block.full {
+      display: none;
+    }
+
+    .container {
+      &.desktop{
+        display: none;
+      }
+
+      .body-copy {
+        margin-top: 50px;
+        border-top: 1px solid #636466;
+        padding-top: 25px;
+
+
+        h4 {
+          font-size: 32px;
+          line-height: 38px;
+        }
+
+        .member-name {
+          font-size: 19.5px;
+          line-height: 28px;
+        }
+
+        .copy {
+          font-size: 19.5px;
+          line-height: 28px;
+          margin-top: 25px;
+          *{
+            display: block;
+          }
+        }
+        .services{
+          font-size: 19.5px;
+          line-height: 21px;
+          margin-top: 18px;
+        }
+
+
+        .contact-us {
+          border-top: 1px solid #636466;
+          border-bottom: 1px solid #636466;
+
+          margin-top: 50px;
+
+          > p {
+            font-size: 28px;
+            line-height: 32px;
+            margin-top: 50px;
+          }
+
+          span {
+            display: block;
+          }
+
+          .btn {
+            display: table;
+            width: 183px;
+            height: 40px;
+            margin: 30px auto 0 auto;
+            border-radius: 16px;
+
+            .v-align {
+              padding: 10px;
+              display: table-cell;
+              text-align: center;
+              vertical-align: middle;
+
+              .cell {
+                display: inline-block;
+                vertical-align: top;
+              }
+            }
+
+            p {
+              font-size: 14px;
+            }
+          }
+
+          .footer-wrap {
+            margin-top: 35px;
+            margin-bottom: 50px;
+          }
+        }
+
+      }
+
+    }
+  }
+
+}
+
+
+/*container margin padding folowing header begins*/
+
+@media only screen and (min-width: 1581px) {
+  .container {
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+  }
+
+}
+
+@media only screen and (min-width: 1400px) and (max-width: 1580px) {
+  .container {
+    padding-left: 164px;
+    padding-right: 164px;
+  }
+
+}
+
+@media only screen and (min-width: 1025px) and (max-width: 1399px) {
+  .container {
+    padding-left: 70px;
+    padding-right: 70px;
+  }
+
+}
+
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+  .container {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+
+}
+
+@media only screen and (min-width: 501px) and (max-width: 768px) {
+  .container {
+    padding-left: 10.4vw;
+    padding-right: 10.4vw;
+  }
+
+}
+
+@media only screen and (max-width: 500px) {
+  .container {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+}
+
+/*container margin padding folowing header ends*/
+
+/*  CURSOR STYLES */
+
+
+@media only screen and (min-width: 1025px) {
+  /* Hiding the System Cursor */
+  .home-page, .projects-page, .about-page, .header-wrap {
+    * {
+      cursor: none;
+    }
+  }
+
+  /* Basic Colors and Layout */
+  body.tutorial {
+    --color-text: #000;
+    --color-link: #000;
+  }
+
+  /* The Basic Cursor Styles */
+  .cursor {
+    position: fixed;
+    left: 0;
+    top: 0;
+    pointer-events: none;
+  }
+
+  .cursor--small {
+    width: 5px;
+    height: 5px;
+    left: -2.5px;
+    top: -2.5px;
+    border-radius: 50%;
+    z-index: 11000;
+    background: var(--color-text);
+  }
+
+  .cursor--canvas {
+    width: 100vw;
+    height: 100vh;
+    z-index: 12000;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .cursor {
+    display: none;
+  }
+}

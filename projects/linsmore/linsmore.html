@@ -4,6 +4,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="UTF-8">
     <meta name="format-detection" content="telephone=no">
+    <link rel="icon" href="../../static/images/favicon.jpg" type="image/x-icon">
     <title>Pause</title>
     <style>
         .splash {
@@ -23,7 +24,7 @@
     <link rel="stylesheet" href="../../css/style.css">
     <link rel="stylesheet" href="../../css/projects-style.css">
 </head>
-<body>
+<body  id="hammer" class="page tutorial">
 <!-- The cursor elements -->
 <div class="cursor cursor--small"></div>
 <canvas class="cursor cursor--canvas" resize></canvas>
@@ -31,17 +32,17 @@
 </div>
 <div class="header-wrap fixed">
     <div class="header">
-        <div id="headerLogo" class="logo link-item">Pause</div>
+        <div onclick="location.href='../../index.html'" id="headerLogo" class="logo link-item">Pause</div>
         <div class="nav-wrap js-nav-wrap">
             <div id="projectsNav" class="nav-item projects left link-item">
                 <div class="wrapper">
-                    <div>Projects</div>
+                    <div onclick="location.href='../../index.html#projects'">Projects</div>
                 </div>
             </div>
             <div id="aboutNav" class="nav-item center left-origin link-item">
 
                 <div class="wrapper">
-                    <div>About</div>
+                    <div onclick="location.href='../../about.html'">About</div>
                 </div>
             </div>
             <div id="contactNav" class="nav-item right link-item">
@@ -60,7 +61,7 @@
         </button>
     </div>
 </div>
-<div class="project-content">
+<div class="project-content project-page">
     <div class="project-name"><p>Linsmore House</p></div>
     <div class="header-content">
         <span>Renovating the idea</span>
@@ -378,11 +379,11 @@
     });
 </script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.13/jquery.mousewheel.min.js"></script>
-<!-- <script src="/static/js-libs/hammer.min.js"></script> -->
-<!--<script src="https://hammerjs.github.io/dist/hammer.js"></script>-->
+ <script src="/static/js-libs/hammer.min.js"></script>
+<script src="https://hammerjs.github.io/dist/hammer.js"></script>
 <!-- Including Paper and SimplexNoise -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/paper.js/0.12.0/paper-core.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/simplex-noise/2.4.0/simplex-noise.min.js"></script>
-<!--<script src="../../js/main.js"></script>-->
+<script src="../../js/main.js"></script>
 </body>
 </html>

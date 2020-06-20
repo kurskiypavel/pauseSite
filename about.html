@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="icon" href="static/images/favicon.jpg" type="image/x-icon">
+    <title>Pause</title>
+    <style>
+        .splash {
+            z-index: 1000;
+            display: block;
+            transition: 0.3s;
+            position: fixed;
+            top: 0;
+            left: 0;
+            background: #fff;
+            width: 100%;
+            height: 100%;
+            max-height: 100vh;
+        }
+    </style>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/about.css">
+</head>
+<body id="hammer" class="page tutorial">
+<!-- The cursor elements -->
+<div class="cursor cursor--small"></div>
+<canvas class="cursor cursor--canvas" resize></canvas>
+<div class="splash">
+</div>
+<div class="header-wrap fixed">
+    <div class="header">
+        <div onclick="location.href='index.html'" id="headerLogo" class="logo link-item">Pause</div>
+        <div class="nav-wrap js-nav-wrap">
+            <div id="projectsNav" class="nav-item projects left link-item">
+                <div class="wrapper">
+                    <div onclick="location.href='index.html#projects'">Projects</div>
+                </div>
+            </div>
+            <div id="aboutNav" class="nav-item center left-origin link-item active">
+
+                <div class="wrapper">
+                    <div onclick="location.href='about.html'">About</div>
+                </div>
+            </div>
+            <div id="contactNav" class="nav-item right link-item">
+
+                <div class="wrapper">
+                    <div>Contact</div>
+                </div>
+            </div>
+
+        </div>
+        <button type="button" class="site-header-button" id='toogle-hamburger' title="Toggle menu">
+            <span class="u-visually-hidden">Toggle menu</span>
+            <span class="button-bar button-bar--1"></span>
+            <span class="button-bar button-bar--2"></span>
+            <span class="button-bar button-bar--3"></span>
+        </button>
+    </div>
+</div>
+<div class="about-content about-page">
+    <div class="header-content">
+        <span>About</span>
+        <div class="text-over-image">
+            <span>Pause</span>
+            <img class="header-image" src="static/images/about/header.png" alt="">
+        </div>
+    </div>
+    <div class="container mobile">
+        <div class="body-copy">
+            <h4>Welcome to</h4>
+            <h4>Pause Design</h4>
+            <p class="copy">We’re a highly passionate, group of Toronto-based designers and builders who create
+                inspiring spaces.
+                Nothing gets us more excited than helping our clients transform an interior or exterior area into
+                something beautiful, functional and unique to them.</p>
+            <p class="copy">We’ll offer our counsel, of course, but your vision is our goal. You can see it in all our
+                work, which
+                marries the beauty of natural materials with the aesthetics of industrial design.</p>
+            <p class="copy">Unlike the traditional approach to construction projects, where a designer hands off to a
+                contractor, we
+                follow the design-build model that integrates the two disciplines. The result is a seamless flow from
+                imagination to proposal to creation. Our process offers you a single point of responsibility, so you can
+                be assured of the highest aesthetic standards while simultaneously reducing practical risk and overall
+                costs.</p>
+        </div>
+    </div>
+    <div class="container desktop">
+        <div class="body-copy">
+            <div class="col-one">
+                <h4>Welcome to Pause Design</h4>
+            </div>
+            <div class="col-two">
+                <p class="copy">We’re a highly passionate, group of Toronto-based designers and builders who create
+                    inspiring spaces.
+                    Nothing gets us more excited than helping our clients transform an interior or exterior area into
+                    something beautiful, functional and unique to them.</p>
+                <p class="copy">We’ll offer our counsel, of course, but your vision is our goal. You can see it in all
+                    our work, which
+                    marries the beauty of natural materials with the aesthetics of industrial design.</p>
+                <p class="copy">Unlike the traditional approach to construction projects, where a designer hands off to
+                    a contractor, we
+                    follow the design-build model that integrates the two disciplines. The result is a seamless flow
+                    from
+                    imagination to proposal to creation. Our process offers you a single point of responsibility, so you
+                    can
+                    be assured of the highest aesthetic standards while simultaneously reducing practical risk and
+                    overall
+                    costs.</p>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="header-content weare mobile">
+        <span>We're</span>
+        <div class="text-over-image">
+            <span>Jason</span>
+            <img class="header-image" src="static/images/about/jason.png" alt="">
+        </div>
+    </div>
+    <div class="header-content mobile">
+        <span>&</span>
+        <div class="text-over-image">
+            <span>Scott</span>
+            <img class="header-image" src="static/images/about/scott.png" alt="">
+        </div>
+    </div>
+    <div class="header-content weare desktop">
+        <span>We're</span>
+        <div class="text-over-image">
+            <span>Jason & Scott</span>
+            <img class="header-image" src="static/images/about/Jason%20&%20Scott.png" alt="">
+        </div>
+    </div>
+
+    <div class="container mobile">
+        <div class="body-copy">
+            <h4>Who we are</h4>
+            <p class="copy">For over ten years, we’ve worked together, both as friends and as creators—Jason as an
+                architect-designer
+                and Scott as a builder-contractor. In 2019, we formalized what began years ago as a side-project
+                together, and created a thriving design-build practice that lets us bring our individual gifts to each
+                project we take on.</p>
+            <p class="copy"><span class="member-name">Jason Ho</span>
+                Where other kids admired superheroes in capes, Jason’s heroes used mechanical pencils and graph paper.
+                On
+                his way to fulfilling his childhood ambition, he got his undergraduate degree in architecture from
+                Ryerson University, and then went on to complete a master’s in architecture at the University of
+                Toronto. Since then, he’s gained valuable experience, dedicating the past 15 years to honing his craft
+                and in so doing has re-imagined spaces everywhere from healthcare facilities and other commercial
+                buildings to residential properties.</p>
+            <p class="copy"><span class="member-name">Scott O’Brien</span>
+                Scott grew up the son and grandson of do-it-yourselfer-contractors, and comes by his love for building
+                honestly. Whether around his own home or helping friends around theirs, he’s always liked taking things
+                apart, figuring out how they work and re-building them. This naturally led to a career in television
+                post-production, where he learned workflow analysis and project management. He puts these organizational
+                skills to good use, along with his knowledge of product design, working with Jason. Together, they help
+                clients find the right solution to achieve project goals, by reinventing incredible new spaces.</p>
+        </div>
+    </div>
+    <div class="container mobile">
+        <div class="body-copy">
+            <h4>Service we provide</h4>
+            <p class="copy">We might be quietly confident about our work and the quality of our results, but we’re
+                especially proud
+                of working with each client to design a custom-made creative solution, perfect for their home and
+                budget.</p>
+            <p class="copy">We provide different services, for different clients.</p>
+            <p class="services">Timeless design and concepts</p>
+            <p class="services">Balance between form and function</p>
+            <p class="services">Tailor-made space planning and design</p>
+            <p class="services">Best-in-class interior design and decoration</p>
+            <p class="services">Permit and project management–from design to delivery</p>
+            <p class="services">Top-quality construction materials and contracting</p>
+            <div class="contact-us">
+                <p><span>Let’s start </span><span>the conversation</span></p>
+                <div class="btn" onclick="location.href='mailto:scott@pausedesign.ca'">
+                    <div class="v-align">
+                        <div class="cell">
+                            <p>Ask us anything</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-wrap ">
+                    <div class="footer">
+                        <div class="footer-item link-item">
+                            instagram
+                        </div>
+                        <div class="footer-item center link-item">
+                            twitter
+                        </div>
+                        <div class="footer-item link-item">
+                            houzz
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container desktop">
+        <div class="body-copy">
+            <div class="col-one">
+                <h4>Who we are</h4>
+            </div>
+            <div class="col-two">
+                <p class="copy">For over ten years, we’ve worked together, both as friends and as creators—Jason as an
+                    architect-designer
+                    and Scott as a builder-contractor. In 2019, we formalized what began years ago as a side-project
+                    together, and created a thriving design-build practice that lets us bring our individual gifts to
+                    each
+                    project we take on.</p>
+                <p class="copy"><span class="member-name">Jason Ho</span>
+                    Where other kids admired superheroes in capes, Jason’s heroes used mechanical pencils and graph
+                    paper.
+                    On
+                    his way to fulfilling his childhood ambition, he got his undergraduate degree in architecture from
+                    Ryerson University, and then went on to complete a master’s in architecture at the University of
+                    Toronto. Since then, he’s gained valuable experience, dedicating the past 15 years to honing his
+                    craft
+                    and in so doing has re-imagined spaces everywhere from healthcare facilities and other commercial
+                    buildings to residential properties.</p>
+                <p class="copy"><span class="member-name">Scott O’Brien</span>
+                    Scott grew up the son and grandson of do-it-yourselfer-contractors, and comes by his love for
+                    building
+                    honestly. Whether around his own home or helping friends around theirs, he’s always liked taking
+                    things
+                    apart, figuring out how they work and re-building them. This naturally led to a career in television
+                    post-production, where he learned workflow analysis and project management. He puts these
+                    organizational
+                    skills to good use, along with his knowledge of product design, working with Jason. Together, they
+                    help
+                    clients find the right solution to achieve project goals, by reinventing incredible new spaces.</p>
+            </div>
+
+        </div>
+    </div>
+    <div class="container desktop">
+        <div class="body-copy">
+            <div class="col-one">
+                <h4>Service we provide</h4>
+            </div>
+            <div class="col-two"><p class="copy">We might be quietly confident about our work and the quality of our
+                results, but we’re
+                especially proud
+                of working with each client to design a custom-made creative solution, perfect for their home and
+                budget.</p>
+                <p class="copy">We provide different services, for different clients.</p>
+                <p class="services">Timeless design and concepts</p>
+                <p class="services">Balance between form and function</p>
+                <p class="services">Tailor-made space planning and design</p>
+                <p class="services">Best-in-class interior design and decoration</p>
+                <p class="services">Permit and project management–from design to delivery</p>
+                <p class="services">Top-quality construction materials and contracting</p>
+            </div>
+
+        </div>
+    </div>
+    <div class="container">
+        <div class="body-copy">
+            <div class="contact-us">
+                <p><span>Let’s start </span><span>the conversation</span></p>
+                <div class="btn" onclick="location.href='mailto:scott@pausedesign.ca'">
+                    <div class="v-align">
+                        <div class="cell">
+                            <p>Ask us anything</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-wrap ">
+                    <div class="footer">
+                        <div class="footer-item link-item">
+                            instagram
+                        </div>
+                        <div class="footer-item center link-item">
+                            twitter
+                        </div>
+                        <div class="footer-item link-item">
+                            houzz
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script>
+    // Dont show content until loaded
+    $(window).on('load', function () {
+        if (document.readyState === 'complete') {
+            $(window).scrollTop(0);
+            $('.splash').css({
+                'visibility': 'hidden',
+                'opacity': '0',
+                'widht': '0'
+            });
+            setTimeout(() => {
+                $('.splash').css('display', 'none');
+            }, 300);
+        }
+    });
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.13/jquery.mousewheel.min.js"></script>
+<!-- <script src="/static/js-libs/hammer.min.js"></script> -->
+<script src="https://hammerjs.github.io/dist/hammer.js"></script>
+<!-- Including Paper and SimplexNoise -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/paper.js/0.12.0/paper-core.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/simplex-noise/2.4.0/simplex-noise.min.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
